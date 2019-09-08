@@ -102,7 +102,7 @@
 <nav class="navbar">
   <div class="container">
     <div class="upper-side">
-      <div class="logo"> <a href="index.html"><img src="/img/logo-4.png" alt="Image"></a> </div>
+      <div class="logo"> <a href="/"><img src="/img/logo-4.png" alt="Image"></a> </div>
       <div class="phone-email mr-5">
         <img src="/img/icon-phone.png" alt="Image">
         <h4>+7(775)045-00-08</h4>
