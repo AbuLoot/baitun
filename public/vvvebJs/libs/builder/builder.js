@@ -1361,20 +1361,20 @@ Vvveb.Builder = {
 	    var element = document.getElementById("save-btn");
 	    var dataset = element.dataset;
         var token = $('input[name="_token"]').val();
-		$('.page-header').prevAll().remove();
-		$('.footer-bar').nextAll().remove();
+		// $('.page-header').prevAll().remove();
+		// $('.footer-bar').nextAll().remove();
 
-		// data["fileName"] = (fileName && fileName != "") ? fileName : Vvveb.FileManager.getCurrentUrl();
-		// data["startTemplateUrl"] = startTemplateUrl;
+		data["fileName"] = (fileName && fileName != "") ? fileName : Vvveb.FileManager.getCurrentUrl();
+		data["startTemplateUrl"] = startTemplateUrl;
 
-		// if (!startTemplateUrl || startTemplateUrl == null)
-		// {
-		// 	data["html"] = this.getHtml();
-		// }
+		if (!startTemplateUrl || startTemplateUrl == null)
+		{
+			data["html"] = this.getHtml();
+		}
 
 		// console.log(data);
 
-		$.ajaxa({
+		$.ajax({
 			type: "post",
 			url: '/admin/'+dataset.routeurl+'/'+dataset.id, //set your server side save script url
           	dataType: "json",
