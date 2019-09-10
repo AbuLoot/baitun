@@ -57,15 +57,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
     Route::delete('apps/{id}', 'Joystick\AppController@destroy');
 });
 
-// Route::get('save-html/{id}', function(\Request $request, $id) {
-
-//     $product = \App\Product::find($id);
-//     $product->description = $_GET['html'];
-//     $product->save();
-
-//     return response()->json($id);
-// });
-
 // Input
 Route::get('search', 'InputController@search');
 Route::get('search-ajax', 'InputController@searchAjax');

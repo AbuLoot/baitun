@@ -5,11 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Page;
+use App\Product;
 
 class PageController extends Controller
 {
     public function main()
     {
+        $products = Product::where('status', 1)->get();
+
         return view('main');
     }
 

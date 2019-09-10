@@ -37,7 +37,7 @@
     </div>
     <div class="form-group">
       <label for="company_id">Компания</label>
-      <select id="company_id" name="company_id" class="form-control" required>
+      <select id="company_id" name="company_id" class="form-control">
         <option value=""></option>
         @foreach($companies as $company)
           <option value="{{ $company->id }}">{{ $company->title }}</option>
@@ -46,12 +46,12 @@
     </div>
     <div class="form-group">
       <label for="barcode">Артикул</label>
-      <input type="text" class="form-control" id="barcode" name="barcode" value="{{ (old('barcode')) ? old('barcode') : NULL }}" required>
+      <input type="text" class="form-control" id="barcode" name="barcode" value="{{ (old('barcode')) ? old('barcode') : NULL }}">
     </div>
     <div class="form-group">
       <label for="price">Цена</label>
       <div class="input-group">
-        <input type="text" class="form-control" id="price" name="price" maxlength="10" value="{{ (old('price')) ? old('price') : '' }}" required>
+        <input type="text" class="form-control" id="price" name="price" maxlength="10" value="{{ (old('price')) ? old('price') : '' }}">
         <div class="input-group-addon">〒</div>
       </div>
     </div>
@@ -103,7 +103,7 @@
     </div>
     <div class="form-group">
       <label for="description">Описание</label>
-      <textarea class="form-control" id="summernote" name="description" rows="6" maxlength="2000">{{ (old('description')) ? old('description') : '' }}</textarea>
+      <textarea class="form-control" id="summernote2" name="description" rows="6" maxlength="2000">{{ (old('description')) ? old('description') : '' }}</textarea>
     </div>
     <div class="form-group">
       <label>Фотографии</label><br>
@@ -263,6 +263,9 @@
   <script>
     $(document).ready(function() {
       $('#summernote').summernote({
+        height: 300,
+      });
+      $('#summernote2').summernote({
         height: 300,
       });
     });

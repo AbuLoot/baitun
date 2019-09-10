@@ -120,7 +120,7 @@ class ProductController extends Controller
     {
         $this->validate($request, [
             'title' => 'required|min:2|max:80|unique:products',
-            'category_id' => 'required|numeric',
+            // 'category_id' => 'required|numeric',
             // 'images' => 'mimes:jpeg,jpg,png,svg,svgs,bmp,gif',
         ]);
 

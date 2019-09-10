@@ -890,7 +890,9 @@ textarea {
   align-items: center;
   justify-content: center;
   align-content: center;
-  background-size: auto 120%;
+  /*background-size: auto 120%;*/
+  background-size: cover;
+  background-position: center top;
 }
 .slider .slider-container .swiper-slide:after {
   content: "";

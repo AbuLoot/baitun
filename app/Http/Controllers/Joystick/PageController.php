@@ -62,7 +62,7 @@ class PageController extends Controller
     }
 
     public function update(Request $request, $id)
-    {    	
+    {
         $this->validate($request, [
             'title' => 'required|min:2|max:80',
         ]);
@@ -95,6 +95,7 @@ class PageController extends Controller
     public function editHtml($id)
     {
         $page = Page::findOrFail($id);
+        // $html = view('joystick-admin.pages.pages-render', ['page' => $page])->render();
 
         return view('joystick-admin.pages.html', ['page' => $page, 'route_url' => 'save-html-page']);
     }

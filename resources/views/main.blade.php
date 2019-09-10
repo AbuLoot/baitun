@@ -77,121 +77,61 @@
   </div>
 </div>
 
-<!-- Services -->
-<section class="section-services">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h2 class="h1 font-brand text-center">Какие <span class="color-brown">Услуги</span> мы оказываем?</h2>
-        <!-- <small>Smaller male cones</small> -->
-      </div>
-      <div class="col-md-6">
-        <figure class="documentation-support">
-          <!-- <div class="image-block"></div> -->
-          <!-- <img src="/img/Service-1.jpg" alt="Image"> -->
-          <figcaption>
-            <b>1</b>
-            <h4><span>Сопровождение</span> Документации</h4>
-            <p>Наша компания предлагает тщательно собрать и оформить все документы в короткие сроки.</p>
-            <a href="#" class="btn btn-outline-brown text-dark">Подробнее</a>
-            <!-- <a class="btn btn-primary" href="#">GET A CONSULTATION <i class="fas fa-caret-right"></i></a> -->
-            <!-- <a href="#" class="btn btn-outline-dark btn-block text-uppercase">Подробнее</a> -->
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-md-6">
-        <figure class="architectural-design">
-          <!-- <img src="/img/Service-2.jpg" alt="Image"> -->
-          <figcaption>
-            <b>2</b>
-            <h4><span>Архитектурное</span> Проектирование</h4>
-            <p>Мы проектируем все: от частных жилых домов до коммерческих объектов любого назначения.</p>
-            <a href="#" class="btn btn-outline-brown text-dark">Подробнее</a>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-md-6">
-        <figure class="building-construction">
-          <!-- <img src="/img/Service-3.jpeg" alt="Image"> -->
-          <figcaption>
-            <b>3</b>
-            <h4><span>Строительство</span> объекта</h4>
-            <p>Ищете компанию, которая воплотит в реальность ваш рабочий проект? Тогда мы — к вашим услугам.</p>
-            <a href="#" class="btn btn-outline-brown text-dark">Подробнее</a>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-md-6">
-        <figure class="interior-design">
-          <!-- <img src="/img/Service-4.jpg" alt="Image"> -->
-          <figcaption>
-            <b>4</b>
-            <h4><span>Дизайн</span> Интерьера</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="#" class="btn btn-outline-brown text-dark">Подробнее</a>
-          </figcaption>
-        </figure>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Services -->
+<!-- Services 2 -->
 <section class="section-services-2">
   <div class="container">
     <div class="row">
       <div class="col-12">
         <h2 class="h1 font-brand text-center">Какие <span class="color-brown">Услуги</span> мы оказываем?</h2>
-        <!-- <small>Smaller male cones</small> -->
+        <small>&nbsp;</small>
       </div>
-      <div class="col-md-6">
-        <figure class="documentation-support-2">
-          <!-- <div class="image-block"></div> -->
-          <!-- <img src="/img/Service-1.jpg" alt="Image"> -->
-          <figcaption>
-            <!-- <b>1</b> -->
-            <h4><span>Сопровождение</span> Документации</h4>
-            <p>Наша компания предлагает за Вас собрать и оформить все документы в короткие сроки.</p>
-            <a href="#" class="btn btn-outline-brown text-dark">Подробнее</a>
-            <!-- <a class="btn btn-primary" href="#">GET A CONSULTATION <i class="fas fa-caret-right"></i></a> -->
-            <!-- <a href="#" class="btn btn-outline-dark btn-block text-uppercase">Подробнее</a> -->
-          </figcaption>
-        </figure>
+      <div class="col-md-6 col-sm-6">
+        <div class="card">
+          <div class="image-cover">
+            <img src="/img/services/service-1a.jpg" class="img-fluid">
+          </div>
+          <div class="card-content">
+            <h2 class="h1">Сопровождение Документации</h2>
+            <h5 class="card-text">Наша компания предлагает за Вас собрать и оформить все документы в короткие сроки.</h5>
+            <a href="#" class="btn btn-outline-brown btn-lg">Подробнее</a>
+          </div>
+        </div>
       </div>
-      <div class="col-md-6">
-        <figure class="architectural-design-2">
-          <!-- <img src="/img/Service-2.jpg" alt="Image"> -->
-          <figcaption>
-            <!-- <b>2</b> -->
-            <h4><span>Архитектурное</span> Проектирование</h4>
-            <p>Мы проектируем все: от частных жилых домов до коммерческих объектов любого назначения.</p>
-            <a href="#" class="btn btn-outline-brown text-dark">Подробнее</a>
-          </figcaption>
-        </figure>
+      <div class="col-md-6 col-sm-6">
+        <div class="card">
+          <div class="image-cover">
+            <img src="/img/services/service-2a.jpg" class="img-fluid">
+          </div>
+          <div class="card-content">
+            <h2 class="h1">Архитектурное Проектирование</h2>
+            <h5 class="card-text">Мы проектируем все: от частных жилых домов до коммерческих объектов любого назначения.</h5>
+            <a href="#" class="btn btn-outline-brown btn-lg">Подробнее</a>
+          </div>
+        </div>
       </div>
-      <div class="col-md-6">
-        <figure class="building-construction-2">
-          <!-- <img src="/img/Service-3.jpeg" alt="Image"> -->
-          <figcaption>
-            <!-- <b>3</b> -->
-            <h4><span>Строительство</span> объекта</h4>
-            <p>Ищете компанию, которая воплотит в реальность ваш рабочий проект? Тогда мы — к вашим услугам.</p>
-            <a href="#" class="btn btn-outline-brown text-dark">Подробнее</a>
-          </figcaption>
-        </figure>
+      <div class="col-md-6 col-sm-6">
+        <div class="card">
+          <div class="image-cover">
+            <img src="/img/services/service-3a.jpeg" class="img-fluid">
+          </div>
+          <div class="card-content">
+            <h2 class="h1">Строительство Объектов</h2>
+            <h5 class="card-text">Ищете компанию, которая воплотит в реальность ваш рабочий проект? Тогда мы — к вашим услугам.</h5>
+            <a href="#" class="btn btn-outline-brown btn-lg">Подробнее</a>
+          </div>
+        </div>
       </div>
-      <div class="col-md-6">
-        <figure class="interior-design-2">
-          <!-- <img src="/img/Service-4.jpg" alt="Image"> -->
-          <figcaption>
-            <!-- <b>4</b> -->
-            <h4><span>Дизайн</span> Интерьера</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="#" class="btn btn-outline-brown text-dark">Подробнее</a>
-          </figcaption>
-        </figure>
+      <div class="col-md-6 col-sm-6">
+        <div class="card">
+          <div class="image-cover">
+            <img src="/img/services/service-4a.jpg" class="img-fluid">
+          </div>
+          <div class="card-content">
+            <h2 class="h1">Дизайн Интерьера</h2>
+            <h5 class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
+            <a href="#" class="btn btn-outline-brown btn-lg">Подробнее</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
