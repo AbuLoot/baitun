@@ -24,7 +24,7 @@
     {!! csrf_field() !!}
 
     <div class="form-group">
-      <label for="title">Название</label>
+      <label for="title">Заголовок</label>
       <input type="text" class="form-control" id="title" name="title" minlength="5" maxlength="80" value="{{ (old('title')) ? old('title') : $product->title }}" required>
     </div>
     <div class="form-group">
@@ -37,7 +37,7 @@
     </div>
     <div class="form-group">
       <label for="category_id">Категории</label>
-      <select id="category_id" name="category_id" class="form-control">
+      <select id="category_id" name="category_id" class="form-control" required>
         <option value=""></option>
         <?php $traverse = function ($nodes, $prefix = null) use (&$traverse, $product) { ?>
           <?php foreach ($nodes as $node) : ?>
@@ -54,7 +54,7 @@
     </div>
     <div class="form-group">
       <label for="company_id">Компания</label>
-      <select id="company_id" name="company_id" class="form-control" required>
+      <select id="company_id" name="company_id" class="form-control">
         <option value=""></option>
         @foreach($companies as $company)
           @if ($company->id == $product->company_id)
@@ -72,7 +72,7 @@
     <div class="form-group">
       <label for="price">Цена</label>
       <div class="input-group">
-        <input type="text" class="form-control" id="price" name="price" maxlength="10" value="{{ (old('price')) ? old('price') : $product->price }}" required>
+        <input type="text" class="form-control" id="price" name="price" maxlength="10" value="{{ (old('price')) ? old('price') : $product->price }}">
         <div class="input-group-addon">〒</div>
       </div>
     </div>
@@ -131,7 +131,7 @@
     </div>
     <div class="form-group">
       <label for="description">Описание</label>
-      <textarea class="form-control" id="summernote" name="description" rows="6" maxlength="2000">{{ (old('description')) ? old('description') : $product->description }}</textarea>
+      <textarea class="form-control" id="summernote-2" name="description" rows="6" maxlength="2000">{{ (old('description')) ? old('description') : $product->description }}</textarea>
     </div>
     <div class="form-group">
       <label>Галерея</label><br>
@@ -268,6 +268,9 @@
   <script>
     $(document).ready(function() {
       $('#summernote').summernote({
+        height: 300,
+      });
+      $('#summernote-2').summernote({
         height: 300,
       });
     });

@@ -11,7 +11,7 @@
   <form action="{{ route('products.store') }}" method="post" enctype="multipart/form-data">
     {!! csrf_field() !!}
     <div class="form-group">
-      <label for="title">Название</label>
+      <label for="title">Заголовок</label>
       <input type="text" class="form-control" id="title" name="title" minlength="5" maxlength="80" value="{{ (old('title')) ? old('title') : '' }}" required>
     </div>
     <div class="form-group">
@@ -24,7 +24,7 @@
     </div>
     <div class="form-group">
       <label for="category_id">Категории</label>
-      <select id="category_id" name="category_id" class="form-control">
+      <select id="category_id" name="category_id" class="form-control" required>
         <option value=""></option>
         <?php $traverse = function ($nodes, $prefix = null) use (&$traverse) { ?>
           <?php foreach ($nodes as $node) : ?>

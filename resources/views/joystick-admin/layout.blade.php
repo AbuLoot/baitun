@@ -70,6 +70,7 @@
             <li @if (Request::is('admin/projects', 'admin/projects/*')) class="active" @endif><a href="/admin/projects"><i class="material-icons md-18">widgets</i> Проекты</a></li>
             <li @if (Request::is('admin/categories', 'admin/categories/*')) class="active" @endif><a href="/admin/categories"><i class="material-icons md-18">list</i> Категории</a></li>
             <li @if (Request::is('admin/products', 'admin/products/*')) class="active" @endif><a href="/admin/products"><i class="material-icons md-18">store</i> Продукты</a></li>
+            <li @if (Request::is('admin/filemanager', 'admin/filemanager/*')) class="active" @endif><a href="/admin/filemanager"><i class="material-icons md-18">folder</i> Файловый менеджер</a></li>
             <li @if (Request::is('admin/slide', 'admin/slide/*')) class="active" @endif><a href="/admin/slide"><i class="material-icons md-18">collections</i> Слайд</a></li>
             <li @if (Request::is('admin/modes', 'admin/modes/*')) class="active" @endif><a href="/admin/modes"><i class="material-icons md-18">style</i> Режимы</a></li>
             <li @if (Request::is('admin/options', 'admin/options/*')) class="active" @endif><a href="/admin/options"><i class="material-icons md-18">label_outline</i> Опции</a></li>

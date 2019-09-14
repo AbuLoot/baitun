@@ -16,4 +16,9 @@ class Page extends Model
     {
         return $this->hasMany('App\News');
     }
+
+    public function products()
+    {
+        return $this->hasMany('App\Product');
+    }
 }

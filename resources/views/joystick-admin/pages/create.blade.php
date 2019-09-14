@@ -12,12 +12,16 @@
   <form action="{{ route('pages.store') }}" method="post">
     {!! csrf_field() !!}
     <div class="form-group">
-      <label for="title">Название</label>
+      <label for="title">Заголовок</label>
       <input type="text" class="form-control" id="title" name="title" minlength="2" maxlength="80" value="{{ (old('title')) ? old('title') : '' }}" required>
     </div>
     <div class="form-group">
       <label for="slug">Slug</label>
       <input type="text" class="form-control" id="slug" name="slug" maxlength="80" value="{{ (old('slug')) ? old('slug') : '' }}">
+    </div>
+    <div class="form-group">
+      <label for="headline">Подзаголовок</label>
+      <input type="text" class="form-control" id="headline" name="headline" minlength="2" maxlength="80" value="{{ (old('headline')) ? old('headline') : '' }}">
     </div>
     <div class="form-group">
       <label for="page_id">Категории</label>
@@ -33,7 +37,7 @@
       </select>
     </div>
     <div class="form-group">
-      <label for="icon">Icon</label>
+      <label for="icon">Картинка</label>
       <input type="text" class="form-control" id="icon" name="icon" minlength="2" maxlength="80" value="{{ (old('icon')) ? old('icon') : '' }}">
     </div>
     <div class="form-group">

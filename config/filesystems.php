@@ -60,6 +60,13 @@ return [
             'visibility' => 'public',
         ],
 
+        'filemanager' => [
+            'driver' => 'local',
+            'root' => public_path('filemanager'),
+            'url' => '/',
+            'visibility' => 'public',
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

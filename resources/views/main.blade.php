@@ -92,7 +92,7 @@
           </div>
           <div class="card-content">
             <h2 class="h1">Сопровождение Документации</h2>
-            <h5 class="card-text">Наша компания предлагает за Вас собрать и оформить все документы в короткие сроки.</h5>
+            <h5 class="card-text">Специалисты компании Baitun Project возьмут на себя подготовку всех необходимых бумаг и их оформление в официальных инстанциях. </h5>
             <a href="#" class="btn btn-outline-brown btn-lg">Подробнее</a>
           </div>
         </div>
@@ -104,7 +104,7 @@
           </div>
           <div class="card-content">
             <h2 class="h1">Архитектурное Проектирование</h2>
-            <h5 class="card-text">Мы проектируем все: от частных жилых домов до коммерческих объектов любого назначения.</h5>
+            <h5 class="card-text">Разработаем и согласуем проект любого строительства: от жилого дома до автомагистрали. Осуществляем авторский надзор.</h5>
             <a href="#" class="btn btn-outline-brown btn-lg">Подробнее</a>
           </div>
         </div>
@@ -116,7 +116,7 @@
           </div>
           <div class="card-content">
             <h2 class="h1">Строительство Объектов</h2>
-            <h5 class="card-text">Ищете компанию, которая воплотит в реальность ваш рабочий проект? Тогда мы — к вашим услугам.</h5>
+            <h5 class="card-text">Выполняем все виды строительных работ: под ключ и по отдельности. Строим по проектам заказчика и реализуем проекты собственной разработки.</h5>
             <a href="#" class="btn btn-outline-brown btn-lg">Подробнее</a>
           </div>
         </div>
@@ -128,7 +128,7 @@
           </div>
           <div class="card-content">
             <h2 class="h1">Дизайн Интерьера</h2>
-            <h5 class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
+            <h5 class="card-text">Разработаем и оформим стильный и красивый интерьер: с учетом ваших пожеланий и с соблюдением всех норм.</h5>
             <a href="#" class="btn btn-outline-brown btn-lg">Подробнее</a>
           </div>
         </div>
@@ -143,7 +143,8 @@
     <div class="row align-items-center">
       <div class="col-lg-6">
         <div class="content-box">
-          <h2 class="font-brand color-brown- "><span class="display-4 font-brand  text-center color-brown"></span> Закажите <span class="color-brown">Проектирование Архитектуры</span> и получите бесплатно на&nbsp;выбор Сопровождение Документации или&nbsp;же Авторский Надзор</h2>
+          <h2 class="font-brand color-brown- ">Если вы готовы заказать проект, строительство или вам нужна консультация специалиста, звоните по телефону ХХХ-ХХ-ХХ. Или оставьте заявку через форму на этой страницы и мы перезвоним вам в течение 60 секунд.</h2>
+          <!-- <h2 class="font-brand color-brown- "><span class="display-4 font-brand  text-center color-brown"></span> Закажите <span class="color-brown">Проектирование Архитектуры</span> и получите бесплатно на&nbsp;выбор Сопровождение Документации или&nbsp;же Авторский Надзор</h2> -->
           <!-- <h3>Давайте его обсудем!</h3>
           <h4><span>Pozniaky</span> Construction LLC</h4>
           <h3>Living spaces for creative peoples</h3>

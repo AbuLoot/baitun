@@ -120,7 +120,7 @@ class ProductController extends Controller
     {
         $this->validate($request, [
             'title' => 'required|min:2|max:80|unique:products',
-            // 'category_id' => 'required|numeric',
+            'category_id' => 'required|numeric',
             // 'images' => 'mimes:jpeg,jpg,png,svg,svgs,bmp,gif',
         ]);
 
@@ -140,7 +140,7 @@ class ProductController extends Controller
 
                     // Creating preview image
                     if ($key == 0) {
-                        $this->resizeImage($image, 265, 265, '/img/products/'.$dirName.'/preview-'.$imageName, 100);
+                        $this->resizeOptimalImage($image, 450, 550, '/img/products/'.$dirName.'/preview-'.$imageName, 100);
                         $introImage = 'preview-'.$imageName;
                     }
 
@@ -148,17 +148,13 @@ class ProductController extends Controller
 
                     // Storing original images
                     // $image->storeAs('/img/products/'.$dirName, $imageName);
-                    $this->resizeImage($image, 700, 850, '/img/products/'.$dirName.'/'.$imageName, 90);
+                    $this->resizeOptimalImage($image, 1500, 1000, '/img/products/'.$dirName.'/'.$imageName, 90);
 
                     // Creating present images
-                    $this->resizeImage($image, 265, 265, '/img/products/'.$dirName.'/present-'.$imageName, 100);
-
-                    // Creating mini images
-                    $this->resizeImage($image, 80, 100, '/img/products/'.$dirName.'/mini-'.$imageName, 100);
+                    $this->resizeOptimalImage($image, 450, 550, '/img/products/'.$dirName.'/present-'.$imageName, 100);
 
                     $images[$key]['image'] = $imageName;
                     $images[$key]['present_image'] = 'present-'.$imageName;
-                    $images[$key]['mini_image'] = 'mini-'.$imageName;
                 }
             }
         }
@@ -221,22 +217,6 @@ class ProductController extends Controller
         return view('joystick-admin.products.edit', ['modes' => $modes, 'product' => $product, 'categories' => $categories, 'companies' => $companies, 'options' => $options, 'grouped' => $grouped]);
     }
 
-    public function editHtml($id)
-    {
-        $product = Product::findOrFail($id);
-
-        return view('joystick-admin.products.page', ['product' => $product]);
-    }
-
-    public function saveHtml($id)
-    {
-        $product = Product::find($id);
-        $product->description = $_GET['html'];
-        $product->save();
-
-        return response()->json($product->title);
-    }
-
     public function update(Request $request, $id)
     {
         $this->validate($request, [
@@ -273,39 +253,33 @@ class ProductController extends Controller
                             Storage::delete('img/products/'.$product->path.'/'.$product->image);
                         }
 
-                        $this->resizeImage($image, 265, 265, '/img/products/'.$dirName.'/preview-'.$imageName, 100);
+                        $this->resizeOptimalImage($image, 450, 550, '/img/products/'.$dirName.'/preview-'.$imageName, 100);
                         $introImage = 'preview-'.$imageName;
                     }
 
                     // $watermark = Image::make('img/watermark.png');
 
                     // Storing original images
-                    $this->resizeImage($image, 700, 850, '/img/products/'.$dirName.'/'.$imageName, 90);
+                    $this->resizeOptimalImage($image, 1500, 1000, '/img/products/'.$dirName.'/'.$imageName, 90);
 
                     // Creating present images
-                    $this->resizeImage($image, 265, 265, '/img/products/'.$dirName.'/present-'.$imageName, 100);
-
-                    // Creating mini images
-                    $this->resizeImage($image, 80, 100, '/img/products/'.$dirName.'/mini-'.$imageName, 100);
+                    $this->resizeOptimalImage($image, 450, 550, '/img/products/'.$dirName.'/present-'.$imageName, 100);
 
                     if (isset($images[$key])) {
 
                         if ($images[$key]['image'] != 'no-image-middle.png') {
                             Storage::delete([
                                 'img/products/'.$product->path.'/'.$images[$key]['image'],
-                                'img/products/'.$product->path.'/'.$images[$key]['present_image'],
-                                'img/products/'.$product->path.'/'.$images[$key]['mini_image']
+                                'img/products/'.$product->path.'/'.$images[$key]['present_image']
                             ]);
                         }
 
                         $images[$key]['image'] = $imageName;
                         $images[$key]['present_image'] = 'present-'.$imageName;
-                        $images[$key]['mini_image'] = 'mini-'.$imageName;
                     }
                     else {
                         $images[$key]['image'] = $imageName;
                         $images[$key]['present_image'] = 'present-'.$imageName;
-                        $images[$key]['mini_image'] = 'mini-'.$imageName;
                     }
                 }
             }
@@ -348,8 +322,7 @@ class ProductController extends Controller
 
                     Storage::delete([
                         'img/products/'.$product->path.'/'.$images[$value]['image'],
-                        'img/products/'.$product->path.'/'.$images[$value]['present_image'],
-                        'img/products/'.$product->path.'/'.$images[$value]['mini_image']
+                        'img/products/'.$product->path.'/'.$images[$value]['present_image']
                     ]);
 
                     unset($images[$value]);
@@ -395,6 +368,22 @@ class ProductController extends Controller
         return redirect('admin/products')->with('status', 'Товар обновлен!');
     }
 
+    public function editHtml($id)
+    {
+        $product = Product::findOrFail($id);
+
+        return view('joystick-admin.products.page', ['product' => $product]);
+    }
+
+    public function saveHtml($id)
+    {
+        $product = Product::find($id);
+        $product->description = $_GET['html'];
+        $product->save();
+
+        return response()->json($product->title);
+    }
+
     public function destroy($id)
     {
         $product = Product::findOrFail($id);
@@ -412,8 +401,7 @@ class ProductController extends Controller
                 if ($image['image'] != 'no-image-middle.png') {
                     Storage::delete([
                         'img/products/'.$product->path.'/'.$image['image'],
-                        'img/products/'.$product->path.'/'.$image['present_image'],
-                        'img/products/'.$product->path.'/'.$image['mini_image']
+                        'img/products/'.$product->path.'/'.$image['present_image']
                     ]);
                 }
             }

@@ -24,6 +24,7 @@ Route::group(['middleware' => 'auth', 'role:user'], function() {
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function () {
 
     Route::get('/', 'Joystick\AdminController@index');
+    Route::get('filemanager', 'Joystick\AdminController@filemanager');
 
     Route::resource('categories', 'Joystick\CategoryController');
     Route::resource('countries', 'Joystick\CountryController');
@@ -98,5 +99,9 @@ Route::post('comment-news', 'NewsController@saveComment');
 
 // Pages
 Route::get('/', 'PageController@main');
-Route::get('contacts', 'PageController@contacts');
+Route::get('glavnaya', 'PageController@main');
+Route::get('uslugi/{slug}', 'PageController@services');
+Route::get('proekty', 'PageController@projects');
+Route::get('p/{slug}', 'PageController@showProject');
+Route::get('kontakty', 'PageController@contacts');
 Route::get('{page}', 'PageController@page');

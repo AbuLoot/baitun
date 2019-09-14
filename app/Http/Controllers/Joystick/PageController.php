@@ -32,6 +32,7 @@ class PageController extends Controller
         $page->sort_id = ($request->sort_id > 0) ? $request->sort_id : $page->count() + 1;
         $page->slug = (empty($request->slug)) ? str_slug($request->title) : $request->slug;
         $page->title = $request->title;
+        $page->headline = $request->headline;
         $page->icon = $request->icon;
         $page->title_description = $request->title_description;
         $page->meta_description = $request->meta_description;
@@ -71,6 +72,7 @@ class PageController extends Controller
         $page->sort_id = ($request->sort_id > 0) ? $request->sort_id : $page->count() + 1;
         $page->slug = (empty($request->slug)) ? str_slug($request->title) : $request->slug;
         $page->title = $request->title;
+        $page->headline = $request->headline;
         $page->icon = $request->icon;
         $page->title_description = $request->title_description;
         $page->meta_description = $request->meta_description;

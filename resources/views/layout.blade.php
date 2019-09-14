@@ -27,20 +27,20 @@
   <meta name="twitter:image" content="http://www.themezinho.net/homepark/preview.png">
 
   <!-- FAVICON FILES -->
-  <link href="ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon" sizes="144x144">
-  <link href="ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon" sizes="114x114">
-  <link href="ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon" sizes="72x72">
-  <link href="ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon">
-  <link href="ico/favicon.png" rel="shortcut icon">
+  <link href="/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon" sizes="144x144">
+  <link href="/ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon" sizes="114x114">
+  <link href="/ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon" sizes="72x72">
+  <link href="/ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon">
+  <link href="/ico/favicon.png" rel="shortcut icon">
 
   <!-- CSS FILES -->
-  <link rel="stylesheet" href="css/fontawesome.min.css">
-  <link rel="stylesheet" href="css/fancybox.min.css">
-  <link rel="stylesheet" href="css/odometer.min.css">
-  <link rel="stylesheet" href="css/swiper.min.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="/css/fontawesome.min.css">
+  <link rel="stylesheet" href="/css/fancybox.min.css">
+  <link rel="stylesheet" href="/css/odometer.min.css">
+  <link rel="stylesheet" href="/css/swiper.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/custom.css">
 </head>
 <body>
 <div class="preloader">
@@ -61,13 +61,13 @@
       <?php $traverse = function ($nodes, $prefix = null) use (&$traverse) { ?>
         <?php foreach ($nodes as $page) : ?>
           <?php if ($page->children && count($page->children) > 0) : ?>
-            <li><a href="/{{ $page->slug }}">{{ $page->title }}</a>
+            <li><a href="#{{ $page->slug }}">{{ $page->title }}</a>
               <ul>
-                <?php $traverse($page->children); ?>
+                <?php $traverse($page->children, $page->slug.'/'); ?>
               </ul>
             </li>
           <?php else : ?>
-            <li><a href="/{{ $page->slug }}">{{ $page->title }}</a></li>
+            <li><a href="/{{ $prefix . $page->slug }}">{{ $page->title }}</a></li>
           <?php endif; ?>
         <?php endforeach; ?>
       <?php }; ?>
@@ -78,9 +78,9 @@
     <figure> <img src="/img/logo-light.png" alt="Image"> </figure>
     <p>By aiming to take the life quality to an upper level with the whole realized Projects, Homepark continues to be the address of luxury.</p>
     <ul class="gallery">
-      <li><a href="images/gallery-thumb01.jpg" data-fancybox><img src="/img/gallery-thumb01.jpg" alt="Image"></a></li>
-      <li><a href="images/gallery-thumb01.jpg" data-fancybox><img src="/img/gallery-thumb01.jpg" alt="Image"></a></li>
-      <li><a href="images/gallery-thumb01.jpg" data-fancybox><img src="/img/gallery-thumb01.jpg" alt="Image"></a></li>
+      <li><a href="/img/gallery-thumb01.jpg" data-fancybox><img src="/img/gallery-thumb01.jpg" alt="Image"></a></li>
+      <li><a href="/img/gallery-thumb01.jpg" data-fancybox><img src="/img/gallery-thumb01.jpg" alt="Image"></a></li>
+      <li><a href="/img/gallery-thumb01.jpg" data-fancybox><img src="/img/gallery-thumb01.jpg" alt="Image"></a></li>
     </ul>
     <address>
     Kyiv | G. Stalingrada Avenue, 6 
@@ -116,13 +116,24 @@
         <?php $traverse = function ($nodes, $prefix = null) use (&$traverse) { ?>
           <?php foreach ($nodes as $page) : ?>
             <?php if ($page->children && count($page->children) > 0) : ?>
-              <li><a href="/{{ $page->slug }}">{{ $page->title }}</a>
+              <li><a href="#{{ $page->slug }}">{{ $page->title }}</a>
                 <ul>
-                  <?php $traverse($page->children); ?>
+                  <?php $traverse($page->children, $page->slug.'/'); ?>
                 </ul>
               </li>
             <?php else : ?>
-              <li><a href="/{{ $page->slug }}">{{ $page->title }}</a></li>
+              <?php if (in_array($page->slug, ['proekty', 'projects'])) : ?>
+                <?php $category = \App\Category::where('slug', $page->slug)->first(); ?>
+                <li><a href="/{{ $prefix . $page->slug }}">{{ $page->title }}</a>
+                  <ul>
+                    <?php foreach ($category->products as $product) : ?>
+                      <li><a href="/p/{{ $product->slug }}">{{ $product->title }}</a></li>
+                    <?php endforeach; ?>
+                  </ul>
+                </li>
+              <?php else : ?>
+                <li><a href="/{{ $prefix . $page->slug }}">{{ $page->title }}</a></li>
+              <?php endif; ?>
             <?php endif; ?>
           <?php endforeach; ?>
         <?php }; ?>
@@ -155,7 +166,7 @@
         <div class="col-lg-4">
           <figure><img src="/img/footer-icon03.png" alt="Image"></figure>
           <h3>Наши контакты</h3>
-          <p>+7(777)99988777Б<br>info@baitun.kz</p>
+          <p>+7(777)99988777<br>info@baitun.kz</p>
         </div>
       </div>
     </div>
@@ -214,16 +225,16 @@
 </footer>
 
 <!-- JS FILES --> 
-<script src="js/jquery.min.js"></script> 
-<script src="js/popper.min.js"></script> 
-<script src="js/bootstrap.min.js"></script> 
-<script src="js/swiper.min.js"></script> 
-<script src="js/fancybox.min.js"></script> 
-<script src="js/odometer.min.js"></script> 
-<!-- <script src="js/wow.min.js"></script>  -->
-<script src="js/text-rotater.js"></script> 
-<script src="js/jquery.stellar.js"></script> 
-<script src="js/isotope.min.js"></script> 
-<script src="js/scripts.js"></script>
+<script src="/js/jquery.min.js"></script> 
+<script src="/js/popper.min.js"></script> 
+<script src="/js/bootstrap.min.js"></script> 
+<script src="/js/swiper.min.js"></script> 
+<script src="/js/fancybox.min.js"></script> 
+<script src="/js/odometer.min.js"></script> 
+<!-- <script src="/js/wow.min.js"></script>  -->
+<script src="/js/text-rotater.js"></script> 
+<script src="/js/jquery.stellar.js"></script> 
+<script src="/js/isotope.min.js"></script> 
+<script src="/js/scripts.js"></script>
 </body>
 </html>

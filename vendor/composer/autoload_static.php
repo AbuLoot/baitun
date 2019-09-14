@@ -15,9 +15,10 @@ class ComposerStaticInit6d888e0133a5681b796d08d7fb03af4b
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
-        '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
+        'bd9634f2d41831496de0d3dfe4c94881' => __DIR__ . '/..' . '/symfony/polyfill-php56/bootstrap.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
+        '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
@@ -50,8 +51,10 @@ class ComposerStaticInit6d888e0133a5681b796d08d7fb03af4b
         ),
         'S' => 
         array (
+            'Symfony\\Polyfill\\Util\\' => 22,
             'Symfony\\Polyfill\\Php73\\' => 23,
             'Symfony\\Polyfill\\Php72\\' => 23,
+            'Symfony\\Polyfill\\Php56\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Intl\\Idn\\' => 26,
             'Symfony\\Polyfill\\Iconv\\' => 23,
@@ -71,6 +74,7 @@ class ComposerStaticInit6d888e0133a5681b796d08d7fb03af4b
             'Symfony\\Component\\Debug\\' => 24,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
+            'SuperClosure\\' => 13,
         ),
         'R' => 
         array (
@@ -151,6 +155,7 @@ class ComposerStaticInit6d888e0133a5681b796d08d7fb03af4b
         'A' => 
         array (
             'App\\' => 4,
+            'Alexusmai\\LaravelFileManager\\' => 29,
         ),
     );
 
@@ -185,6 +190,10 @@ class ComposerStaticInit6d888e0133a5681b796d08d7fb03af4b
         array (
             0 => __DIR__ . '/../..' . '/tests',
         ),
+        'Symfony\\Polyfill\\Util\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-util',
+        ),
         'Symfony\\Polyfill\\Php73\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php73',
@@ -192,6 +201,10 @@ class ComposerStaticInit6d888e0133a5681b796d08d7fb03af4b
         'Symfony\\Polyfill\\Php72\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php72',
+        ),
+        'Symfony\\Polyfill\\Php56\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-php56',
         ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
@@ -269,6 +282,10 @@ class ComposerStaticInit6d888e0133a5681b796d08d7fb03af4b
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
+        'SuperClosure\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jeremeamia/superclosure/src',
+        ),
         'Ramsey\\Uuid\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
@@ -340,6 +357,7 @@ class ComposerStaticInit6d888e0133a5681b796d08d7fb03af4b
         'Intervention\\Image\\' => 
         array (
             0 => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image',
+            1 => __DIR__ . '/..' . '/intervention/imagecache/src/Intervention/Image',
         ),
         'Illuminate\\' => 
         array (
@@ -397,6 +415,10 @@ class ComposerStaticInit6d888e0133a5681b796d08d7fb03af4b
         array (
             0 => __DIR__ . '/../..' . '/app',
         ),
+        'Alexusmai\\LaravelFileManager\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -421,14 +443,81 @@ class ComposerStaticInit6d888e0133a5681b796d08d7fb03af4b
     );
 
     public static $classMap = array (
+        'Alexusmai\\LaravelFileManager\\Controllers\\FileManagerController' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Controllers/FileManagerController.php',
+        'Alexusmai\\LaravelFileManager\\Events\\Deleted' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Events/Deleted.php',
+        'Alexusmai\\LaravelFileManager\\Events\\Deleting' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Events/Deleting.php',
+        'Alexusmai\\LaravelFileManager\\Events\\DirectoryCreated' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Events/DirectoryCreated.php',
+        'Alexusmai\\LaravelFileManager\\Events\\DirectoryCreating' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Events/DirectoryCreating.php',
+        'Alexusmai\\LaravelFileManager\\Events\\DiskSelected' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Events/DiskSelected.php',
+        'Alexusmai\\LaravelFileManager\\Events\\Download' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Events/Download.php',
+        'Alexusmai\\LaravelFileManager\\Events\\FileCreated' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Events/FileCreated.php',
+        'Alexusmai\\LaravelFileManager\\Events\\FileCreating' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Events/FileCreating.php',
+        'Alexusmai\\LaravelFileManager\\Events\\FileUpdate' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Events/FileUpdate.php',
+        'Alexusmai\\LaravelFileManager\\Events\\FilesUploaded' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Events/FilesUploaded.php',
+        'Alexusmai\\LaravelFileManager\\Events\\FilesUploading' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Events/FilesUploading.php',
+        'Alexusmai\\LaravelFileManager\\Events\\Paste' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Events/Paste.php',
+        'Alexusmai\\LaravelFileManager\\Events\\Rename' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Events/Rename.php',
+        'Alexusmai\\LaravelFileManager\\FileManager' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/FileManager.php',
+        'Alexusmai\\LaravelFileManager\\FileManagerServiceProvider' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/FileManagerServiceProvider.php',
+        'Alexusmai\\LaravelFileManager\\Middleware\\FileManagerACL' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Middleware/FileManagerACL.php',
+        'Alexusmai\\LaravelFileManager\\Requests\\CustomErrorMessage' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Requests/CustomErrorMessage.php',
+        'Alexusmai\\LaravelFileManager\\Requests\\RequestValidator' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Requests/RequestValidator.php',
+        'Alexusmai\\LaravelFileManager\\Services\\ACLService\\ACL' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Services/ACLService/ACL.php',
+        'Alexusmai\\LaravelFileManager\\Services\\ACLService\\ACLRepository' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Services/ACLService/ACLRepository.php',
+        'Alexusmai\\LaravelFileManager\\Services\\ACLService\\ConfigACLRepository' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Services/ACLService/ConfigACLRepository.php',
+        'Alexusmai\\LaravelFileManager\\Services\\ACLService\\DBACLRepository' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Services/ACLService/DBACLRepository.php',
+        'Alexusmai\\LaravelFileManager\\Services\\ConfigService\\ConfigRepository' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Services/ConfigService/ConfigRepository.php',
+        'Alexusmai\\LaravelFileManager\\Services\\ConfigService\\DefaultConfigRepository' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Services/ConfigService/DefaultConfigRepository.php',
+        'Alexusmai\\LaravelFileManager\\Services\\TransferService\\ExternalTransfer' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Services/TransferService/ExternalTransfer.php',
+        'Alexusmai\\LaravelFileManager\\Services\\TransferService\\LocalTransfer' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Services/TransferService/LocalTransfer.php',
+        'Alexusmai\\LaravelFileManager\\Services\\TransferService\\Transfer' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Services/TransferService/Transfer.php',
+        'Alexusmai\\LaravelFileManager\\Services\\TransferService\\TransferFactory' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Services/TransferService/TransferFactory.php',
+        'Alexusmai\\LaravelFileManager\\Services\\Zip' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Services/Zip.php',
+        'Alexusmai\\LaravelFileManager\\Traits\\CheckTrait' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Traits/CheckTrait.php',
+        'Alexusmai\\LaravelFileManager\\Traits\\ContentTrait' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Traits/ContentTrait.php',
+        'Alexusmai\\LaravelFileManager\\Traits\\PathTrait' => __DIR__ . '/..' . '/alexusmai/laravel-file-manager/src/Traits/PathTrait.php',
+        'App\\App' => __DIR__ . '/../..' . '/app/App.php',
+        'App\\Category' => __DIR__ . '/../..' . '/app/Category.php',
+        'App\\City' => __DIR__ . '/../..' . '/app/City.php',
+        'App\\Comment' => __DIR__ . '/../..' . '/app/Comment.php',
+        'App\\Company' => __DIR__ . '/../..' . '/app/Company.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Country' => __DIR__ . '/../..' . '/app/Country.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\Auth\\AuthCustomController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/AuthCustomController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
+        'App\\Http\\Controllers\\CartController' => __DIR__ . '/../..' . '/app/Http/Controllers/CartController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\FavoriteController' => __DIR__ . '/../..' . '/app/Http/Controllers/FavoriteController.php',
+        'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\InputController' => __DIR__ . '/../..' . '/app/Http/Controllers/InputController.php',
+        'App\\Http\\Controllers\\Joystick\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/Joystick/AdminController.php',
+        'App\\Http\\Controllers\\Joystick\\AppController' => __DIR__ . '/../..' . '/app/Http/Controllers/Joystick/AppController.php',
+        'App\\Http\\Controllers\\Joystick\\CategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/Joystick/CategoryController.php',
+        'App\\Http\\Controllers\\Joystick\\CityController' => __DIR__ . '/../..' . '/app/Http/Controllers/Joystick/CityController.php',
+        'App\\Http\\Controllers\\Joystick\\CompanyController' => __DIR__ . '/../..' . '/app/Http/Controllers/Joystick/CompanyController.php',
+        'App\\Http\\Controllers\\Joystick\\CountryController' => __DIR__ . '/../..' . '/app/Http/Controllers/Joystick/CountryController.php',
+        'App\\Http\\Controllers\\Joystick\\LanguageController' => __DIR__ . '/../..' . '/app/Http/Controllers/Joystick/LanguageController.php',
+        'App\\Http\\Controllers\\Joystick\\ModeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Joystick/ModeController.php',
+        'App\\Http\\Controllers\\Joystick\\NewsController' => __DIR__ . '/../..' . '/app/Http/Controllers/Joystick/NewsController.php',
+        'App\\Http\\Controllers\\Joystick\\OptionController' => __DIR__ . '/../..' . '/app/Http/Controllers/Joystick/OptionController.php',
+        'App\\Http\\Controllers\\Joystick\\OrderController' => __DIR__ . '/../..' . '/app/Http/Controllers/Joystick/OrderController.php',
+        'App\\Http\\Controllers\\Joystick\\PageController' => __DIR__ . '/../..' . '/app/Http/Controllers/Joystick/PageController.php',
+        'App\\Http\\Controllers\\Joystick\\PermissionController' => __DIR__ . '/../..' . '/app/Http/Controllers/Joystick/PermissionController.php',
+        'App\\Http\\Controllers\\Joystick\\ProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/Joystick/ProductController.php',
+        'App\\Http\\Controllers\\Joystick\\ProjectController' => __DIR__ . '/../..' . '/app/Http/Controllers/Joystick/ProjectController.php',
+        'App\\Http\\Controllers\\Joystick\\RoleController' => __DIR__ . '/../..' . '/app/Http/Controllers/Joystick/RoleController.php',
+        'App\\Http\\Controllers\\Joystick\\SlideController' => __DIR__ . '/../..' . '/app/Http/Controllers/Joystick/SlideController.php',
+        'App\\Http\\Controllers\\Joystick\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/Joystick/UserController.php',
+        'App\\Http\\Controllers\\NewsController' => __DIR__ . '/../..' . '/app/Http/Controllers/NewsController.php',
+        'App\\Http\\Controllers\\PageController' => __DIR__ . '/../..' . '/app/Http/Controllers/PageController.php',
+        'App\\Http\\Controllers\\ProfileController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProfileController.php',
+        'App\\Http\\Controllers\\PromoController' => __DIR__ . '/../..' . '/app/Http/Controllers/PromoController.php',
+        'App\\Http\\Controllers\\ShopController' => __DIR__ . '/../..' . '/app/Http/Controllers/ShopController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -437,11 +526,24 @@ class ComposerStaticInit6d888e0133a5681b796d08d7fb03af4b
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\ImageTrait' => __DIR__ . '/../..' . '/app/ImageTrait.php',
+        'App\\Language' => __DIR__ . '/../..' . '/app/Language.php',
+        'App\\Mode' => __DIR__ . '/../..' . '/app/Mode.php',
+        'App\\News' => __DIR__ . '/../..' . '/app/News.php',
+        'App\\Option' => __DIR__ . '/../..' . '/app/Option.php',
+        'App\\Order' => __DIR__ . '/../..' . '/app/Order.php',
+        'App\\Page' => __DIR__ . '/../..' . '/app/Page.php',
+        'App\\Permission' => __DIR__ . '/../..' . '/app/Permission.php',
+        'App\\Product' => __DIR__ . '/../..' . '/app/Product.php',
+        'App\\Profile' => __DIR__ . '/../..' . '/app/Profile.php',
+        'App\\Project' => __DIR__ . '/../..' . '/app/Project.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\Role' => __DIR__ . '/../..' . '/app/Role.php',
+        'App\\Slide' => __DIR__ . '/../..' . '/app/Slide.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'BeyondCode\\DumpServer\\DumpServerCommand' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src/DumpServerCommand.php',
         'BeyondCode\\DumpServer\\DumpServerServiceProvider' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src/DumpServerServiceProvider.php',
@@ -1980,6 +2082,7 @@ class ComposerStaticInit6d888e0133a5681b796d08d7fb03af4b
         'Intervention\\Image\\AbstractEncoder' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/AbstractEncoder.php',
         'Intervention\\Image\\AbstractFont' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/AbstractFont.php',
         'Intervention\\Image\\AbstractShape' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/AbstractShape.php',
+        'Intervention\\Image\\CachedImage' => __DIR__ . '/..' . '/intervention/imagecache/src/Intervention/Image/CachedImage.php',
         'Intervention\\Image\\Commands\\AbstractCommand' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/Commands/AbstractCommand.php',
         'Intervention\\Image\\Commands\\Argument' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/Commands/Argument.php',
         'Intervention\\Image\\Commands\\ChecksumCommand' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/Commands/ChecksumCommand.php',
@@ -2049,6 +2152,8 @@ class ComposerStaticInit6d888e0133a5681b796d08d7fb03af4b
         'Intervention\\Image\\Gd\\Shapes\\PolygonShape' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/Gd/Shapes/PolygonShape.php',
         'Intervention\\Image\\Gd\\Shapes\\RectangleShape' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/Gd/Shapes/RectangleShape.php',
         'Intervention\\Image\\Image' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/Image.php',
+        'Intervention\\Image\\ImageCache' => __DIR__ . '/..' . '/intervention/imagecache/src/Intervention/Image/ImageCache.php',
+        'Intervention\\Image\\ImageCacheController' => __DIR__ . '/..' . '/intervention/imagecache/src/Intervention/Image/ImageCacheController.php',
         'Intervention\\Image\\ImageManager' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/ImageManager.php',
         'Intervention\\Image\\ImageManagerStatic' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/ImageManagerStatic.php',
         'Intervention\\Image\\ImageServiceProvider' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/ImageServiceProvider.php',
@@ -2100,6 +2205,9 @@ class ComposerStaticInit6d888e0133a5681b796d08d7fb03af4b
         'Intervention\\Image\\Point' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/Point.php',
         'Intervention\\Image\\Response' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/Response.php',
         'Intervention\\Image\\Size' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/Size.php',
+        'Intervention\\Image\\Templates\\Large' => __DIR__ . '/..' . '/intervention/imagecache/src/Intervention/Image/Templates/Large.php',
+        'Intervention\\Image\\Templates\\Medium' => __DIR__ . '/..' . '/intervention/imagecache/src/Intervention/Image/Templates/Medium.php',
+        'Intervention\\Image\\Templates\\Small' => __DIR__ . '/..' . '/intervention/imagecache/src/Intervention/Image/Templates/Small.php',
         'JakubOnderka\\PhpConsoleColor\\ConsoleColor' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/ConsoleColor.php',
         'JakubOnderka\\PhpConsoleColor\\InvalidStyleException' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/InvalidStyleException.php',
         'JakubOnderka\\PhpConsoleHighlighter\\Highlighter' => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src/Highlighter.php',
@@ -3432,6 +3540,20 @@ class ComposerStaticInit6d888e0133a5681b796d08d7fb03af4b
         'SebastianBergmann\\Timer\\RuntimeException' => __DIR__ . '/..' . '/phpunit/php-timer/src/RuntimeException.php',
         'SebastianBergmann\\Timer\\Timer' => __DIR__ . '/..' . '/phpunit/php-timer/src/Timer.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
+        'SuperClosure\\Analyzer\\AstAnalyzer' => __DIR__ . '/..' . '/jeremeamia/superclosure/src/Analyzer/AstAnalyzer.php',
+        'SuperClosure\\Analyzer\\ClosureAnalyzer' => __DIR__ . '/..' . '/jeremeamia/superclosure/src/Analyzer/ClosureAnalyzer.php',
+        'SuperClosure\\Analyzer\\Token' => __DIR__ . '/..' . '/jeremeamia/superclosure/src/Analyzer/Token.php',
+        'SuperClosure\\Analyzer\\TokenAnalyzer' => __DIR__ . '/..' . '/jeremeamia/superclosure/src/Analyzer/TokenAnalyzer.php',
+        'SuperClosure\\Analyzer\\Visitor\\ClosureLocatorVisitor' => __DIR__ . '/..' . '/jeremeamia/superclosure/src/Analyzer/Visitor/ClosureLocatorVisitor.php',
+        'SuperClosure\\Analyzer\\Visitor\\MagicConstantVisitor' => __DIR__ . '/..' . '/jeremeamia/superclosure/src/Analyzer/Visitor/MagicConstantVisitor.php',
+        'SuperClosure\\Analyzer\\Visitor\\ThisDetectorVisitor' => __DIR__ . '/..' . '/jeremeamia/superclosure/src/Analyzer/Visitor/ThisDetectorVisitor.php',
+        'SuperClosure\\Exception\\ClosureAnalysisException' => __DIR__ . '/..' . '/jeremeamia/superclosure/src/Exception/ClosureAnalysisException.php',
+        'SuperClosure\\Exception\\ClosureSerializationException' => __DIR__ . '/..' . '/jeremeamia/superclosure/src/Exception/ClosureSerializationException.php',
+        'SuperClosure\\Exception\\ClosureUnserializationException' => __DIR__ . '/..' . '/jeremeamia/superclosure/src/Exception/ClosureUnserializationException.php',
+        'SuperClosure\\Exception\\SuperClosureException' => __DIR__ . '/..' . '/jeremeamia/superclosure/src/Exception/SuperClosureException.php',
+        'SuperClosure\\SerializableClosure' => __DIR__ . '/..' . '/jeremeamia/superclosure/src/SerializableClosure.php',
+        'SuperClosure\\Serializer' => __DIR__ . '/..' . '/jeremeamia/superclosure/src/Serializer.php',
+        'SuperClosure\\SerializerInterface' => __DIR__ . '/..' . '/jeremeamia/superclosure/src/SerializerInterface.php',
         'Symfony\\Component\\Console\\Application' => __DIR__ . '/..' . '/symfony/console/Application.php',
         'Symfony\\Component\\Console\\CommandLoader\\CommandLoaderInterface' => __DIR__ . '/..' . '/symfony/console/CommandLoader/CommandLoaderInterface.php',
         'Symfony\\Component\\Console\\CommandLoader\\ContainerCommandLoader' => __DIR__ . '/..' . '/symfony/console/CommandLoader/ContainerCommandLoader.php',
@@ -4113,8 +4235,17 @@ class ComposerStaticInit6d888e0133a5681b796d08d7fb03af4b
         'Symfony\\Polyfill\\Iconv\\Iconv' => __DIR__ . '/..' . '/symfony/polyfill-iconv/Iconv.php',
         'Symfony\\Polyfill\\Intl\\Idn\\Idn' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/Idn.php',
         'Symfony\\Polyfill\\Mbstring\\Mbstring' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/Mbstring.php',
+        'Symfony\\Polyfill\\Php56\\Php56' => __DIR__ . '/..' . '/symfony/polyfill-php56/Php56.php',
         'Symfony\\Polyfill\\Php72\\Php72' => __DIR__ . '/..' . '/symfony/polyfill-php72/Php72.php',
         'Symfony\\Polyfill\\Php73\\Php73' => __DIR__ . '/..' . '/symfony/polyfill-php73/Php73.php',
+        'Symfony\\Polyfill\\Util\\Binary' => __DIR__ . '/..' . '/symfony/polyfill-util/Binary.php',
+        'Symfony\\Polyfill\\Util\\BinaryNoFuncOverload' => __DIR__ . '/..' . '/symfony/polyfill-util/BinaryNoFuncOverload.php',
+        'Symfony\\Polyfill\\Util\\BinaryOnFuncOverload' => __DIR__ . '/..' . '/symfony/polyfill-util/BinaryOnFuncOverload.php',
+        'Symfony\\Polyfill\\Util\\TestListener' => __DIR__ . '/..' . '/symfony/polyfill-util/TestListener.php',
+        'Symfony\\Polyfill\\Util\\TestListenerForV5' => __DIR__ . '/..' . '/symfony/polyfill-util/TestListenerForV5.php',
+        'Symfony\\Polyfill\\Util\\TestListenerForV6' => __DIR__ . '/..' . '/symfony/polyfill-util/TestListenerForV6.php',
+        'Symfony\\Polyfill\\Util\\TestListenerForV7' => __DIR__ . '/..' . '/symfony/polyfill-util/TestListenerForV7.php',
+        'Symfony\\Polyfill\\Util\\TestListenerTrait' => __DIR__ . '/..' . '/symfony/polyfill-util/TestListenerTrait.php',
         'Tests\\CreatesApplication' => __DIR__ . '/../..' . '/tests/CreatesApplication.php',
         'Tests\\Feature\\ExampleTest' => __DIR__ . '/../..' . '/tests/Feature/ExampleTest.php',
         'Tests\\TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',

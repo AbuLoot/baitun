@@ -1187,7 +1187,7 @@ textarea {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 100px 0;
+  padding: 100px 0 0;
 }
 .logos * {
   -webkit-transition: 0.25s ease-in-out;
@@ -1238,7 +1238,7 @@ textarea {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 100px 0;
+  padding: 100px 0 0;
   background: #f9f9f9;
 }
 .benefits .col {
@@ -1319,7 +1319,7 @@ textarea {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 100px 0;
+  padding: 100px 0 0;
 }
 .recent-gallery b {
   display: block;
@@ -1646,7 +1646,7 @@ textarea {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 100px 0;
+  padding: 100px 0 0;
 }
 .recent-posts b {
   display: block;
@@ -1718,7 +1718,7 @@ textarea {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 100px 0;
+  padding: 100px 0 0;
   background: #26282b;
   color: #fff;
   position: relative;
@@ -1767,7 +1767,7 @@ textarea {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 100px 0;
+  padding: 100px 0 0;
 }
 .apartment h2 {
   font-size: 4vw;
@@ -1869,7 +1869,7 @@ textarea {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 100px 0;
+  padding: 100px 0 0;
 }
 .about-content h2 {
   font-size: 4vw;
@@ -1943,7 +1943,7 @@ textarea {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 100px 0;
+  padding: 100px 0 0;
 }
 .certificates b {
   display: block;
@@ -2055,7 +2055,7 @@ textarea {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 100px 0;
+  padding: 100px 0 0;
 }
 .faq .sidebox {
   width: calc(100% - 70px);
@@ -2128,7 +2128,7 @@ textarea {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 100px 0;
+  padding: 100px 0 0;
   text-align: center;
 }
 .intro-video b {
@@ -2209,7 +2209,7 @@ textarea {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 100px 0;
+  padding: 100px 0 0;
 }
 .photo-gallery .gallery-filter {
   width: 100%;
@@ -2259,7 +2259,7 @@ textarea {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 100px 0;
+  padding: 100px 0 0;
 }
 .sales-team figure {
   width: 100%;
@@ -2346,7 +2346,7 @@ textarea {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 100px 0;
+  padding: 100px 0 0;
   text-align: center;
 }
 .error404 figure {
@@ -2396,7 +2396,7 @@ a.btn-native:hover {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 100px 0;
+  padding: 100px 0 0;
 }
 .blog .post {
   width: 100%;
@@ -2644,7 +2644,7 @@ a.btn-native:hover {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 100px 0;
+  padding: 100px 0 0;
 }
 .contact b {
   display: block;
@@ -2817,6 +2817,7 @@ a.btn-native:hover {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  padding: 100px 0 0;
   margin-bottom: -80px;
 }
 .footer-bar .inner {

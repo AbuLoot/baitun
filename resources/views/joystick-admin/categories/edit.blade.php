@@ -12,7 +12,7 @@
     <input name="_method" type="hidden" value="PUT">
     {!! csrf_field() !!}
     <div class="form-group">
-      <label for="title">Название</label>
+      <label for="title">Заголовок</label>
       <input type="text" class="form-control" id="title" name="title" minlength="2" maxlength="80" value="{{ (old('title')) ? old('title') : $category->title }}" required>
     </div>
     <div class="form-group">

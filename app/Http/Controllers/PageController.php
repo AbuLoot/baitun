@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Page;
 use App\Product;
+use App\Category;
 
 class PageController extends Controller
 {
@@ -14,6 +15,28 @@ class PageController extends Controller
         $products = Product::where('status', 1)->get();
 
         return view('main');
+    }
+
+    public function services($slug)
+    {
+        $page = Page::where('slug', $slug)->first();
+
+        return view('service-'.$page->id)->with('page', $page);
+    }
+
+    public function projects()
+    {
+        $page = Page::where('slug', 'proekty')->firstOrFail();
+        $category = Category::where('slug', $page->slug)->first();
+
+        return view('projects', ['page' => $page, 'category' => $category]);
+    }
+
+    public function showProject($slug)
+    {
+        $product = Product::where('slug', $slug)->firstOrFail();
+
+        return view('show-project')->with('product', $product);
     }
 
     public function page($slug)
@@ -25,9 +48,8 @@ class PageController extends Controller
 
     public function contacts()
     {
-        return view('pages.contacts');
-        // $page = Page::where('slug', 'kontakty')->firstOrFail();
+        $page = Page::where('slug', 'kontakty')->firstOrFail();
 
-        // return view('pages.contacts')->with('page', $page);
+        return view('contacts')->with('page', $page);
     }
 }
