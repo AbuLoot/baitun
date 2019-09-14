@@ -14,7 +14,7 @@ class PageController extends Controller
     {
         $products = Product::where('status', 1)->get();
 
-        return view('main');
+        return view('main', ['products' => $products]);
     }
 
     public function services($slug)

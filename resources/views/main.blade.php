@@ -189,6 +189,23 @@
   </div>
   <div class="container-fluid">
     <div class="row no-gutters">
+      <?php foreach ($products as $product) : ?>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+          <div class="card">
+            <div class="image-cover">
+              <img src="/img/products/{{ $product->path.'/'.$product->image }}" class="img-fluid">
+            </div>
+            <div class="card-img-overlay">
+              <h3 class="card-title">{{ $product->title }}</h3>
+              <div class="card-action">
+                <h5 class="card-text">{{ $product->title_extra }}</h5>
+                <a href="/p/{{ $product->slug }}" class="btn btn-outline-brown btn-lg">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      <?php endforeach; ?>
+
       <div class="col-12 col-sm-6 col-md-6 col-lg-4">
         <div class="card">
           <div class="image-cover">
