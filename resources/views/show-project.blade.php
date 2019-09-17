@@ -1,12 +1,10 @@
 @extends('layout')
 
-@section('title_description', $product->title_description)
+@section('title_description', $product->title)
 
 @section('meta_description', $product->meta_description)
 
-
 @section('content')
-
 <?php $images = unserialize($product->images); ?>
 <header class="page-header" data-background="/img/products/{{ $product->path.'/'.$images[0]['image'] }}" data-stellar-background-ratio="1.15">
   <div class="container">
@@ -21,10 +19,13 @@
 
 <section class="projects-section">
   <div class="container">
-    {!! $product->characteristic !!}
-    <br>
-    {!! $product->description !!}
-
+    <div class="row">
+      <div class="col-md-8">
+        {!! $product->characteristic !!}
+        <br>
+        {!! $product->description !!}
+      </div>  
+    </div>
   </div>
 </section>
 

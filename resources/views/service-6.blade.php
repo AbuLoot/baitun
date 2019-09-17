@@ -21,7 +21,7 @@
 <section class="about-content">
   <div class="container">
     <div class="row">
-      <div class="offset-md-1 col-md-8">
+      <div class="col-md-9">
         {!! $page->content !!}
       </div>
     </div>

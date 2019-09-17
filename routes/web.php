@@ -66,7 +66,6 @@ Route::post('send-app', 'InputController@sendApp');
 
 
 // Shop
-Route::get('/', 'ShopController@index');
 Route::get('catalog', 'ShopController@catalog');
 Route::get('catalog/all/{category}', 'ShopController@allCategoryProducts');
 Route::get('catalog/{category}/{id}', 'ShopController@categoryProducts');

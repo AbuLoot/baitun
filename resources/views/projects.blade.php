@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title_description', $page->meta_title)
+@section('title_description', $page->title_description)
 
 @section('meta_description', $page->meta_description)
 
@@ -23,7 +23,7 @@
     <div class="container">
       <div class="col-12">
         <h2 class="h1 font-brand text-center">Что мы умеем <span class="color-brown">Проектировать?</span></h2>
-        <small class="subheading">Smaller male cones </small>
+        <small class="subheading"></small>
       </div>
     </div>
     <div class="container-fluid">

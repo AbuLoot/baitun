@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="format-detection" content="telephone=no">
   <meta name="theme-color" content="#282828"/>
-  <title>Homepark | Real Estate & Luxury Homes</title>
-  <meta name="author" content="Themezinho">
-  <meta name="description" content="Homepark | Real Estate & Luxury Homes">
-  <meta name="keywords" content="homepark, realestate, flat, apartment, benefits, facility, consultation, home, house, studio, pool, animation, transportation">
+  <title>@yield('title_description', 'Baitun Project - Архитектурно Строительная Компания')</title>
+  <meta name="description" content="@yield('meta_description', 'Baitun Project - Архитектурно Строительная Компания')">
+  <meta name="author" content="issayev.adilet@gmail.com">
+  <!-- <meta name="keywords" content="homepark, realestate, flat, apartment, benefits, facility, consultation, home, house, studio, pool, animation, transportation"> -->
 
   <!-- SOCIAL MEDIA META -->
   <meta property="og:description" content="Homepark | Real Estate & Luxury Homes">
@@ -75,8 +75,8 @@
     </ul>
   </div>
   <div class="side-content">
-    <figure> <img src="/img/logo-light.png" alt="Image"> </figure>
-    <p>By aiming to take the life quality to an upper level with the whole realized Projects, Homepark continues to be the address of luxury.</p>
+    <figure> <img src="/img/logo-4.png" alt="Image"> </figure>
+    <p>Архитектурно-строительная компания Baitun Project занимается проектированием и строительством объектов от подготовки и сопровождения разрешительной документации до сдачи готового объекта под ключ.</p>
     <ul class="gallery">
       <li><a href="/img/gallery-thumb01.jpg" data-fancybox><img src="/img/gallery-thumb01.jpg" alt="Image"></a></li>
       <li><a href="/img/gallery-thumb01.jpg" data-fancybox><img src="/img/gallery-thumb01.jpg" alt="Image"></a></li>
@@ -95,7 +95,7 @@
       <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
       <li><a href="#"><i class="fab fa-youtube"></i></a></li>
     </ul>
-    <small>© 2019 Homepark | Real Estate & Luxury Homes</small>
+    <small>© <?= date('Y') ?> Baitun Project | Все права зарезервированы</small>
   </div>
 </div>
 
@@ -176,40 +176,55 @@
 <footer class="footer">
   <div class="container">
     <div class="row">
-      <div class="col-lg-4">
-        <img src="/img/logo-light.png" alt="Image" class="logo">
-        <p>By aiming to take the life quality to an upper level with the whole realized Projects, Homepark continues to be the address of luxury.</p>
-        <div class="select-box dropdown show"> <a class="dropdown-toggle" href="#" role="button" id="language-select" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span><img src="/img/flag-tr.svg" alt="Image"> Turkish</span> </a>
-          <ul class="dropdown-menu" aria-labelledby="language-select">
-            <li><a class="dropdown-item" href="#"><img src="/img/flag-en.svg" alt="Image"> English</a></li>
-            <li><a class="dropdown-item" href="#"><img src="/img/flag-ua.svg" alt="Image"> Russian</a></li>
-            <li><a class="dropdown-item" href="#"><img src="/img/flag-br.svg" alt="Image"> Portugues</a></li>
-          </ul>
-        </div>
+      <div class="col-lg-3">
+        <img src="/img/logo-4.png" alt="Image" class="logo">
+        <p>Архитектурно-строительная компания Baitun Project занимается проектированием и строительством объектов от подготовки и сопровождения разрешительной документации до сдачи готового объекта под ключ.</p>
       </div>
-      <div class="col-lg-2 col-md-6">
+      <div class="col-lg-3 col-md-6">
+        <h5 class="text-uppercase color-gold">Страницы</h5>
         <ul class="footer-menu">
-          <li><a href="#">Homepark</a></li>
-          <li><a href="#">Apartments</a></li>
-          <li><a href="#">Facilities</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Contact</a></li>
+          <?php $traverse = function ($nodes, $prefix = null) use (&$traverse) { ?>
+            <?php foreach ($nodes as $page) : ?>
+              <?php if ($page->children && count($page->children) > 0) : ?>
+                <li><a href="#{{ $page->slug }}">{{ $page->title }}</a>
+                  <ul>
+                    <?php $traverse($page->children, $page->slug.'/'); ?>
+                  </ul>
+                </li>
+              <?php else : ?>
+                <?php if (in_array($page->slug, ['proekty', 'projects'])) : ?>
+                  <?php continue; ?>
+                  <?php $category = \App\Category::where('slug', $page->slug)->first(); ?>
+                  <li><a href="/{{ $prefix . $page->slug }}">{{ $page->title }}</a>
+                    <ul>
+                      <?php foreach ($category->products as $product) : ?>
+                        <li><a href="/p/{{ $product->slug }}">{{ $product->title }}</a></li>
+                      <?php endforeach; ?>
+                    </ul>
+                  </li>
+                <?php else : ?>
+                  <li><a href="/{{ $prefix . $page->slug }}">{{ $page->title }}</a></li>
+                <?php endif; ?>
+              <?php endif; ?>
+            <?php endforeach; ?>
+          <?php }; ?>
+          <?php $traverse($pages); ?>
         </ul>
       </div>
-      <div class="col-lg-2 col-md-6">
+      <div class="col-lg-3 col-md-6">
+        <h5 class="text-uppercase color-gold">Проекты</h5>
         <ul class="footer-menu">
-          <li><a href="#">Suites</a></li>
-          <li><a href="#">Apartments</a></li>
-          <li><a href="#">Villas & Houses</a></li>
-          <li><a href="#">Butique Room</a></li>
-          <li><a href="#">Buildings</a></li>
+          <?php $category = \App\Category::where('slug', 'proekty')->first(); ?>
+          <?php foreach ($category->products as $product) : ?>
+            <li><a href="/p/{{ $product->slug }}">{{ $product->title }}</a></li>
+          <?php endforeach; ?>
         </ul>
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-3">
         <div class="contact-box">
-          <h5>CALL CENTER</h5>
-          <h3>+380(98)298-59-73</h3>
-          <p><a href="#">hello@homepark.com.ua</a></p>
+          <h5 class="color-gold">CALL CENTER</h5>
+          <h3>+7(775)045-00-08</h3>
+          <p><a href="#">info@baitun.kz</a></p>
           <ul>
             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
             <li><a href="#"><i class="fab fa-twitter"></i></a></li>
@@ -219,7 +234,10 @@
           </ul>
         </div>
       </div>
-      <div class="col-12"> <span class="copyright">© 2019 Homepark | Real Estate &amp; Luxury Homes</span> <span class="creation">Site created by <a href="#">Themezinho</a></span> </div>
+      <div class="col-12">
+        <span class="copyright">© <?= date('Y') ?> Baitun Project | Все права зарезервированы</span>
+        <span class="creation">Связь с разработчиком сайта: <a href="#">issayev.adilet@gmail.com</a></span>
+      </div>
     </div>
   </div>
 </footer>

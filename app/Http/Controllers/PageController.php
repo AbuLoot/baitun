@@ -12,9 +12,10 @@ class PageController extends Controller
 {
     public function main()
     {
+        $page = Page::where('slug', 'glavnaya')->first();
         $products = Product::where('status', 1)->get();
 
-        return view('main', ['products' => $products]);
+        return view('main', ['page' => $page, 'products' => $products]);
     }
 
     public function services($slug)

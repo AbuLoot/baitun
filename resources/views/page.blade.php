@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title_description', $page->meta_title)
+@section('title_description', $page->title_description)
 
 @section('meta_description', $page->meta_description)
 
@@ -18,9 +18,13 @@
     </div>
   </header>
 
-  <section class="about-content">
+  <section class="custom-content">
     <div class="container">
-      {!! $page->content !!}
+      <div class="row">
+        <div class="col-md-9">
+          {!! $page->content !!}
+        </div>
+      </div>
     </div>
   </section>
 @endsection

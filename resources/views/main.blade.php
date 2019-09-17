@@ -1,8 +1,8 @@
 @extends('layout')
 
-@section('title_description', 'Baitun')
+@section('title_description', $page->title_description)
 
-@section('meta_description', 'Baitun')
+@section('meta_description', $page->meta_description)
 
 
 @section('content')
@@ -184,7 +184,7 @@
   <div class="container">
     <div class="col-12">
       <h2 class="h1 font-brand text-center">Что мы умеем <span class="color-brown">Проектировать?</span></h2>
-      <small class="subheading">Smaller male cones </small>
+      <small class="subheading"></small>
     </div>
   </div>
   <div class="container-fluid">
@@ -498,7 +498,8 @@
     <div class="row align-items-center">
       <div class="col-lg-4 col-md-12">
         <h4 class="h1"><span>Наши</span> Сертификаты</h4>
-        <small>Smaller male cones </small> </div>
+        <!-- <small>Smaller male cones </small> -->
+      </div>
       <div class="col-lg-2 col-md-3 col-sm-6 col-6">
         <figure> <a href="images/certificate01.jpg" data-fancybox><img src="/img/certificate01.jpg" alt="Image"></a> </figure>
       </div>
