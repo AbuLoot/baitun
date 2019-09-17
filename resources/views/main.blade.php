@@ -206,7 +206,7 @@
         </div>
       <?php endforeach; ?>
 
-      <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+      <!-- <div class="col-12 col-sm-6 col-md-6 col-lg-4">
         <div class="card">
           <div class="image-cover">
             <img src="/img/projects/6.jpg" class="img-fluid">
@@ -289,7 +289,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
