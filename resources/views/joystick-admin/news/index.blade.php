@@ -1,7 +1,7 @@
 @extends('joystick-admin.layout')
 
 @section('content')
-  <h2 class="page-header">Страницы</h2>
+  <h2 class="page-header">Новости</h2>
 
   @include('joystick-admin.partials.alerts')
 

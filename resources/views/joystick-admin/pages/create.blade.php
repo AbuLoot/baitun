@@ -21,7 +21,7 @@
     </div>
     <div class="form-group">
       <label for="headline">Подзаголовок</label>
-      <input type="text" class="form-control" id="headline" name="headline" minlength="2" maxlength="80" value="{{ (old('headline')) ? old('headline') : '' }}">
+      <input type="text" class="form-control" id="headline" name="headline" minlength="2" maxlength="250" value="{{ (old('headline')) ? old('headline') : '' }}">
     </div>
     <div class="form-group">
       <label for="page_id">Категории</label>
@@ -38,7 +38,28 @@
     </div>
     <div class="form-group">
       <label for="icon">Картинка</label>
-      <input type="text" class="form-control" id="icon" name="icon" minlength="2" maxlength="80" value="{{ (old('icon')) ? old('icon') : '' }}">
+      <div class="input-group">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button" data-toggle="modal" data-target="#filemanager"><i class="material-icons md-18">folder</i> Выбрать</button>
+        </span>
+
+        <input type="text" class="form-control" id="icon" name="icon" minlength="2" maxlength="80" value="{{ (old('icon')) ? old('icon') : '' }}">
+      </div>
+
+      <!-- Filemanager -->
+      <div class="modal fade" id="filemanager" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Файловый менеджер</h4>
+            </div>
+            <div class="modal-body">
+              <iframe src="<?= url('/admin/filemanager'); ?>" frameborder="0" style="width:100%;min-height:600px"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="form-group">
       <label for="sort_id">Номер</label>

@@ -174,6 +174,10 @@
         </div>
       </div>
     </div>
+    <div>
+      <button type="button" class="btn btn-success" onclick="addFileinput(this);">Добавить загрузчик</button>
+    </div>
+    <br>
     <div class="page-header">
       <h3>Фон для продукта</h3>
     </div>
@@ -257,6 +261,24 @@
 @endsection
 
 @section('scripts')
+  <script>
+    function addFileinput(i) {
+      var fileinput = 
+        '<div class="fileinput fileinput-new" data-provides="fileinput">' +
+            '<div class="fileinput-preview thumbnail" style="width:300px;height:200px;" data-trigger="fileinput"></div>' +
+            '<div>' +
+              '<span class="btn btn-default btn-sm btn-file">' +
+                '<span class="fileinput-new"><i class="glyphicon glyphicon-folder-open"></i>&nbsp; Выбрать</span>' +
+                '<span class="fileinput-exists"><i class="glyphicon glyphicon-folder-open"></i>&nbsp;</span>' +
+                '<input type="file" name="images[]" accept="image/*">' +
+              '</span>' +
+              '<a href="#" class="btn btn-default btn-sm fileinput-exists" data-dismiss="fileinput"><i class="glyphicon glyphicon-trash"></i> Удалить</a>' +
+            '</div>' +
+          '</div>';
+
+      $('#gallery').append(fileinput);
+    }
+  </script>
   <script src="/joystick/js/jasny-bootstrap.js"></script>
   <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
   <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>

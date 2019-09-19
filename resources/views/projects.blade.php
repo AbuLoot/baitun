@@ -7,7 +7,7 @@
 
 @section('content')
 
-  <header class="page-header" data-background="images/services/bg-service-1.jpg" data-stellar-background-ratio="1.15">
+  <header class="page-header" data-background="/filemanager/{{ $page->icon }}" data-stellar-background-ratio="1.15">
     <div class="container">
       <h1>{{ $page->title }}</h1>
       <p>{{ $page->headline }}</p>

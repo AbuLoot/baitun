@@ -7,7 +7,7 @@
 
 @section('content')
 
-  <header class="page-header" data-background="images/services/bg-service-1.jpg" data-stellar-background-ratio="1.15">
+  <header class="page-header" data-background="/filemanager/{{ $page->icon }}" data-stellar-background-ratio="1.15">
     <div class="container">
       <h1>{{ $page->title }}</h1>
       <p>{{ $page->headline }}</p>
@@ -21,20 +21,20 @@
   <section class="contact">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-lg-6 wow fadeInUp"> <b>07</b>
-          <h4><span>Homepark</span> Living Spaces</h4>
-          <small>Smaller male cones </small>
+        <div class="col-lg-6">
+          <h4>Наши <span>Контакты</span></h4>
+          <small>&nbsp;</small>
         </div>
         <div class="col-lg-3 col-md-6 wow fadeInUp"> 
           <address>
-            <strong>Visit Us</strong>
-            <p>Kristiatik 15th Street, Floot 17<br> Kiev, Ukraine 78692</p>
+            <h4>Посетите нас</h4>
+            <p>Казахстан, г.Шымкент, ул.Конаева 3/3 2-этаж</p>
           </address>
         </div>
         <div class="col-lg-3 col-md-6 wow fadeInUp"> 
           <address>
-            <strong>Say Hello</strong>
-            <p><a href="#">hello@homepark.com.ua</a> +380(98)298-59-73</p>
+            <h4>Скажите Алло</h4>
+            <p><a href="mailto:info@baitun.kz">info@baitun.kz</a><br> <a href="tel:+77750450008">+7(775)045-00-08</a></p>
           </address>
         </div>
       </div>
@@ -42,37 +42,40 @@
         <div class="col-lg-6">
           <div class="map">
             <div class="pattern-bg" data-stellar-ratio="1.03"></div>
-            <div class="holder" data-stellar-ratio="1.07"> 
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.2378765886474!2d-73.97644805915624!3d40.69075842971381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25bb6c6fe52c7%3A0x2b3bb16e97b13c01!2sFort+Greene+Tennis+Courts!5e0!3m2!1sen!2str!4v1559831164025!5m2!1sen!2str" allowfullscreen></iframe>
+            <div class="holder" data-stellar-ratio="1.07">
+              <iframe src="https://yandex.ua/map-widget/v1/?um=constructor%3A01ff02ba49cfc0d873672fcc55f7e1b6a8303ad8e2c900a9b97e80e475494bad&amp;source=constructor" width="100%" height="665" frameborder="0"></iframe>
+              <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.2378765886474!2d-73.97644805915624!3d40.69075842971381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25bb6c6fe52c7%3A0x2b3bb16e97b13c01!2sFort+Greene+Tennis+Courts!5e0!3m2!1sen!2str!4v1559831164025!5m2!1sen!2str" allowfullscreen></iframe> -->
             </div>
           </div>
         </div>
         <div class="col-lg-6">
-          <div class="contact-form">  
-            <form id="contact" name="contact" method="post">
+          <div class="contact-form">
+            <h4>Форма для <span>Связи</span></h4><br>
+            <form action="/send-app" name="contact" method="post">
+              @csrf
               <div class="form-group">
-                <input type="text" name="name" id="name" autocomplete="off" required>
-                 <span>Your name</span>
+                <span>Ваше имя</span>
+                <input type="text" name="name" id="name" minlength="2" maxlength="40" autocomplete="off" required>
               </div>
               <div class="form-group"> 
-                <input type="text" name="email" id="email" autocomplete="off" required>
-                <span>Your e-mail</span>
+                <span>Ваш e-mail</span>
+                <input type="email" name="email" id="email" autocomplete="off" required>
               </div>
               <div class="form-group"> 
-                <input type="text" name="subject" id="subject" autocomplete="off" required>
-                <span>Subject</span>
+                <span>Введите номер телефона</span>
+                <input type="tel" pattern="(\+?\d[- .]*){7,13}" name="phone" minlength="5" maxlength="20" required>
               </div>
               <div class="form-group"> 
+                <span>Ваш текст</span>
                 <textarea name="message" id="message" autocomplete="off" required></textarea>
-                <span>Your message</span>
               </div>
               <div class="form-group">
-                <button id="submit" type="submit" name="submit">Submit</button>
+                <button id="submit" type="submit" name="submit">Отправить</button>
               </div>
             </form>
             <div class="form-group">
-              <div id="success" class="alert alert-success wow fadeInUp" role="alert"> Your message was sent successfully! We will be in touch as soon as we can. </div>
-              <div id="error" class="alert alert-danger wow fadeInUp" role="alert"> Something went wrong, try refreshing and submitting the form again. </div>
+              <div id="success" class="alert alert-success" role="alert"> Your message was sent successfully! We will be in touch as soon as we can. </div>
+              <div id="error" class="alert alert-danger" role="alert"> Something went wrong, try refreshing and submitting the form again. </div>
             </div>
           </div>
         </div>

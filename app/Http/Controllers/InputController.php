@@ -63,13 +63,10 @@ class InputController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return redirect('/#contact-form')->withErrors($validator)->withInput();
+            return redirect()->withErrors($validator)->withInput();
         }
 
-        $project = Project::where('name', $request->project)->first();
-
         $app = new App;
-        $app->project_id = $project->id;
         $app->name = $request->name;
         $app->email = $request->email;
         $app->phone = $request->phone;
@@ -77,10 +74,10 @@ class InputController extends Controller
         $app->save();
 
         // Email subject
-        $subject = "Biotic - " . $project->name . " Новая заявка от $request->name";
+        $subject = "Baitun Project - Новая заявка от $request->name";
 
         // Email content
-        $content = "<h2>Biotic - " . $project->name . "</h2>";
+        $content = "<h2>Baitun Project</h2>";
         $content .= "<b>Имя: $request->name</b><br>";
         $content .= "<b>Номер: $request->phone</b><br>";
         $content .= "<b>Email: $request->email</b><br>";
@@ -88,7 +85,7 @@ class InputController extends Controller
         $content .= "<b>Дата: " . date('Y-m-d') . "</b><br>";
         $content .= "<b>Время: " . date('G:i') . "</b>";
 
-        $headers = "From: info@biotic.kz \r\n" .
+        $headers = "From: info@baitun.kz \r\n" .
                    "MIME-Version: 1.0" . "\r\n" . 
                    "Content-type: text/html; charset=UTF-8" . "\r\n";
 

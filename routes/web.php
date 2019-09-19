@@ -25,6 +25,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
 
     Route::get('/', 'Joystick\AdminController@index');
     Route::get('filemanager', 'Joystick\AdminController@filemanager');
+    Route::get('frame-filemanager', 'Joystick\AdminController@frameFilemanager');
 
     Route::resource('categories', 'Joystick\CategoryController');
     Route::resource('countries', 'Joystick\CountryController');

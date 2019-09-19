@@ -25,30 +25,13 @@
         </div>
       </div> -->
     </div>
-    <!-- Add Pagination -->
-    <!-- <div class="inner-elements">
-      <div class="container">
-        <div class="pagination"></div>
-        <div class="button-prev">PREV</div>
-        <div class="button-next">NEXT</div>
-        <div class="social-media">
-          <h6>SOCIAL MEDIA</h6>
-          <ul>
-            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fab fa-google"></i></a></li>
-            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-          </ul>
-        </div>
-      </div>
-    </div> -->
   </div>
 </header>
 
 <!-- Modal App -->
 <div class="modal fade" id="appForm" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
+    <div class="modal-content text-white-">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -56,14 +39,15 @@
       </div>
       <h3 class="font-brand">Хотите чтобы мы позвонили Вам? Тогда оставьте заявку!</h3>
       <!-- <h3>Давайте его обсудем!</h3> -->
-      <form id="contact" name="contact" method="post">
+      <form action="/send-app" name="contact" method="post">
+        @csrf
         <div class="form-group">
           <span>Ваше имя</span>
-          <input type="text" name="name" id="name" autocomplete="off" required>
+          <input type="text" name="name" id="name" minlength="2" maxlength="40" autocomplete="off" required>
         </div>
         <div class="form-group"> 
           <span>Введите номер телефона</span>
-          <input type="text" name="email" id="email" autocomplete="off" required>
+          <input type="tel" pattern="(\+?\d[- .]*){7,13}" name="phone" minlength="5" maxlength="20" required>
         </div>
         <div class="form-group"> 
           <span>Комментарии</span>
@@ -85,54 +69,21 @@
         <h2 class="h1 font-brand text-center">Какие <span class="color-brown">Услуги</span> мы оказываем?</h2>
         <small>&nbsp;</small>
       </div>
-      <div class="col-md-6 col-sm-6">
-        <div class="card">
-          <div class="image-cover">
-            <img src="/img/services/service-1a.jpg" class="img-fluid">
-          </div>
-          <div class="card-content">
-            <h2 class="h1">Сопровождение Документации</h2>
-            <h5 class="card-text">Специалисты компании Baitun Project возьмут на себя подготовку всех необходимых бумаг и их оформление в официальных инстанциях. </h5>
-            <a href="#" class="btn btn-outline-brown btn-lg">Подробнее</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-sm-6">
-        <div class="card">
-          <div class="image-cover">
-            <img src="/img/services/service-2a.jpg" class="img-fluid">
-          </div>
-          <div class="card-content">
-            <h2 class="h1">Архитектурное Проектирование</h2>
-            <h5 class="card-text">Разработаем и согласуем проект любого строительства: от жилого дома до автомагистрали. Осуществляем авторский надзор.</h5>
-            <a href="#" class="btn btn-outline-brown btn-lg">Подробнее</a>
+      <?php foreach ($page_services as $page_service) : ?>
+        <div class="col-md-6 col-sm-6">
+          <div class="card">
+            <div class="image-cover">
+              <img src="/filemanager/{{ $page_service->icon }}" class="img-fluid">
+            </div>
+            <div class="card-content">
+              <h2 class="h1">{{ $page_service->title }}</h2>
+              <h5 class="card-text">{{ $page_service->headline }}</h5>
+              <a href="/uslugi/{{ $page_service->slug }}" class="btn btn-outline-brown btn-lg mb-1">Подробнее</a>
+              <button type="button" class="btn btn-outline-brown btn-lg mb-1" data-toggle="modal" data-target="#appForm">Заказать</button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-6 col-sm-6">
-        <div class="card">
-          <div class="image-cover">
-            <img src="/img/services/service-3a.jpeg" class="img-fluid">
-          </div>
-          <div class="card-content">
-            <h2 class="h1">Строительство Объектов</h2>
-            <h5 class="card-text">Выполняем все виды строительных работ: под ключ и по отдельности. Строим по проектам заказчика и реализуем проекты собственной разработки.</h5>
-            <a href="#" class="btn btn-outline-brown btn-lg">Подробнее</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-sm-6">
-        <div class="card">
-          <div class="image-cover">
-            <img src="/img/services/service-4a.jpg" class="img-fluid">
-          </div>
-          <div class="card-content">
-            <h2 class="h1">Дизайн Интерьера</h2>
-            <h5 class="card-text">Разработаем и оформим стильный и красивый интерьер: с учетом ваших пожеланий и с соблюдением всех норм.</h5>
-            <a href="#" class="btn btn-outline-brown btn-lg">Подробнее</a>
-          </div>
-        </div>
-      </div>
+      <?php endforeach; ?>
     </div>
   </div>
 </section>
@@ -143,12 +94,8 @@
     <div class="row align-items-center">
       <div class="col-lg-6">
         <div class="content-box">
-          <h2 class="font-brand color-brown- ">Если вы готовы заказать проект, строительство или вам нужна консультация специалиста, звоните по телефону ХХХ-ХХ-ХХ. Или оставьте заявку через форму на этой страницы и мы перезвоним вам в течение 60 секунд.</h2>
+          <h2 class="font-brand color-brown- ">Если вы готовы заказать проект, строительство или вам нужна консультация специалиста, звоните по телефону <a href="tel:+77750450008" class="text-white-">+7(775)045-00-08</a>. Или оставьте заявку через форму и мы перезвоним вам в течение дня.</h2>
           <!-- <h2 class="font-brand color-brown- "><span class="display-4 font-brand  text-center color-brown"></span> Закажите <span class="color-brown">Проектирование Архитектуры</span> и получите бесплатно на&nbsp;выбор Сопровождение Документации или&nbsp;же Авторский Надзор</h2> -->
-          <!-- <h3>Давайте его обсудем!</h3>
-          <h4><span>Pozniaky</span> Construction LLC</h4>
-          <h3>Living spaces for creative peoples</h3>
-          <a href="#"> <img src="/img/icon-m2.png" alt="Image">See our projects</a> -->
         </div>
       </div>
       <div class="col-lg-6">
@@ -157,15 +104,15 @@
           <div class="holder" -data-stellar-ratio="1.10">
             <div class="app-form">
               <h3 class="font-brand">Хотите чтобы мы позвонили Вам? Тогда оставьте заявку!</h3>
-              <!-- <h3>Давайте его обсудем!</h3> -->
-              <form id="contact" name="contact" method="post">
+              <form action="/send-app" name="contact" method="post">
+                @csrf
                 <div class="form-group">
                   <span>Ваше имя</span>
-                  <input type="text" name="name" id="name" autocomplete="off" required>
+                  <input type="text" name="name" id="name" minlength="2" maxlength="40" autocomplete="off" required>
                 </div>
                 <div class="form-group"> 
                   <span>Введите номер телефона</span>
-                  <input type="text" name="email" id="email" autocomplete="off" required>
+                  <input type="tel" pattern="(\+?\d[- .]*){7,13}" name="phone" minlength="5" maxlength="20" required>
                 </div>
                 <div class="form-group"><br>
                   <button type="submit" name="submit" class="btn btn-black btn-lg btn-block">Оставить заявку <i class="fas fa-caret-right"></i></button>
@@ -189,7 +136,7 @@
   </div>
   <div class="container-fluid">
     <div class="row no-gutters">
-      <?php foreach ($products as $product) : ?>
+      @foreach($mode->products->where('status', 1)->take(9) as $product)
         <div class="col-12 col-sm-6 col-md-6 col-lg-4">
           <div class="card">
             <div class="image-cover">
@@ -204,92 +151,7 @@
             </div>
           </div>
         </div>
-      <?php endforeach; ?>
-
-      <!-- <div class="col-12 col-sm-6 col-md-6 col-lg-4">
-        <div class="card">
-          <div class="image-cover">
-            <img src="/img/projects/6.jpg" class="img-fluid">
-          </div>
-          <div class="card-img-overlay">
-            <h3 class="card-title">Проектирование<br> спортивных комплексов</h3>
-            <div class="card-action">
-              <h5 class="card-text">Продумываем удобные объекты для спорта</h5>
-              <a href="#" class="btn btn-outline-brown btn-lg">Подробнее</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-6 col-lg-4">
-        <div class="card">
-          <div class="image-cover">
-            <img src="/img/projects/05.jpg" class="img-fluid">
-          </div>
-          <div class="card-img-overlay">
-            <h3 class="card-title">Проектирование<br> бизнес-центров</h3>
-            <div class="card-action">
-              <h5 class="card-text">Воплощаем идеальный образ делового мира</h5>
-              <a href="#" class="btn btn-outline-brown btn-lg">Подробнее</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-6 col-lg-4">
-        <div class="card">
-          <div class="image-cover">
-            <img src="/img/projects/03.jpg" class="img-fluid">
-          </div>
-          <div class="card-img-overlay">
-            <h3 class="card-title">Проектирование<br> частных домов</h3>
-            <div class="card-action">
-              <h5 class="card-text">Придаем форму вашим мечтам</h5>
-              <a href="#" class="btn btn-outline-brown btn-lg">Подробнее</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-6 col-lg-4">
-        <div class="card">
-          <div class="image-cover">
-            <img src="/img/projects/3.jpg" class="img-fluid">
-          </div>
-          <div class="card-img-overlay">
-            <h3 class="card-title">Проектирование<br> учебных центров</h3>
-            <div class="card-action">
-              <h5 class="card-text">Создаем будущее новому поколению</h5>
-              <a href="#" class="btn btn-outline-brown btn-lg">Подробнее</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-6 col-lg-4">
-        <div class="card">
-          <div class="image-cover">
-            <img src="/img/projects/1.jpg" class="img-fluid">
-          </div>
-          <div class="card-img-overlay">
-            <h3 class="card-title">Проектирование<br> ЖК</h3>
-            <div class="card-action">
-              <h5 class="card-text">Моделируем пространства для современной жизни</h5>
-              <a href="#" class="btn btn-outline-brown btn-lg">Подробнее</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-6 col-lg-4">
-        <div class="card">
-          <div class="image-cover">
-            <img src="/img/projects/00.jpg" class="img-fluid">
-          </div>
-          <div class="card-img-overlay">
-            <h3 class="card-title">Проектирование<br> интерьеров</h3>
-            <div class="card-action">
-              <h5 class="card-text">Преображаем пространства, создаём уникальный декор</h5>
-              <a href="#" class="btn btn-outline-brown btn-lg">Подробнее</a>
-            </div>
-          </div>
-        </div>
-      </div> -->
+      @endforeach
     </div>
   </div>
 </section>
@@ -346,14 +208,15 @@
           <h2 class="font-brand">Есть Проект?!</h2>
           <h3>Давайте его обсудем!</h3>
           <div class="contact-form">  
-           <form id="contact" name="contact" method="post">
+           <form action="/send-app" name="contact" method="post">
+              @csrf
               <div class="form-group">
                 <span>Ваше имя</span>
-                <input type="text" name="name" id="name" autocomplete="off" required>
+                <input type="text" name="name" id="name" minlength="2" maxlength="40" autocomplete="off" required>
               </div>
               <div class="form-group"> 
                 <span>Введите номер телефона</span>
-                <input type="text" name="email" id="email" autocomplete="off" required>
+                <input type="tel" pattern="(\+?\d[- .]*){7,13}" name="phone" minlength="5" maxlength="20" required>
               </div>
               <!-- <div class="form-group"> 
                 <span>Ваш сообщение</span>

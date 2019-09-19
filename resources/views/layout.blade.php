@@ -10,28 +10,17 @@
   <meta name="author" content="issayev.adilet@gmail.com">
   <!-- <meta name="keywords" content="homepark, realestate, flat, apartment, benefits, facility, consultation, home, house, studio, pool, animation, transportation"> -->
 
-  <!-- SOCIAL MEDIA META -->
+  <!-- SOCIAL MEDIA META
   <meta property="og:description" content="Homepark | Real Estate & Luxury Homes">
   <meta property="og:image" content="http://www.themezinho.net/homepark/preview.png">
   <meta property="og:site_name" content="homepark">
   <meta property="og:title" content="homepark">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://www.themezinho.net/homepark">
-
-  <!-- TWITTER META -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@homepark">
-  <meta name="twitter:creator" content="@homepark">
-  <meta name="twitter:title" content="homepark">
-  <meta name="twitter:description" content="Homepark | Real Estate & Luxury Homes">
-  <meta name="twitter:image" content="http://www.themezinho.net/homepark/preview.png">
+  <meta property="og:url" content="http://www.themezinho.net/homepark"> -->
 
   <!-- FAVICON FILES -->
-  <link href="/ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon" sizes="144x144">
-  <link href="/ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon" sizes="114x114">
-  <link href="/ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon" sizes="72x72">
-  <link href="/ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon">
-  <link href="/ico/favicon.png" rel="shortcut icon">
+  <link rel="icon" href="/img/favicon.png">
+  <link rel="shortcut icon" href="/img/favicon.png">
 
   <!-- CSS FILES -->
   <link rel="stylesheet" href="/css/fontawesome.min.css">
@@ -78,23 +67,16 @@
     <figure> <img src="/img/logo-4.png" alt="Image"> </figure>
     <p>Архитектурно-строительная компания Baitun Project занимается проектированием и строительством объектов от подготовки и сопровождения разрешительной документации до сдачи готового объекта под ключ.</p>
     <ul class="gallery">
-      <li><a href="/img/gallery-thumb01.jpg" data-fancybox><img src="/img/gallery-thumb01.jpg" alt="Image"></a></li>
-      <li><a href="/img/gallery-thumb01.jpg" data-fancybox><img src="/img/gallery-thumb01.jpg" alt="Image"></a></li>
-      <li><a href="/img/gallery-thumb01.jpg" data-fancybox><img src="/img/gallery-thumb01.jpg" alt="Image"></a></li>
+      <li><a href="http://127.0.0.1:8000/img/products/1/1568306933/image-05d7a79f7d6084-proektirovanie-biznes-tsentrov.jpg" data-fancybox><img src="http://127.0.0.1:8000/img/products/1/1568306933/preview-image-05d7a79f7d6084-proektirovanie-biznes-tsentrov.jpg" alt="Image"></a></li>
+      <li><a href="http://127.0.0.1:8000/img/products/1/1568308624/image-05d7a7edee744f-proektirovanie-chastnykh-domov.jpg" data-fancybox><img src="http://127.0.0.1:8000/img/products/1/1568308624/preview-image-05d7a7edee744f-proektirovanie-chastnykh-domov.jpg" alt="Image"></a></li>
+      <li><a href="http://127.0.0.1:8000/img/products/1/1568295200/image-05d7a7aa25b3db-proektirovanie-sportivnykh-kompleksov.jpg" data-fancybox><img src="http://127.0.0.1:8000/img/products/1/1568295200/preview-image-05d7a7aa25b3db-proektirovanie-sportivnykh-kompleksov.jpg" alt="Image"></a></li>
     </ul>
-    <address>
-    Kyiv | G. Stalingrada Avenue, 6 
-    Vilnius | Antakalnio St. 17
-    </address>
-    <h6>+380(98)298-59-73</h6>
-    <p><a href="#">hello@homepark.com.ua</a></p>
-    <ul class="social-media">
-      <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-      <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-      <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-      <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-    </ul>
+    <address>Казахстан, г.Шымкент, ул.Конаева 3/3 2-этаж</address>
+    <h6><a href="tel:+77750450008" class="text-white">+7(775)045-00-08</a></h6>
+    <p>
+      Email: <a href="mailto:info@baitun.kz">info@baitun.kz</a><br>
+      Instagram: <a href="https://www.instagram.com/baitunproject/" class="text-white">@Baitunproject</a>
+    </p>
     <small>© <?= date('Y') ?> Baitun Project | Все права зарезервированы</small>
   </div>
 </div>
@@ -105,8 +87,8 @@
       <div class="logo"> <a href="/"><img src="/img/logo-4.png" alt="Image"></a> </div>
       <div class="phone-email mr-5">
         <img src="/img/icon-phone.png" alt="Image">
-        <h4>+7(775)045-00-08</h4>
-        <small><a href="#">info@baitun.kz</a></small>
+        <h4><a href="tel:+77750450008" class="text-white">+7(775)045-00-08</a></h4>
+        <small><a href="mailto:info@baitun.kz">info@baitun.kz</a></small>
       </div>
       <!-- <div class="language"> <a href="#">EN</a> <a href="#">UA</a> </div> -->
       <div class="hamburger"> <span></span> <span></span> <span></span><span></span> </div>
@@ -146,6 +128,33 @@
 <!-- Content -->
 @yield('content')
 
+<!-- MODAL MESSAGE -->
+<div class="modal fade" id="message-status" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title text-center text-uppercase">Статус заявки</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <p class="alert {{ session('status') }}">{{ session('message') }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT BUTTONS -->
+<div class="fixed-button">
+  <a href="whatsapp://send?phone=+77750450008" target="_top" data-attr="whatsapp_call">
+    <img src="/img/whatsapp-logo.png">
+  </a>
+</div>
+<div class="fixed-button2">
+  <a href="tel:+77750450008" target="_top" data-attr="phone">
+    <img src="/img/phone-receiver.png">
+  </a>
+</div>
+
 <!-- Footer Bar -->
 <section class="footer-bar">
   <div class="container">
@@ -154,19 +163,21 @@
         <div class="col-lg-4">
           <figure><img src="/img/footer-icon01.png" alt="Image"></figure>
           <h3>Мы находимся</h3>
-          <p>Kyiv | G. Stalingrada Avenue, 6 <br>
-            Vilnius | Antakalnio St. 17</p>
+          <p>Казахстан, г.Шымкент, ул.Конаева 3/3 2-этаж</p>
         </div>
         <div class="col-lg-4">
           <figure><img src="/img/footer-icon02.png" alt="Image"></figure>
           <h3>График работы</h3>
-          <p>Monday to Friday <strong>09:00</strong> to <strong>18:30</strong> <br>
-            Saturday we work until <strong>15:30</strong></p>
+          <p>Пн, Ср, Пт. <strong>09:00</strong> - <strong>20:00</strong> <br>
+            Вт, Чт, Сб. <strong>09:00</strong> - <strong>18:00</strong></p>
         </div>
         <div class="col-lg-4">
           <figure><img src="/img/footer-icon03.png" alt="Image"></figure>
           <h3>Наши контакты</h3>
-          <p>+7(777)99988777<br>info@baitun.kz</p>
+          <p>
+            <a href="tel:+77750450008" class="text-white">+7(775)045-00-08</a><br>
+            <a href="mailto:info@baitun.kz" class="text-white">info@baitun.kz</a>
+          </p>
         </div>
       </div>
     </div>
@@ -221,17 +232,11 @@
         </ul>
       </div>
       <div class="col-lg-3">
-        <div class="contact-box">
+        <div class="contact-box- text-white">
           <h5 class="color-gold">CALL CENTER</h5>
-          <h3>+7(775)045-00-08</h3>
-          <p><a href="#">info@baitun.kz</a></p>
-          <ul>
-            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-          </ul>
+          <h3><a href="tel:+77750450008" class="text-white">+7(775)045-00-08</a></h3>
+          <p>Email: <a href="mailto:info@baitun.kz" class="text-white">info@baitun.kz</a><br>
+            Instagram: <a href="https://www.instagram.com/baitunproject/" class="text-white">@Baitunproject</a></p>
         </div>
       </div>
       <div class="col-12">
@@ -254,5 +259,11 @@
 <script src="/js/jquery.stellar.js"></script> 
 <script src="/js/isotope.min.js"></script> 
 <script src="/js/scripts.js"></script>
+<!-- Message Status -->
+@if (session('status'))
+  <script type="text/javascript">
+    $('#message-status').modal('show');
+  </script>
+@endif
 </body>
 </html>

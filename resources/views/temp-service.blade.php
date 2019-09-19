@@ -193,6 +193,60 @@
           </figcaption>
         </figure>
       </div>
+
+
+      <div class="col-md-6 col-sm-6">
+        <div class="card">
+          <div class="image-cover">
+            <img src="/img/services/service-1a.jpg" class="img-fluid">
+          </div>
+          <div class="card-content">
+            <h2 class="h1">Сопровождение Документации</h2>
+            <h5 class="card-text">Специалисты компании Baitun Project возьмут на себя оформление всех необходимых бумаг для строительство</h5>
+            <a href="#" class="btn btn-outline-brown btn-lg mb-1">Подробнее</a>
+            <a href="#" class="btn btn-outline-brown btn-lg mb-1" data-toggle="modal" data-target="#appForm">Заказать</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <div class="card">
+          <div class="image-cover">
+            <img src="/img/services/service-2a.jpg" class="img-fluid">
+          </div>
+          <div class="card-content">
+            <h2 class="h1">Архитектурное Проектирование</h2>
+            <h5 class="card-text">Разработаем и согласуем проект любого строительства: от жилого дома до автомагистрали</h5>
+            <a href="#" class="btn btn-outline-brown btn-lg mb-1">Подробнее</a>
+            <a href="#" class="btn btn-outline-brown btn-lg mb-1" data-toggle="modal" data-target="#appForm">Заказать</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <div class="card">
+          <div class="image-cover">
+            <img src="/img/services/service-3a.jpeg" class="img-fluid">
+          </div>
+          <div class="card-content">
+            <h2 class="h1">Строительство Объектов</h2>
+            <h5 class="card-text">Выполняем все виды строительных работ под ключ. Строим по проектам заказчика и реализуем собственные проекты</h5>
+            <a href="#" class="btn btn-outline-brown btn-lg mb-1">Подробнее</a>
+            <a href="#" class="btn btn-outline-brown btn-lg mb-1" data-toggle="modal" data-target="#appForm">Заказать</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <div class="card">
+          <div class="image-cover">
+            <img src="/img/services/service-4a.jpg" class="img-fluid">
+          </div>
+          <div class="card-content">
+            <h2 class="h1">Дизайн Интерьера</h2>
+            <h5 class="card-text">Разработаем и оформим стильный и красивый интерьер: с учетом ваших пожеланий и с соблюдением всех норм</h5>
+            <a href="#" class="btn btn-outline-brown btn-lg mb-1">Подробнее</a>
+            <a href="#" class="btn btn-outline-brown btn-lg mb-1" data-toggle="modal" data-target="#appForm">Заказать</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -248,6 +302,92 @@
   </div>
   <div class="container-fluid">
     <div class="row no-gutters">
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+        <div class="card">
+          <div class="image-cover">
+            <img src="/img/projects/6.jpg" class="img-fluid">
+          </div>
+          <div class="card-img-overlay">
+            <h3 class="card-title">Проектирование<br> спортивных комплексов</h3>
+            <div class="card-action">
+              <h5 class="card-text">Продумываем удобные объекты для спорта</h5>
+              <a href="#" class="btn btn-outline-brown btn-lg">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+        <div class="card">
+          <div class="image-cover">
+            <img src="/img/projects/05.jpg" class="img-fluid">
+          </div>
+          <div class="card-img-overlay">
+            <h3 class="card-title">Проектирование<br> бизнес-центров</h3>
+            <div class="card-action">
+              <h5 class="card-text">Воплощаем идеальный образ делового мира</h5>
+              <a href="#" class="btn btn-outline-brown btn-lg">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+        <div class="card">
+          <div class="image-cover">
+            <img src="/img/projects/03.jpg" class="img-fluid">
+          </div>
+          <div class="card-img-overlay">
+            <h3 class="card-title">Проектирование<br> частных домов</h3>
+            <div class="card-action">
+              <h5 class="card-text">Придаем форму вашим мечтам</h5>
+              <a href="#" class="btn btn-outline-brown btn-lg">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+        <div class="card">
+          <div class="image-cover">
+            <img src="/img/projects/3.jpg" class="img-fluid">
+          </div>
+          <div class="card-img-overlay">
+            <h3 class="card-title">Проектирование<br> учебных центров</h3>
+            <div class="card-action">
+              <h5 class="card-text">Создаем будущее новому поколению</h5>
+              <a href="#" class="btn btn-outline-brown btn-lg">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+        <div class="card">
+          <div class="image-cover">
+            <img src="/img/projects/1.jpg" class="img-fluid">
+          </div>
+          <div class="card-img-overlay">
+            <h3 class="card-title">Проектирование<br> ЖК</h3>
+            <div class="card-action">
+              <h5 class="card-text">Моделируем пространства для современной жизни</h5>
+              <a href="#" class="btn btn-outline-brown btn-lg">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+        <div class="card">
+          <div class="image-cover">
+            <img src="/img/projects/00.jpg" class="img-fluid">
+          </div>
+          <div class="card-img-overlay">
+            <h3 class="card-title">Проектирование<br> интерьеров</h3>
+            <div class="card-action">
+              <h5 class="card-text">Преображаем пространства, создаём уникальный декор</h5>
+              <a href="#" class="btn btn-outline-brown btn-lg">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
       <div class="col-12 col-sm-6 col-md-6 col-lg-4">
         <div class="card">
           <div class="image-cover">

@@ -16,4 +16,9 @@ class AdminController extends Controller
     {
     	return view('joystick-admin.filemanager');
     }
+
+    public function frameFilemanager()
+    {
+    	return view('joystick-admin.frame-filemanager');
+    }
 }

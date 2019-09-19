@@ -201,7 +201,7 @@
 /* Section services 2 */
 .section-services-2 {
   width: 100%;
-  padding: 100px 0;
+  padding: 100px 0 0;
 }
 .section-services-2 .card {
   position: relative;
@@ -278,6 +278,7 @@
   display: flex;
   flex-wrap: wrap;
   position: relative;
+  padding-top: 100px;
   z-index: 2;
 }
 .intro figure {
@@ -423,5 +424,55 @@
 
   .intro .content-box {
     padding-left: 0;
+  }
+}
+/* ------------------------------------------------------------------------ */
+/*  FIXED BUTTON
+/* ------------------------------------------------------------------------ */
+.fixed-button ,
+.fixed-button2 {
+  display: none;
+}
+@media (max-width: 480px) {
+
+  .fixed-button ,
+  .fixed-button2 {
+    display: block;
+    position: fixed;
+    z-index: 2000;
+    bottom: 20px;
+  }
+  .fixed-button {
+    right: 15px;
+  }
+  .fixed-button2 {
+    right: 75px;
+  }
+  .fixed-button a,
+  .fixed-button2 a {
+    display: block;
+    font-size: 22px;
+    text-align: center;
+    padding: 10px 14px;
+    color: #fff;
+    /*text-indent: -9999px;*/
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    -webkit-transition: 0.2s all linear;
+    -moz-transition: 0.2s all linear;
+    -o-transition: 0.2s all linear;
+    transition: 0.2s all linear;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+  }
+  .fixed-button a {
+    background-color: #28a745;
+    background: linear-gradient(135deg, #4dc368, #28a745);
+  }
+  .fixed-button2 a {
+    /*background-color: #5F58FA;
+    background: linear-gradient(135deg, #5F58FA, #a777e3);*/
+    background-color: #28a745;
+    background: linear-gradient(135deg, #4dc368, #28a745);
   }
 }
