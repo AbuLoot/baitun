@@ -78,8 +78,12 @@
             <div class="card-content">
               <h2 class="h1">{{ $page_service->title }}</h2>
               <h5 class="card-text">{{ $page_service->headline }}</h5>
-              <a href="/uslugi/{{ $page_service->slug }}" class="btn btn-outline-brown btn-lg mb-1">Подробнее</a>
-              <button type="button" class="btn btn-outline-brown btn-lg mb-1" data-toggle="modal" data-target="#appForm">Заказать</button>
+              <!-- <a href="/uslugi/{{ $page_service->slug }}" class="btn btn-outline-brown btn-lg- mb-1">Подробнее</a> -->
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <a href="/uslugi/{{ $page_service->slug }}" class="btn btn-outline-brown btn-lg mb-1">Подробнее</a>
+                <button type="button" class="btn btn-outline-brown btn-lg mb-1" data-toggle="modal" data-target="#appForm">Заказать</button>
+                <!-- <button type="button" class="btn  btn-outline-brown">Right</button> -->
+              </div>
             </div>
           </div>
         </div>
