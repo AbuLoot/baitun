@@ -48,6 +48,7 @@ theme.
 
 /* GOOGLE FONTS */
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display|Comfortaa:400,600,800&display=swap&subset=cyrillic');
+/*@import url('https://fonts.googleapis.com/css?family=Cuprum:400,700|Tinos:400,700&display=swap&subset=cyrillic');*/
 
 /* BODY */
 * {
@@ -917,7 +918,6 @@ textarea {
   padding-left: 50px;
 }
 .slider .slider-container .swiper-slide .container h1 {
-
   color: #fff;
   font-family: "Playfair Display", serif;
   color: #ebcfa7;

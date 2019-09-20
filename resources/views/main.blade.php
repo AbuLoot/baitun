@@ -12,8 +12,8 @@
     <div class="swiper-wrapper">
       <div class="swiper-slide" data-background="/img/bg/1.jpg" >
         <div class="container">
-          <h1 class="text-capitalize">Проектируем престижную Архитектуру</h1>
-          <h2 class="font-brand text-capitalize">Архитектура которую хочется воплотить</h2><br>
+          <h1 class="text-uppercase">Проектируем престижную Архитектуру</h1>
+          <h2>Архитектура которую хочется воплотить</h2><br>
           <a class="btn-native" href="#" data-toggle="modal" data-target="#appForm">ЗАКАЗАТЬ УСЛУГУ <i class="fas fa-caret-right"></i></a>
         </div>
       </div>
@@ -64,7 +64,7 @@
 <!-- Services 2 -->
 <section class="section-services-2">
   <div class="container">
-    <div class="row">
+    <div class="row no-gutters-">
       <div class="col-12">
         <h2 class="h1 font-brand text-center">Какие <span class="color-brown">Услуги</span> мы оказываем?</h2>
         <small>&nbsp;</small>
@@ -76,7 +76,7 @@
               <img src="/filemanager/{{ $page_service->icon }}" class="img-fluid">
             </div>
             <div class="card-content">
-              <h2 class="h1">{{ $page_service->title }}</h2>
+              <h2 class="h1 text-center mb-5">{{ $page_service->title }}</h2>
               <h5 class="card-text">{{ $page_service->headline }}</h5>
               <div class="btn-group" role="group" aria-label="Basic example">
                 <a href="/uslugi/{{ $page_service->slug }}" class="btn btn-outline-brown btn-lg- mb-1">Подробнее</a>

@@ -24,8 +24,9 @@ class PageController extends Controller
     public function services($slug)
     {
         $page = Page::where('slug', $slug)->first();
+        $page_services = Page::where('parent_id', 2)->whereNotIn('id', [$page->id])->get();
 
-        return view('service-'.$page->id)->with('page', $page);
+        return view('service-'.$page->id, ['page' => $page, 'page_services' => $page_services]);
     }
 
     public function projects()

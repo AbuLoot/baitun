@@ -36,7 +36,7 @@
   <div class="layer"></div>
   <div class="inner">
     <figure><img src="/img/preloader.gif" alt="Image"></figure>
-    <p><span class="text-rotater" data-text="Homepark | Elements | Loading">Загрузка</span></p>
+    <p><span class="text-rotater" data-text="Baitun | Проекты | Загрузка">Загрузка</span></p>
   </div>
 </div>
 <div class="transition-overlay">
@@ -144,7 +144,7 @@
 </div>
 
 <!-- CONTACT BUTTONS -->
-<div class="fixed-button">
+<!-- <div class="fixed-button">
   <a href="whatsapp://send?phone=+77750450008" target="_top" data-attr="whatsapp_call">
     <img src="/img/whatsapp-logo.png">
   </a>
@@ -153,7 +153,7 @@
   <a href="tel:+77750450008" target="_top" data-attr="phone">
     <img src="/img/phone-receiver.png">
   </a>
-</div>
+</div> -->
 
 <!-- Footer Bar -->
 <section class="footer-bar">
@@ -246,7 +246,28 @@
     </div>
   </div>
 </footer>
-
+<!-- WhatsHelp.io widget -->
+<script type="text/javascript">
+    (function () {
+        var options = {
+            whatsapp: "+7(775)045-00-08", // WhatsApp number
+            telegram: "+7(775)045-00-08", // Telegram bot username
+            email: "info@baitun.kz", // Email
+            call: "+7(775)045-00-08", // Call phone number
+            company_logo_url: "//static.whatshelp.io/img/flag.png", // URL of company logo (png, jpg, gif)
+            greeting_message: "Здравствуйте! Отправьте нам сообщение через любой из мессенджеров.", // Text of greeting message
+            call_to_action: "Напишите нам", // Call to action
+            button_color: "#129BF4", // Color of button
+            position: "right", // Position may be 'right' or 'left'
+            order: "whatsapp,telegram,email,call", // Order of buttons
+        };
+        var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    })();
+</script>
+<!-- /WhatsHelp.io widget -->
 <!-- JS FILES --> 
 <script src="/js/jquery.min.js"></script> 
 <script src="/js/popper.min.js"></script> 
