@@ -28,39 +28,6 @@
   </div>
 </header>
 
-<!-- Modal App -->
-<div class="modal fade" id="appForm" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content text-white-">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <h3 class="font-brand">Хотите чтобы мы позвонили Вам? Тогда оставьте заявку!</h3>
-      <!-- <h3>Давайте его обсудем!</h3> -->
-      <form action="/send-app" name="contact" method="post">
-        @csrf
-        <div class="form-group">
-          <span>Ваше имя</span>
-          <input type="text" name="name" id="name" minlength="2" maxlength="40" autocomplete="off" required>
-        </div>
-        <div class="form-group"> 
-          <span>Введите номер телефона</span>
-          <input type="tel" pattern="(\+?\d[- .]*){7,13}" name="phone" minlength="5" maxlength="20" required>
-        </div>
-        <div class="form-group"> 
-          <span>Комментарии</span>
-          <textarea name="message" id="message" autocomplete="off" required></textarea>
-        </div>
-        <div class="form-group"><br>
-          <button type="submit" name="submit" class="btn btn-black btn-lg btn-block">Оставить заявку <i class="fas fa-caret-right"></i></button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-
 <!-- Services 2 -->
 <section class="section-services-2">
   <div class="container">
