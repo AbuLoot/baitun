@@ -33,7 +33,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h2 class="h1">Галлерея</h2>
+        <h2>Галлерея</h2>
         <ul class="gallery">
           <?php foreach ($images as $image) : ?>
             <li><a href="/img/products/{{ $product->path.'/'.$image['image'] }}" data-fancybox><img src="/img/products/{{ $product->path.'/'.$image['present_image'] }}" alt="Image"></a></li>

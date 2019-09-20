@@ -35,7 +35,7 @@
         <?php $traverse($categories); ?>
       </select>
     </div>
-    <div class="form-group">
+    <div class="form-group" id="gallery">
       <label for="company_id">Компания</label>
       <select id="company_id" name="company_id" class="form-control">
         <option value=""></option>
