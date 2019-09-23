@@ -25,16 +25,16 @@
           <h4>Наши <span>Контакты</span></h4>
           <small>&nbsp;</small>
         </div>
-        <div class="col-lg-3 col-md-6 wow fadeInUp"> 
+        <div class="col-lg-3 col-md-6"> 
           <address>
             <h4>Посетите нас</h4>
             <p>Казахстан, г.Шымкент, ул.Конаева 3/3 2-этаж</p>
           </address>
         </div>
-        <div class="col-lg-3 col-md-6 wow fadeInUp"> 
+        <div class="col-lg-3 col-md-6"> 
           <address>
             <h4>Скажите Алло</h4>
-            <p><a href="mailto:info@baitun.kz">info@baitun.kz</a><br> <a href="tel:+77750450008">+7(775)045-00-08</a></p>
+            <p><a href="tel:+77750450008">+7(775)045-00-08</a><br> <a href="mailto:info@baitun.kz">info@baitun.kz</a></p>
           </address>
         </div>
       </div>
@@ -44,7 +44,6 @@
             <div class="pattern-bg" data-stellar-ratio="1.03"></div>
             <div class="holder" data-stellar-ratio="1.07">
               <iframe src="https://yandex.ua/map-widget/v1/?um=constructor%3A01ff02ba49cfc0d873672fcc55f7e1b6a8303ad8e2c900a9b97e80e475494bad&amp;source=constructor" width="100%" height="665" frameborder="0"></iframe>
-              <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.2378765886474!2d-73.97644805915624!3d40.69075842971381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25bb6c6fe52c7%3A0x2b3bb16e97b13c01!2sFort+Greene+Tennis+Courts!5e0!3m2!1sen!2str!4v1559831164025!5m2!1sen!2str" allowfullscreen></iframe> -->
             </div>
           </div>
         </div>

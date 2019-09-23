@@ -6,71 +6,144 @@
 
 
 @section('content')
-<!-- Slider -->
+
+<!-- Slider
 <header class="slider">
   <div class="slider-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide" data-background="/img/bg/1.jpg" >
+      <div class="swiper-slide" data-background="/filemanager/{{ $page->icon }}" >
         <div class="container">
           <h1 class="text-uppercase">Проектируем престижную Архитектуру</h1>
           <h2>Архитектура которую хочется воплотить</h2><br>
           <a class="btn-native" href="#" data-toggle="modal" data-target="#appForm">ЗАКАЗАТЬ УСЛУГУ <i class="fas fa-caret-right"></i></a>
         </div>
       </div>
-      <!-- <div class="swiper-slide" data-background="/img/slide02.jpg" data-stellar-background-ratio="1">
-        <div class="container">
-          <h1><span>Oxøme</span> Premium Flats</h1>
-          <h2>Provide a decent level of comfort </h2>
-          <a href="#">GET A CONSULTATION <i class="fas fa-caret-right"></i></a>
-        </div>
-      </div> -->
     </div>
+  </div>
+</header> -->
+
+<header class="page-header bg-main" data-background="/filemanager/{{ $page->icon }}" data-stellar-background-ratio="1.15">
+  <div class="container">
+    <h1 class="text-uppercase">Проектируем престижную Архитектуру</h1>
+    <h2 class="text-white">Архитектура которую хочется воплотить</h2><br>
+    <a class="btn-native text-white" href="#" data-toggle="modal" data-target="#appForm">ЗАКАЗАТЬ УСЛУГУ <i class="fas fa-caret-right"></i></a>
   </div>
 </header>
 
-<!-- Services 2 -->
-<section class="section-services-2">
-  <div class="container">
-    <div class="row no-gutters-">
-      <div class="col-12">
-        <h2 class="h1 font-brand text-center">Какие <span class="color-brown">Услуги</span> мы оказываем?</h2>
-        <small>&nbsp;</small>
-      </div>
-      <?php foreach ($page_services as $page_service) : ?>
-        <div class="col-md-6 col-sm-6">
-          <div class="card">
-            <div class="image-cover">
-              <img src="/filemanager/{{ $page_service->icon }}" class="img-fluid">
-            </div>
-            <div class="card-content">
-              <h2 class="h1 text-center mb-5">{{ $page_service->title }}</h2>
-              <h5 class="card-text">{{ $page_service->headline }}</h5>
-              <div class="btn-group" role="group" aria-label="Basic example">
-                <a href="/uslugi/{{ $page_service->slug }}" class="btn btn-outline-brown btn-lg- mb-1">Подробнее</a>
-                <button type="button" class="btn btn-outline-brown btn-lg- mb-1" data-toggle="modal" data-target="#appForm">Заказать</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      <?php endforeach; ?>
-    </div>
-  </div>
-</section>
-
-<!-- App Form -->
+<!-- Service 1 -->
 <section class="intro">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6">
-        <div class="content-box">
-          <h2 class="font-brand color-brown- ">Если вы готовы заказать проект, строительство или вам нужна консультация специалиста, звоните по телефону <a href="tel:+77750450008" class="text-white-">+7(775)045-00-08</a>. Или оставьте заявку через форму и мы перезвоним вам в течение дня.</h2>
-          <!-- <h2 class="font-brand color-brown- "><span class="display-4 font-brand  text-center color-brown"></span> Закажите <span class="color-brown">Проектирование Архитектуры</span> и получите бесплатно на&nbsp;выбор Сопровождение Документации или&nbsp;же Авторский Надзор</h2> -->
-        </div>
+        <figure>
+          <div class="pattern-bg" data-stellar-ratio="1.07"></div>
+          <div class="holder" data-stellar-ratio="1.10">
+            <img src="/filemanager/{{ $page_services[0]->icon }}" alt="{{ $page_services[0]->title }}">
+          </div>
+        </figure>
       </div>
       <div class="col-lg-6">
+        <div class="content-box">
+          <!-- <b>01</b> -->
+          <h4 class="h1">{{ $page_services[0]->title }}</h4>
+          {{ $page_services[0]->short_description }}
+          <div class="btn-group" role="group" aria-label="Service">
+            <a href="/uslugi/{{ $page_services[0]->slug }}" class="btn btn-outline-brown btn-lg mb-1">Подробнее</a>
+            <button type="button" class="btn btn-outline-brown btn-lg mb-1" data-toggle="modal" data-target="#appForm">Заказать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service 2 -->
+<section class="intro pt-100">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 order-md-2">
         <figure>
-          <div class="pattern-bg" -data-stellar-ratio="1.07"></div>
-          <div class="holder" -data-stellar-ratio="1.10">
+          <div class="pattern-bg right-pattern-bg" data-stellar-ratio="1.07"></div>
+          <div class="holder right-holder" data-stellar-ratio="1.10">
+            <img src="/filemanager/{{ $page_services[1]->icon }}" alt="{{ $page_services[1]->title }}">
+          </div>
+        </figure>
+      </div>
+      <div class="col-lg-6 order-md-1"> 
+        <div class="content-box">
+          <h4>{{ $page_services[1]->title }}</h4>
+          {{ $page_services[1]->short_description }}
+          <div class="btn-group" role="group" aria-label="Service">
+            <a href="/uslugi/{{ $page_services[1]->slug }}" class="btn btn-outline-brown btn-lg mb-1">Подробнее</a>
+            <button type="button" class="btn btn-outline-brown btn-lg mb-1" data-toggle="modal" data-target="#appForm">Заказать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service 3 -->
+<section class="property-calculator pt-100">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 order-sm--1">
+        <figure>
+          <div class="pattern-bg" data-stellar-ratio="1.03"></div>
+          <div class="holder" data-stellar-ratio="1.07">
+            <img src="/filemanager/{{ $page_services[2]->icon }}" alt="{{ $page_services[2]->title }}">
+          </div>
+        </figure>
+      </div>
+      <div class="col-lg-6 order-sm--2">
+        <div class="content-box">
+          <h4>{{ $page_services[2]->title }}</h4>
+          {{ $page_services[2]->short_description }}
+          <div class="btn-group" role="group" aria-label="Service">
+            <a href="/uslugi/{{ $page_services[2]->slug }}" class="btn btn-outline-brown btn-lg mb-1">Подробнее</a>
+            <button type="button" class="btn btn-outline-brown btn-lg mb-1" data-toggle="modal" data-target="#appForm">Заказать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service 4 -->
+<section class="intro pt-100">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 order-md-2">
+        <figure>
+          <div class="pattern-bg right-pattern-bg" data-stellar-ratio="1.07"></div>
+          <div class="holder right-holder" data-stellar-ratio="1.10">
+            <img src="/filemanager/{{ $page_services[3]->icon }}" alt="{{ $page_services[3]->title }}">
+          </div>
+        </figure>
+      </div>
+      <div class="col-lg-6 order-md-1"> 
+        <div class="content-box">
+          <h4>{{ $page_services[3]->title }}</h4>
+          {{ $page_services[3]->short_description }}
+          <div class="btn-group" role="group" aria-label="Service">
+            <a href="/uslugi/{{ $page_services[3]->slug }}" class="btn btn-outline-brown btn-lg mb-1">Подробнее</a>
+            <button type="button" class="btn btn-outline-brown btn-lg mb-1" data-toggle="modal" data-target="#appForm">Заказать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- App Form -->
+<section class="intro pt-100">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <figure>
+          <div class="pattern-bg -right-pattern-bg" -data-stellar-ratio="1.07"></div>
+          <div class="holder -right-holder" -data-stellar-ratio="1.10">
             <div class="app-form">
               <h3 class="font-brand">Хотите чтобы мы позвонили Вам? Тогда оставьте заявку!</h3>
               <form action="/send-app" name="contact" method="post">
@@ -91,9 +164,44 @@
           </div>
         </figure>
       </div>
+      <div class="col-lg-6">
+        <div class="content-box">
+          <h2 class="font-brand color-brown- ">Если вы готовы заказать проект, строительство или вам нужна консультация специалиста, звоните по телефону <a href="tel:+77750450008" class="text-white-">+7(775)045-00-08</a>. Или оставьте заявку через форму и мы перезвоним вам в течение дня.</h2>
+          <!-- <h2 class="font-brand color-brown- "><span class="display-4 font-brand  text-center color-brown"></span> Закажите <span class="color-brown">Проектирование Архитектуры</span> и получите бесплатно на&nbsp;выбор Сопровождение Документации или&nbsp;же Авторский Надзор</h2> -->
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- Services 2
+<section class="section-services-2">
+  <div class="container">
+    <div class="row no-gutters-">
+      <div class="col-12">
+        <h2 class="h1 font-brand text-center">Какие <span class="color-brown">Услуги</span> мы оказываем?</h2>
+        <small>&nbsp;</small>
+      </div>
+      <?php foreach ($page_services as $page_service) : ?>
+        <div class="col-md-6 col-sm-6">
+          <div class="card">
+            <div class="image-cover">
+              <img src="/filemanager/{{ $page_service->icon }}" class="img-fluid">
+            </div>
+            <div class="card-content">
+              <h2 class="h1 text-center mb-5">{{ $page_service->title }}</h2>
+              <h5 class="card-text">{{ $page_service->headline }}</h5>
+              <div class="btn-group" role="group" aria-label="Service">
+                <a href="/uslugi/{{ $page_service->slug }}" class="btn btn-outline-brown btn-lg- mb-1">Подробнее</a>
+                <button type="button" class="btn btn-outline-brown btn-lg- mb-1" data-toggle="modal" data-target="#appForm">Заказать</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section> -->
 
 <!-- What we can? -->
 <section class="what-we-can">
@@ -115,7 +223,7 @@
               <h3 class="card-title">{{ $product->title }}</h3>
               <div class="card-action">
                 <h5 class="card-text">{{ $product->title_extra }}</h5>
-                <a href="/p/{{ $product->slug }}" class="btn btn-outline-brown btn-lg">Подробнее</a>
+                <a href="/p/{{ $product->slug }}" class="btn btn-outline-brown text-white btn-lg-">Подробнее</a>
               </div>
             </div>
           </div>

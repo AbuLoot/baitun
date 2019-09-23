@@ -17,7 +17,7 @@
   </div>
 </header>
 
-<section class="projects-section">
+<section class="pt-100">
   <div class="container">
     <div class="row">
       <div class="col-md-8">

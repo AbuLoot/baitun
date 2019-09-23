@@ -18,7 +18,7 @@
     </div>
   </header>
 
-  <section class="custom-content">
+  <section class="pt-100">
     <div class="container">
       <div class="row">
         <div class="col-md-9">

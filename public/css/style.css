@@ -705,7 +705,7 @@ textarea {
   flex-wrap: wrap;
   padding: 20px 0;
   align-items: center;
-  transform: translateY(-80px);
+/*  transform: translateY(-80px);
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -713,7 +713,7 @@ textarea {
   -webkit-transition-duration: 700ms;
   transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
   -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
-  transition-delay: 1.2s;
+  transition-delay: 1.2s;*/
 }
 .navbar .container .upper-side .logo {
   margin-left: 0;
@@ -780,14 +780,14 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
-  -webkit-transition: all 0.5s ease;
+  /*-webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease;
   transition-duration: 700ms;
   -webkit-transition-duration: 700ms;
   transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
   -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
-  transition-delay: 1.4s;
+  transition-delay: 1.4s;*/
   opacity: 0;
 }
 .navbar .container .menu ul {
@@ -1396,13 +1396,12 @@ textarea {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 150px;
   margin-top: 100px;
   position: relative;
 }
 .property-calculator figure {
   display: inline-block;
-  margin-bottom: 0;
+  margin-bottom: 40px;
   margin-top: -20px;
   background: #ebcfa7;
   position: relative;
@@ -1415,6 +1414,18 @@ textarea {
   position: absolute;
   left: -50vw;
   top: 0;
+}
+.property-calculator figure:before {
+  content: "";
+  width: 50vw;
+  height: 100%;
+  background: #ebcfa7;
+  position: absolute;
+  left: -50vw;
+  top: 0;
+}
+.property-calculator figure.right-bg:before {
+  left: 0;
 }
 .property-calculator figure .pattern-bg {
   width: 120%;
@@ -3156,17 +3167,16 @@ a.btn-native:hover {
   }
 
   .property-calculator {
-    padding-bottom: 80px;
     margin-top: 0;
   }
 
-  .property-calculator .col-lg-6:nth-child(1) {
+  /*.property-calculator .col-lg-6:nth-child(1) {
     order: 2;
   }
 
   .property-calculator .col-lg-6:nth-child(2) {
     order: 1;
-  }
+  }*/
 
   .property-calculator figure {
     width: 100%;
@@ -3192,7 +3202,6 @@ a.btn-native:hover {
 
   .property-calculator .content-box {
     padding-left: 0;
-    margin-bottom: 150px;
   }
 
   .property-plans {

@@ -29,7 +29,7 @@
 </section>
 
 <!-- App Form -->
-<section class="intro mt-20">
+<section class="intro mt-20 pt-100">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6">

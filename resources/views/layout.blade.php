@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="/css/custom.css">
 </head>
 <body>
-<div class="preloader">
+<!-- <div class="preloader">
   <div class="layer"></div>
   <div class="inner">
     <figure><img src="/img/preloader.gif" alt="Image"></figure>
@@ -41,7 +41,7 @@
 </div>
 <div class="transition-overlay">
   <div class="layer"></div>
-</div>
+</div> -->
 
 <!-- Mobile nav -->
 <div class="side-navigation">
