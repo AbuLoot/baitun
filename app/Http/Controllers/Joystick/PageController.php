@@ -36,6 +36,7 @@ class PageController extends Controller
         $page->icon = $request->icon;
         $page->title_description = $request->title_description;
         $page->meta_description = $request->meta_description;
+        $page->short_description = $request->short_description;
         $page->content = $request->content;
         $page->lang = $request->lang;
         $page->status = ($request->status == 'on') ? 1 : 0;
@@ -76,6 +77,7 @@ class PageController extends Controller
         $page->icon = $request->icon;
         $page->title_description = $request->title_description;
         $page->meta_description = $request->meta_description;
+        $page->short_description = $request->short_description;
         $page->content = $request->content;
         $page->lang = $request->lang;
 
