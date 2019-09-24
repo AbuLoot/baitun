@@ -28,14 +28,14 @@
     <h2 class="text-white">Архитектура которую хочется воплотить</h2><br>
     <a class="btn-native text-white float-left" href="#" data-toggle="modal" data-target="#appForm">ЗАКАЗАТЬ УСЛУГУ <i class="fas fa-caret-right"></i></a>
 
-    <div class="social-media">
+    <!-- <div class="social-media">
       <h6>МЕДИА</h6>
       <ul>
         <li><a href="https://www.instagram.com/baitunproject/"><i class="fab fa-instagram"></i></a></li>
         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
         <li><a href="#"><i class="fab fa-youtube"></i></a></li>
       </ul>
-    </div>
+    </div> -->
   </div>
 </header>
 
@@ -335,29 +335,27 @@
 <section class="certificates">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-lg-4 col-md-12">
-        <h4 class="h1"><span>Наши</span> Лицензии</h4>
+      <div class="col-lg-12 col-md-12">
+        <h2 class="h1 text-center font-brand mb-5"><span class="color-brown">Нащи</span> Лицензии</h2>
         <!-- <small>Smaller male cones </small> -->
       </div>
       <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-        <figure> <a href="/filemanager/docs/Лицензия QA Engineering-Изыскательская деятельность-1-850.jpg" data-fancybox><img src="/filemanager/docs/Лицензия QA Engineering-Изыскательская деятельность-1-258.jpg" alt="Лицензия"></a> </figure>
+        <figure> <a href="/filemanager/docs/Лицензия QA Engineering-Изыскательская деятельность-1-500.jpg" data-fancybox><img src="/filemanager/docs/Лицензия QA Engineering-Изыскательская деятельность-1-258.jpg" alt="Лицензия"></a> </figure>
       </div>
       <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-        <figure> <a href="/filemanager/docs/Лицензия QA Engineering-Изыскательская деятельность-2-850.jpg" data-fancybox><img src="/filemanager/docs/Лицензия QA Engineering-Изыскательская деятельность-2-258.jpg" alt="Лицензия"></a> </figure>
+        <figure> <a href="/filemanager/docs/Лицензия QA Engineering-Изыскательская деятельность-2-500.jpg" data-fancybox><img src="/filemanager/docs/Лицензия QA Engineering-Изыскательская деятельность-2-258.jpg" alt="Лицензия"></a> </figure>
       </div>
       <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-        <figure> <a href="/filemanager/docs/Лицензия QA Engineering -Проектная деятельность II категория-1-850.jpg" data-fancybox><img src="/filemanager/docs/Лицензия QA Engineering -Проектная деятельность II категория-1-258.jpg" alt="Лицензия"></a> </figure>
+        <figure> <a href="/filemanager/docs/Лицензия QA Engineering -Проектная деятельность II категория-1-500.jpg" data-fancybox><img src="/filemanager/docs/Лицензия QA Engineering -Проектная деятельность II категория-1-258.jpg" alt="Лицензия"></a> </figure>
       </div>
       <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-        <figure> <a href="/filemanager/docs/Лицензия QA Engineering -Проектная деятельность II категория-2-850.jpg" data-fancybox><img src="/filemanager/docs/Лицензия QA Engineering -Проектная деятельность II категория-2-258.jpg" alt="Лицензия"></a> </figure>
+        <figure> <a href="/filemanager/docs/Лицензия QA Engineering -Проектная деятельность II категория-2-500.jpg" data-fancybox><img src="/filemanager/docs/Лицензия QA Engineering -Проектная деятельность II категория-2-258.jpg" alt="Лицензия"></a> </figure>
       </div>
-
-      <div class="col-lg-4 col-md-12"></div>
-      <div class="col-lg-2 col-md-3 col-sm-6 col-6 mt-4">
-        <figure> <a href="/filemanager/docs/Лицензия QA Engineering -Проектная деятельность II категория-3-850.jpg" data-fancybox><img src="/filemanager/docs/Лицензия QA Engineering -Проектная деятельность II категория-3-258.jpg" alt="Лицензия"></a> </figure>
+      <div class="col-lg-2 col-md-3 col-sm-6 col-6 mt-4-">
+        <figure> <a href="/filemanager/docs/Лицензия QA Engineering -Проектная деятельность II категория-3-500.jpg" data-fancybox><img src="/filemanager/docs/Лицензия QA Engineering -Проектная деятельность II категория-3-258.jpg" alt="Лицензия"></a> </figure>
       </div>
-      <div class="col-lg-2 col-md-3 col-sm-6 col-6 mt-4">
-        <figure> <a href="/filemanager/docs/Лицензия QA Engineering -Проектная деятельность II категория-4-850.jpg" data-fancybox><img src="/filemanager/docs/Лицензия QA Engineering -Проектная деятельность II категория-4-258.jpg" alt="Лицензия"></a> </figure>
+      <div class="col-lg-2 col-md-3 col-sm-6 col-6 mt-4-">
+        <figure> <a href="/filemanager/docs/Лицензия QA Engineering -Проектная деятельность II категория-4-500.jpg" data-fancybox><img src="/filemanager/docs/Лицензия QA Engineering -Проектная деятельность II категория-4-258.jpg" alt="Лицензия"></a> </figure>
       </div>
     </div>
   </div>
