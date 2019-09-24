@@ -14,6 +14,14 @@
       <li class="breadcrumb-item"><a href="/">Главная</a></li>
       <li class="breadcrumb-item active" aria-current="page">{{ $product->title }}</li>
     </ol>
+    <div class="social-media">
+      <h6>МЕДИА</h6>
+      <ul>
+        <li><a href="https://www.instagram.com/baitunproject/"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+      </ul>
+    </div>
   </div>
 </header>
 

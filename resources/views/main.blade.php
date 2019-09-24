@@ -26,7 +26,16 @@
   <div class="container">
     <h1 class="text-uppercase">Проектируем престижную Архитектуру</h1>
     <h2 class="text-white">Архитектура которую хочется воплотить</h2><br>
-    <a class="btn-native text-white" href="#" data-toggle="modal" data-target="#appForm">ЗАКАЗАТЬ УСЛУГУ <i class="fas fa-caret-right"></i></a>
+    <a class="btn-native text-white float-left" href="#" data-toggle="modal" data-target="#appForm">ЗАКАЗАТЬ УСЛУГУ <i class="fas fa-caret-right"></i></a>
+
+    <div class="social-media">
+      <h6>МЕДИА</h6>
+      <ul>
+        <li><a href="https://www.instagram.com/baitunproject/"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+      </ul>
+    </div>
   </div>
 </header>
 
