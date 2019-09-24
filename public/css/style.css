@@ -1009,8 +1009,8 @@ textarea {
   width: 20px;
   position: absolute;
   right: 10px;
-  top: calc(0%);
-  transform: translateY(-50% + 60px);
+  top: calc(-10%);
+  /*transform: translateY(-50% + 60px);*/
   z-index: 4;
   text-align: center;
 }
