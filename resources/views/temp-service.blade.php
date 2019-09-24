@@ -6,6 +6,17 @@
 
 
 @section('content')
+<!-- <div class="preloader">
+  <div class="layer"></div>
+  <div class="inner">
+    <figure><img src="/img/preloader.gif" alt="Image"></figure>
+    <p><span class="text-rotater" data-text="Baitun | Проекты | Загрузка">Загрузка</span></p>
+  </div>
+</div>
+<div class="transition-overlay">
+  <div class="layer"></div>
+</div> -->
+
 <!-- Slider -->
 <header class="slider">
   <div class="slider-container">
@@ -136,6 +147,35 @@
     </div>
   </div>
 </section>
+
+<!-- Services 2
+<section class="section-services-2">
+  <div class="container">
+    <div class="row no-gutters-">
+      <div class="col-12">
+        <h2 class="h1 font-brand text-center">Какие <span class="color-brown">Услуги</span> мы оказываем?</h2>
+        <small>&nbsp;</small>
+      </div>
+      <?php foreach ($page_services as $page_service) : ?>
+        <div class="col-md-6 col-sm-6">
+          <div class="card">
+            <div class="image-cover">
+              <img src="/filemanager/{{ $page_service->icon }}" class="img-fluid">
+            </div>
+            <div class="card-content">
+              <h2 class="h1 text-center mb-5">{{ $page_service->title }}</h2>
+              <h5 class="card-text">{{ $page_service->headline }}</h5>
+              <div class="btn-group" role="group" aria-label="Service">
+                <a href="/uslugi/{{ $page_service->slug }}" class="btn btn-outline-brown btn-lg- mb-1">Подробнее</a>
+                <button type="button" class="btn btn-outline-brown btn-lg- mb-1" data-toggle="modal" data-target="#appForm">Заказать</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section> -->
 
 <!-- Services -->
 <section class="section-services-2">
@@ -633,6 +673,7 @@
     </div>
   </div>
 </section> --> 
+
 
 <!-- Reviews -->
 <section class="reviews bg-dark2-">

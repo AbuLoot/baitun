@@ -38,7 +38,7 @@
                 <h3 class="card-title">{{ $product->title }}</h3>
                 <div class="card-action">
                   <h5 class="card-text">{{ $product->title_extra }}</h5>
-                  <a href="/p/{{ $product->slug }}" class="btn btn-outline-brown btn-lg">Подробнее</a>
+                  <a href="/p/{{ $product->slug }}" class="btn btn-outline-brown text-white btn-lg-">Подробнее</a>
                 </div>
               </div>
             </div>

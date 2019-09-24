@@ -15,10 +15,9 @@ class PageController extends Controller
     {
         $page = Page::where('slug', 'glavnaya')->first();
         $page_services = Page::where('parent_id', 2)->get();
-        $mode = Mode::where('slug', 'trend')->first();
         $products = Product::where('status', 1)->get();
 
-        return view('main', ['page' => $page, 'page_services' => $page_services, 'mode' => $mode, 'products' => $products]);
+        return view('main', ['page' => $page, 'page_services' => $page_services, 'products' => $products]);
     }
 
     public function services($slug)

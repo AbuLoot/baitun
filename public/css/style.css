@@ -656,30 +656,26 @@ textarea {
 .side-navigation .gallery li img {
   width: 100%;
 }
-.side-navigation .social-media {
-  width: 100%;
-  float: left;
-  margin: 0;
-  margin-bottom: 20px;
+.social-media {
+  margin: 0 20px;
   padding: 0;
 }
-.side-navigation .social-media li {
+.social-media li {
   float: left;
-  margin-left: 5px;
   padding: 0;
   list-style: none;
 }
-.side-navigation .social-media li a {
+.social-media li a {
   width: 40px;
   height: 40px;
   float: left;
   text-align: center;
   line-height: 42px;
-  font-size: 13px;
+  font-size: 22px;
   color: #fff;
   background: rgba(255, 255, 255, 0.1);
 }
-.side-navigation .social-media li a:hover {
+.social-media li a:hover {
   color: #26282b;
   background: #ebcfa7;
 }
@@ -2737,7 +2733,7 @@ a.btn-native:hover {
   width: 100%;
   float: left;
   display: block !important;
-  transform: translate(85px, -35px);
+  transform: translate(55px, -35px);
 }
 .contact .map .holder iframe {
   box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2);
@@ -3303,6 +3299,10 @@ a.btn-native:hover {
   }
 
   .navbar .container .upper-side .phone-email {
+    display: none;
+  }
+
+  .navbar .container .upper-side .social-media {
     display: none;
   }
 

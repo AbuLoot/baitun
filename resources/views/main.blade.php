@@ -19,6 +19,23 @@
         </div>
       </div>
     </div>
+
+    <div class="inner-elements">
+      <div class="container">
+        <div class="pagination"></div>
+        <div class="button-prev">PREV</div>
+        <div class="button-next">NEXT</div>
+        <div class="social-media">
+          <h6>SOCIAL MEDIA</h6>
+          <ul>
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-google"></i></a></li>
+            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </header> -->
 
@@ -87,7 +104,7 @@
 <section class="property-calculator pt-100">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-lg-6 order-sm--1">
+      <div class="col-lg-6">
         <figure>
           <div class="pattern-bg" data-stellar-ratio="1.03"></div>
           <div class="holder" data-stellar-ratio="1.07">
@@ -95,7 +112,7 @@
           </div>
         </figure>
       </div>
-      <div class="col-lg-6 order-sm--2">
+      <div class="col-lg-6">
         <div class="content-box">
           <h4>{{ $page_services[2]->title }}</h4>
           {!! $page_services[2]->short_description !!}
@@ -140,7 +157,13 @@
 <section class="intro pt-100">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-lg-6">
+      <div class="col-lg-6 order-md-2">
+        <div class="content-box">
+          <h2 class="font-brand color-brown- ">Если вы готовы заказать проект, строительство или вам нужна консультация специалиста, звоните по телефону <a href="tel:+77750450008" class="text-white-">+7(775)045-00-08</a>. Или оставьте заявку через форму и мы перезвоним вам в течение дня.</h2>
+          <!-- <h2 class="font-brand color-brown- "><span class="display-4 font-brand  text-center color-brown"></span> Закажите <span class="color-brown">Проектирование Архитектуры</span> и получите бесплатно на&nbsp;выбор Сопровождение Документации или&nbsp;же Авторский Надзор</h2> -->
+        </div>
+      </div>
+      <div class="col-lg-6 order-md-1">
         <figure>
           <div class="pattern-bg -right-pattern-bg" -data-stellar-ratio="1.07"></div>
           <div class="holder -right-holder" -data-stellar-ratio="1.10">
@@ -164,44 +187,9 @@
           </div>
         </figure>
       </div>
-      <div class="col-lg-6">
-        <div class="content-box">
-          <h2 class="font-brand color-brown- ">Если вы готовы заказать проект, строительство или вам нужна консультация специалиста, звоните по телефону <a href="tel:+77750450008" class="text-white-">+7(775)045-00-08</a>. Или оставьте заявку через форму и мы перезвоним вам в течение дня.</h2>
-          <!-- <h2 class="font-brand color-brown- "><span class="display-4 font-brand  text-center color-brown"></span> Закажите <span class="color-brown">Проектирование Архитектуры</span> и получите бесплатно на&nbsp;выбор Сопровождение Документации или&nbsp;же Авторский Надзор</h2> -->
-        </div>
-      </div>
     </div>
   </div>
 </section>
-
-<!-- Services 2
-<section class="section-services-2">
-  <div class="container">
-    <div class="row no-gutters-">
-      <div class="col-12">
-        <h2 class="h1 font-brand text-center">Какие <span class="color-brown">Услуги</span> мы оказываем?</h2>
-        <small>&nbsp;</small>
-      </div>
-      <?php foreach ($page_services as $page_service) : ?>
-        <div class="col-md-6 col-sm-6">
-          <div class="card">
-            <div class="image-cover">
-              <img src="/filemanager/{{ $page_service->icon }}" class="img-fluid">
-            </div>
-            <div class="card-content">
-              <h2 class="h1 text-center mb-5">{{ $page_service->title }}</h2>
-              <h5 class="card-text">{{ $page_service->headline }}</h5>
-              <div class="btn-group" role="group" aria-label="Service">
-                <a href="/uslugi/{{ $page_service->slug }}" class="btn btn-outline-brown btn-lg- mb-1">Подробнее</a>
-                <button type="button" class="btn btn-outline-brown btn-lg- mb-1" data-toggle="modal" data-target="#appForm">Заказать</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      <?php endforeach; ?>
-    </div>
-  </div>
-</section> -->
 
 <!-- What we can? -->
 <section class="what-we-can">
@@ -311,87 +299,6 @@
   </div>
 </section>
 
-<!-- Form App
-<section class="get-consultation" data-background="/img/section-bg01.jpg" data-stellar-background-ratio="0.9">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 col-md-8">
-        <div class="content-box"> <b>06</b>
-          <h4><span>Homepark</span> Living Spaces</h4>
-          <h3>Are you interested to Homepark</h3>
-          <p>The sun collectors, shall provide the electricity of the social areas of the site and shall do its part for protecting the environment.</p>
-          <a href="#">SCHEDULE A VISIT <i class="fas fa-caret-right"></i></a> </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-<!-- Work Stages
-<section class="facilities">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 text-center">
-        <h2 class="h1 font-brand"><span class="color-brown">Этапы</span> работы</h2>
-        <small>Smaller male cones </small>
-      </div>
-      <div class="col-lg-4 col-md-6">
-      <figure>
-        <img src="/img/services-icon01.png" alt="Image">
-        <figcaption>
-          <h5>Подготовительный этап</h5>
-          <p>Мы уточняем у вас все детали и пожелания, выполняем замеры и проводим необходимые исследования.</p>
-        </figcaption>
-      </figure>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <figure>
-          <img src="/img/services-icon01.png" alt="Image">
-          <figcaption>
-            <h5>Эскизный проект</h5>
-            <p>На данной стадии мы разрабатываем генеральный план, планы всех этажей, фасада, кровли, разрезов. Определяем технико-экономические показатели.</p>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <figure>
-          <img src="/img/services-icon01.png" alt="Image">
-          <figcaption>
-            <h5>Рабочий проект</h5>
-            <p>Во время этого этапа мы создаем паспорт проекта, продумываем все технологические и архитектурные решения, рассчитываем конструкции, определяем, какие строительные материалы будут использованы</p>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <figure>
-          <img src="/img/services-icon01.png" alt="Image">
-          <figcaption>
-            <h5>Согласование плана с местным Управлением Архитектуры и Градостроительство</h5>
-            <p></p>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <figure>
-          <img src="/img/services-icon01.png" alt="Image">
-          <figcaption>
-          <h5>Прохождение государственной экспертизы</h5>
-          <p>The smaller male cones release pollen, which fertilizes the female</p>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <figure>
-          <img src="/img/services-icon01.png" alt="Image">
-          <figcaption>
-          <h5>Unique Playground Area</h5>
-          <p>The smaller male cones release pollen, which fertilizes the female</p>
-          </figcaption>
-        </figure>
-      </div>
-    </div>
-  </div>
-</section> --> 
-
 <!-- Reviews -->
 <section class="reviews bg-dark2-">
   <div class="container">
@@ -437,20 +344,28 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-4 col-md-12">
-        <h4 class="h1"><span>Наши</span> Сертификаты</h4>
+        <h4 class="h1"><span>Наши</span> Лицензии</h4>
         <!-- <small>Smaller male cones </small> -->
       </div>
       <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-        <figure> <a href="images/certificate01.jpg" data-fancybox><img src="/img/certificate01.jpg" alt="Image"></a> </figure>
+        <figure> <a href="/filemanager/docs/Лицензия QA Engineering-Изыскательская деятельность-1-850.jpg" data-fancybox><img src="/filemanager/docs/Лицензия QA Engineering-Изыскательская деятельность-1-258.jpg" alt="Лицензия"></a> </figure>
       </div>
       <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-        <figure> <a href="images/certificate01.jpg" data-fancybox><img src="/img/certificate01.jpg" alt="Image"></a> </figure>
+        <figure> <a href="/filemanager/docs/Лицензия QA Engineering-Изыскательская деятельность-2-850.jpg" data-fancybox><img src="/filemanager/docs/Лицензия QA Engineering-Изыскательская деятельность-2-258.jpg" alt="Лицензия"></a> </figure>
       </div>
       <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-        <figure> <a href="images/certificate01.jpg" data-fancybox><img src="/img/certificate01.jpg" alt="Image"></a> </figure>
+        <figure> <a href="/filemanager/docs/Лицензия QA Engineering -Проектная деятельность II категория-1-850.jpg" data-fancybox><img src="/filemanager/docs/Лицензия QA Engineering -Проектная деятельность II категория-1-258.jpg" alt="Лицензия"></a> </figure>
       </div>
       <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-        <figure> <a href="images/certificate01.jpg" data-fancybox><img src="/img/certificate01.jpg" alt="Image"></a> </figure>
+        <figure> <a href="/filemanager/docs/Лицензия QA Engineering -Проектная деятельность II категория-2-850.jpg" data-fancybox><img src="/filemanager/docs/Лицензия QA Engineering -Проектная деятельность II категория-2-258.jpg" alt="Лицензия"></a> </figure>
+      </div>
+
+      <div class="col-lg-4 col-md-12"></div>
+      <div class="col-lg-2 col-md-3 col-sm-6 col-6 mt-4">
+        <figure> <a href="/filemanager/docs/Лицензия QA Engineering -Проектная деятельность II категория-3-850.jpg" data-fancybox><img src="/filemanager/docs/Лицензия QA Engineering -Проектная деятельность II категория-3-258.jpg" alt="Лицензия"></a> </figure>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-6 col-6 mt-4">
+        <figure> <a href="/filemanager/docs/Лицензия QA Engineering -Проектная деятельность II категория-4-850.jpg" data-fancybox><img src="/filemanager/docs/Лицензия QA Engineering -Проектная деятельность II категория-4-258.jpg" alt="Лицензия"></a> </figure>
       </div>
     </div>
   </div>
