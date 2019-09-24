@@ -8,8 +8,7 @@
 	  	$(this).parent().children('.side-navigation .menu ul li ul').slideToggle(300);
         return true;
 	  	});
-		
-		
+
 		
 	// CONTACT FORM INPUT LABEL
 		function checkForInput(element) {
@@ -66,9 +65,7 @@
 					$(this).css("background-image", "url(" + $(this).data("background") + ")");
 				}
 			});
-		
-		
-		
+
 	// PAGE TRANSITION
 		$('body a').on('click', function(e) {
 			if (typeof $( this ).data('fancybox', 'filter') == 'undefined') {
@@ -85,7 +82,7 @@
 
 
 			$('html, body').animate({
-			scrollTop: $(hash).offset().top
+				scrollTop: $(hash).offset().top
 			}, 1300);
 
 			}
@@ -166,17 +163,17 @@
 	
 	
 	// MASONRY
-			$(window).load(function(){
+			/*$(window).load(function(){
 				$('.gallery').isotope({
 				  itemSelector: '.gallery li',
 				  percentPosition: true
 				});
-			});
+			});*/
 		
 		
 	
 		// ISOTOPE FILTER
-			var $container = $('.gallery');
+			/*var $container = $('.gallery');
 			$container.isotope({
 			filter: '*',
 			animationOptions: {
@@ -200,15 +197,14 @@
 				}
 			});
 			return false;
-			}); 
+			}); */
 	
 
 	
 	// PRELOADER
-			$(window).load(function(){
-				$("body").addClass("page-loaded");	
-			});
-	
-		
+			// $(window).load(function(){
+			// 	$("body").addClass("page-loaded");	
+			// });
+
 		
 })(jQuery);

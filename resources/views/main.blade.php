@@ -336,7 +336,7 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-12 col-md-12">
-        <h2 class="h1 text-center font-brand mb-5"><span class="color-brown">Нащи</span> Лицензии</h2>
+        <h2 class="h1 text-center font-brand mb-5"><span class="color-brown">Наши</span> Лицензии</h2>
         <!-- <small>Smaller male cones </small> -->
       </div>
       <div class="col-lg-2 col-md-3 col-sm-6 col-6">

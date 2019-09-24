@@ -952,7 +952,7 @@ textarea {
   position: absolute;
   left: 0;
   top: 40px;
-  background: url(../images/title-mark.png) center no-repeat;
+  background: url(../img/title-mark.png) center no-repeat;
   background-size: contain;
   z-index: -1;
 }
@@ -1431,7 +1431,7 @@ textarea {
   position: absolute;
   left: 5%;
   top: -5%;
-  background: url(../images/side-pattern-bg.png);
+  background: url(../img/side-pattern-bg.png);
   background-size: contain;
 }
 .property-calculator figure .holder {
@@ -2727,7 +2727,7 @@ a.btn-native:hover {
   position: absolute;
   left: 5%;
   top: -5%;
-  background: url(../images/side-pattern-bg.png);
+  background: url(../img/side-pattern-bg.png);
   background-size: contain;
 }
 .contact .map .holder {

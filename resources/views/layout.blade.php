@@ -31,7 +31,7 @@
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/custom.css">
 </head>
-<body>
+<body class="page-loaded">
 
 <!-- Mobile nav -->
 <div class="side-navigation">
@@ -325,6 +325,7 @@
     })();
 </script>
 <!-- /WhatsHelp.io widget -->
+
 <!-- JS FILES --> 
 <script src="/js/jquery.min.js"></script> 
 <script src="/js/popper.min.js"></script> 
@@ -333,11 +334,11 @@
 <script src="/js/fancybox.min.js"></script> 
 <script src="/js/odometer.min.js"></script> 
 <!-- <script src="/js/wow.min.js"></script>  -->
-<script src="/js/text-rotater.js"></script> 
+<!-- <script src="/js/text-rotater.js"></script>  -->
+<!-- <script src="/js/isotope.min.js"></script>  -->
 <script src="/js/jquery.stellar.js"></script> 
-<script src="/js/isotope.min.js"></script> 
 <script src="/js/scripts.js"></script>
-<!-- Message Status -->
+
 @if (session('status'))
   <script type="text/javascript">
     $('#message-status').modal('show');
