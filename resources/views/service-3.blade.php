@@ -74,7 +74,7 @@
         <small>&nbsp;</small>
       </div>
       <?php foreach ($page_services as $page_service) : ?>
-        <div class="col-md-6 col-sm-6">
+        <div class="col-md-4 col-sm-6">
           <div class="card">
             <div class="image-cover">
               <img src="/filemanager/{{ $page_service->icon }}" class="img-fluid">
@@ -83,8 +83,8 @@
               <h2 class="h1 text-center mb-5">{{ $page_service->title }}</h2>
               <h5 class="card-text">{{ $page_service->headline }}</h5>
               <div class="btn-group" role="group" aria-label="Basic example">
-                <a href="/uslugi/{{ $page_service->slug }}" class="btn btn-outline-brown btn-lg- mb-1">Подробнее</a>
-                <button type="button" class="btn btn-outline-brown btn-lg- mb-1" data-toggle="modal" data-target="#appForm">Заказать</button>
+                <a href="/uslugi/{{ $page_service->slug }}" class="btn btn-outline-brown text-white mb-1">Подробнее</a>
+                <button type="button" class="btn btn-outline-brown text-white mb-1" data-toggle="modal" data-target="#appForm">Заказать</button>
               </div>
             </div>
           </div>

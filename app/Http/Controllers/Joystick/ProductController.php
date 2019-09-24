@@ -144,11 +144,11 @@ class ProductController extends Controller
                         $introImage = 'preview-'.$imageName;
                     }
 
-                    // $watermark = Image::make('img/watermark.png');
+                    $watermark = Image::make('img/watermark.png');
 
                     // Storing original images
                     // $image->storeAs('/img/products/'.$dirName, $imageName);
-                    $this->resizeOptimalImage($image, 1500, 1000, '/img/products/'.$dirName.'/'.$imageName, 90);
+                    $this->resizeOptimalImage($image, 1500, 1000, '/img/products/'.$dirName.'/'.$imageName, 90, $watermark);
 
                     // Creating present images
                     $this->resizeOptimalImage($image, 450, 550, '/img/products/'.$dirName.'/present-'.$imageName, 100);
@@ -257,10 +257,10 @@ class ProductController extends Controller
                         $introImage = 'preview-'.$imageName;
                     }
 
-                    // $watermark = Image::make('img/watermark.png');
+                    $watermark = Image::make('img/watermark.png');
 
                     // Storing original images
-                    $this->resizeOptimalImage($image, 1500, 1000, '/img/products/'.$dirName.'/'.$imageName, 90);
+                    $this->resizeOptimalImage($image, 1500, 1000, '/img/products/'.$dirName.'/'.$imageName, 90, $watermark);
 
                     // Creating present images
                     $this->resizeOptimalImage($image, 450, 550, '/img/products/'.$dirName.'/present-'.$imageName, 100);
