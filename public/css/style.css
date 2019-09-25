@@ -808,7 +808,7 @@ textarea {
 .navbar .container .menu ul li ul {
   min-width: 220px;
   position: absolute;
-  left: -35px;
+  left: -100px;
   top: 120%;
   background: #26282b;
   margin: 0;
@@ -829,7 +829,7 @@ textarea {
   border-width: 0 10px 10px 10px;
   border-color: transparent transparent #26282b transparent;
   position: absolute;
-  left: 35px;
+  left: 100px;
   top: -10px;
 }
 .navbar .container .menu ul li ul li {
