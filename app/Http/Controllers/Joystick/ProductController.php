@@ -183,6 +183,7 @@ class ProductController extends Controller
         $product->count = $request->count;
         $product->condition = $request->condition;
         $product->presense = $request->presense;
+        $product->meta_title = $request->meta_title;
         $product->meta_description = $request->meta_description;
         $product->description = $request->description;
         $product->characteristic = $request->characteristic;
@@ -347,6 +348,7 @@ class ProductController extends Controller
         $product->count = $request->count;
         $product->condition = $request->condition;
         $product->presense = $request->presense;
+        $product->meta_title = $request->meta_title;
         $product->meta_description = $request->meta_description;
         $product->description = $request->description;
         $product->characteristic = (isset($request->characteristic)) ? $request->characteristic : '';

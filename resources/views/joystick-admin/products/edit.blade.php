@@ -119,6 +119,10 @@
       </select>
     </div>
     <div class="form-group">
+      <label for="meta_title">Мета заголовок</label>
+      <input type="text" class="form-control" id="meta_title" name="meta_title" maxlength="255" value="{{ (old('meta_title')) ? old('meta_title') : $product->meta_title }}">
+    </div>
+    <div class="form-group">
       <label for="meta_description">Мета описание</label>
       <input type="text" class="form-control" id="meta_description" name="meta_description" maxlength="255" value="{{ (old('meta_description')) ? old('meta_description') : $product->meta_description }}">
     </div>

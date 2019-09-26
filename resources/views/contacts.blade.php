@@ -51,7 +51,7 @@
           <div class="map">
             <div class="pattern-bg" data-stellar-ratio="1.03"></div>
             <div class="holder" data-stellar-ratio="1.07">
-              <iframe src="https://yandex.ua/map-widget/v1/?um=constructor%3A01ff02ba49cfc0d873672fcc55f7e1b6a8303ad8e2c900a9b97e80e475494bad&amp;source=constructor" width="100%" height="665" frameborder="0"></iframe>
+              <iframe src="https://yandex.ua/map-widget/v1/?um=constructor%3Afeee38d4e43e5e861be85ae88d6d4fc0f8d492fa9d34de7d407a2d380d1eed4f&amp;source=constructor" width="100%" height="665" frameborder="0"></iframe>
             </div>
           </div>
         </div>
