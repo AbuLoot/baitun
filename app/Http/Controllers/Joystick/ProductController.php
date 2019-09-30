@@ -4,12 +4,10 @@ namespace App\Http\Controllers\Joystick;
 
 use Illuminate\Http\Request;
 
-use DB;
 use Image;
 use Storage;
 use Validator;
 
-use App\Http\Controllers\Controller;
 use App\Mode;
 use App\Option;
 use App\Comment;
@@ -17,6 +15,7 @@ use App\Company;
 use App\Product;
 use App\Category;
 use App\ImageTrait;
+use App\Http\Controllers\Controller;
 
 class ProductController extends Controller
 {
@@ -132,14 +131,16 @@ class ProductController extends Controller
 
         if ($request->hasFile('images')) {
 
+            $order = 0;
+
             foreach ($request->file('images') as $key => $image)
             {
                 if (isset($image)) {
 
-                    $imageName = 'image-'.$key.uniqid().'-'.str_slug($request->title).'.'.$image->getClientOriginalExtension();
+                    $imageName = 'image-'.$order.'-'.str_slug($request->title).'.'.$image->getClientOriginalExtension();
 
                     // Creating preview image
-                    if ($key == 0) {
+                    if ($order == 0) {
                         $this->resizeOptimalImage($image, 450, 550, '/img/products/'.$dirName.'/preview-'.$imageName, 100);
                         $introImage = 'preview-'.$imageName;
                     }
@@ -148,13 +149,14 @@ class ProductController extends Controller
 
                     // Storing original images
                     // $image->storeAs('/img/products/'.$dirName, $imageName);
-                    $this->resizeOptimalImage($image, 1500, 1000, '/img/products/'.$dirName.'/'.$imageName, 90, $watermark);
+                    $this->resizeOptimalImage($image, 1500, 900, '/img/products/'.$dirName.'/'.$imageName, 90, $watermark);
 
                     // Creating present images
                     $this->resizeOptimalImage($image, 450, 550, '/img/products/'.$dirName.'/present-'.$imageName, 100);
 
-                    $images[$key]['image'] = $imageName;
-                    $images[$key]['present_image'] = 'present-'.$imageName;
+                    $images[$order]['image'] = $imageName;
+                    $images[$order]['present_image'] = 'present-'.$imageName;
+                    $order++;
                 }
             }
         }
@@ -238,43 +240,31 @@ class ProductController extends Controller
         }
 
         if ($request->hasFile('images')) {
-
             $introImage = null;
-
             foreach ($request->file('images') as $key => $image)
             {
                 if (isset($image)) {
-
                     $imageName = 'image-'.$key.uniqid().'-'.str_slug($request->title).'.'.$image->getClientOriginalExtension();
-
                     // Creating preview image
                     if ($key == 0) {
-
                         if ($product->image != NULL AND $product->image != 'no-image-middle.png' AND file_exists('img/products/'.$product->path.'/'.$product->image)) {
                             Storage::delete('img/products/'.$product->path.'/'.$product->image);
                         }
-
                         $this->resizeOptimalImage($image, 450, 550, '/img/products/'.$dirName.'/preview-'.$imageName, 100);
                         $introImage = 'preview-'.$imageName;
                     }
-
                     $watermark = Image::make('img/watermark.png');
-
                     // Storing original images
                     $this->resizeOptimalImage($image, 1500, 1000, '/img/products/'.$dirName.'/'.$imageName, 90, $watermark);
-
                     // Creating present images
                     $this->resizeOptimalImage($image, 450, 550, '/img/products/'.$dirName.'/present-'.$imageName, 100);
-
                     if (isset($images[$key])) {
-
                         if ($images[$key]['image'] != 'no-image-middle.png') {
                             Storage::delete([
                                 'img/products/'.$product->path.'/'.$images[$key]['image'],
                                 'img/products/'.$product->path.'/'.$images[$key]['present_image']
                             ]);
                         }
-
                         $images[$key]['image'] = $imageName;
                         $images[$key]['present_image'] = 'present-'.$imageName;
                     }
@@ -284,7 +274,6 @@ class ProductController extends Controller
                     }
                 }
             }
-
             $images = array_sort_recursive($images);
         }
 
@@ -309,9 +298,9 @@ class ProductController extends Controller
         }
 
         // Delete images
-        if (isset($request->remove_images)) {
+        if (isset($request->delete_images)) {
 
-            foreach ($request->remove_images as $key => $value) {
+            foreach ($request->delete_images as $key => $value) {
 
                 if (!isset($request->images[$value])) {
 

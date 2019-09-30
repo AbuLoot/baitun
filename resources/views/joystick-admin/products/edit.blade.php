@@ -154,7 +154,7 @@
                 <input type="file" name="images[]" accept="image/*">
               </span>
               <label>
-                <input type="checkbox" name="remove_images[]" value="{{ $i }}"> Удалить
+                <input type="checkbox" name="delete_images[]" value="{{ $i }}"> Удалить
               </label>
               <a href="#" class="btn btn-default btn-sm fileinput-exists" data-dismiss="fileinput"><i class="glyphicon glyphicon-trash"></i> Удалить</a>
             </div>

@@ -236,11 +236,11 @@
 <footer class="footer">
   <div class="container">
     <div class="row">
-      <div class="col-lg-3">
+      <div class="col-lg-3 mb-4">
         <img src="/img/logo-4.png" alt="Image" class="logo">
         <p>Архитектурно-строительная компания Baitun Project занимается проектированием и строительством объектов от подготовки и сопровождения разрешительной документации до сдачи готового объекта под ключ.</p>
       </div>
-      <div class="col-lg-3 col-md-6">
+      <div class="col-lg-3 col-md-6 mb-4">
         <h5 class="text-uppercase color-gold">Страницы</h5>
         <ul class="footer-menu">
           <?php $traverse = function ($nodes, $prefix = null) use (&$traverse) { ?>
@@ -271,7 +271,7 @@
           <?php $traverse($pages); ?>
         </ul>
       </div>
-      <div class="col-lg-3 col-md-6">
+      <div class="col-lg-3 col-md-6 mb-4">
         <h5 class="text-uppercase color-gold">Проекты</h5>
         <ul class="footer-menu">
           <?php $category = \App\Category::where('slug', 'proekty')->first(); ?>

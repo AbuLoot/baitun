@@ -1240,7 +1240,7 @@ textarea {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 100px 0 0;
+  padding: 100px 0 75px;
   background: #f9f9f9;
 }
 .benefits .col {
