@@ -25,7 +25,7 @@
 <header class="page-header bg-main" data-background="/filemanager/{{ $page->icon }}" data-stellar-background-ratio="1.15">
   <div class="container">
     <h1 class="text-uppercase">Проектируем Архитектуру здании и&nbsp;строим проект под&nbsp;ключ</h1>
-    <h2 class="text-white">Baitun Project имеет более 8 лет опыта в строительстве</h2><br>
+    <h4 class="text-white">Работаем более 8&nbsp;лет в&nbsp;сфере строительство и&nbsp;даем гарантии на&nbsp;услуги</h4><br>
     <a class="btn-native text-white float-left" href="#" data-toggle="modal" data-target="#appForm">ЗАКАЗАТЬ УСЛУГУ <i class="fas fa-caret-right"></i></a>
 
     <!-- <div class="social-media">
