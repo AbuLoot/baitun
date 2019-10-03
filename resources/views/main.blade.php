@@ -229,7 +229,7 @@
       <div class="col">
         <figure> <img src="/img/icon-benefits01.png" alt="Image"> <b></b> </figure>
         <h6>Офис от парка</h6>
-        <span class="odometer" data-count="25" data-status="yes">0</span> <span class="extra">мин</span>
+        <span class="odometer" data-count="5" data-status="yes">0</span> <span class="extra">мин</span>
       </div>
       <div class="col">
         <figure> <img src="/img/icon-benefits02.png" alt="Image"> <b></b> </figure>
