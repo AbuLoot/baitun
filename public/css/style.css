@@ -3294,6 +3294,7 @@ a.btn-native:hover {
 
   .page-header .container h1 {
     font-size: 10vw;
+    font-weight: bold;
   }
 
   .page-header .container .breadcrumb {

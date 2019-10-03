@@ -54,7 +54,7 @@
       <div class="col-lg-6">
         <div class="content-box">
           <!-- <b>01</b> -->
-          <h4 class="h1">{{ $page_services[0]->title }}</h4>
+          <h4 class="h1">{{ $page_services[0]->title }}</h4><br>
           {!! $page_services[0]->short_description !!}
           <div class="btn-group" role="group" aria-label="Service">
             <a href="/uslugi/{{ $page_services[0]->slug }}" class="btn btn-outline-brown btn-lg mb-1">Подробнее</a>
@@ -80,7 +80,7 @@
       </div>
       <div class="col-lg-6 order-md-1"> 
         <div class="content-box">
-          <h4>{{ $page_services[1]->title }}</h4>
+          <h4 class="h1">{{ $page_services[1]->title }}</h4><br>
           {!! $page_services[1]->short_description !!}
           <div class="btn-group" role="group" aria-label="Service">
             <a href="/uslugi/{{ $page_services[1]->slug }}" class="btn btn-outline-brown btn-lg mb-1">Подробнее</a>
@@ -106,7 +106,7 @@
       </div>
       <div class="col-lg-6">
         <div class="content-box">
-          <h4>{{ $page_services[2]->title }}</h4>
+          <h4 class="h1">{{ $page_services[2]->title }}</h4><br>
           {!! $page_services[2]->short_description !!}
           <div class="btn-group" role="group" aria-label="Service">
             <a href="/uslugi/{{ $page_services[2]->slug }}" class="btn btn-outline-brown btn-lg mb-1">Подробнее</a>
@@ -132,7 +132,7 @@
       </div>
       <div class="col-lg-6 order-md-1"> 
         <div class="content-box">
-          <h4>{{ $page_services[3]->title }}</h4>
+          <h4 class="h1">{{ $page_services[3]->title }}</h4><br>
           {!! $page_services[3]->short_description !!}
           <div class="btn-group" role="group" aria-label="Service">
             <a href="/uslugi/{{ $page_services[3]->slug }}" class="btn btn-outline-brown btn-lg mb-1">Подробнее</a>
@@ -143,7 +143,6 @@
     </div>
   </div>
 </section>
-
 
 <!-- App Form -->
 <section class="intro pt-100">
