@@ -67,6 +67,7 @@
             <li class="sidebar-title">Главное</li>
             <li @if (Request::is('admin/pages', 'admin/pages/*')) class="active" @endif><a href="/admin/pages"><i class="material-icons md-18">content_copy</i> Страницы</a></li>
             <li @if (Request::is('admin/news', 'admin/news/*')) class="active" @endif><a href="/admin/news"><i class="material-icons md-18">create</i> Новости</a></li>
+            <li @if (Request::is('admin/section', 'admin/section/*')) class="active" @endif> <a href="/admin/section"><i class="material-icons md-18">dashboard</i> Разделы</a> </li>
             <li @if (Request::is('admin/projects', 'admin/projects/*')) class="active" @endif><a href="/admin/projects"><i class="material-icons md-18">widgets</i> Проекты</a></li>
             <li @if (Request::is('admin/categories', 'admin/categories/*')) class="active" @endif><a href="/admin/categories"><i class="material-icons md-18">list</i> Категории</a></li>
             <li @if (Request::is('admin/products', 'admin/products/*')) class="active" @endif><a href="/admin/products"><i class="material-icons md-18">store</i> Продукты</a></li>

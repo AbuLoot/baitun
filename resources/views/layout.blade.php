@@ -32,11 +32,17 @@
   <link rel="stylesheet" href="/css/custom.css">
 </head>
 <body class="page-loaded">
-
+<?php
+  $data_1 = unserialize($parts[0]->data_1);
+  $data_2 = unserialize($parts[0]->data_2);
+  $data_3 = unserialize($parts[0]->data_3);
+  $phones = explode('/', $data_2['value']);
+?>
 <!-- Mobile nav -->
 <div class="side-navigation">
   <div class="menu">
     <ul>
+      <li><a href="/">Главная</a>
       <?php $traverse = function ($nodes, $prefix = null) use (&$traverse) { ?>
         <?php foreach ($nodes as $page) : ?>
           <?php if ($page->children && count($page->children) > 0) : ?>
@@ -56,7 +62,7 @@
                 </ul>
               </li>
             <?php else : ?>
-              <li><a href="/{{ $prefix . $page->slug }}">{{ $page->title }}</a></li>
+              <li><a href="{{ $prefix . $page->slug }}">{{ $page->title }}</a></li>
             <?php endif; ?>
           <?php endif; ?>
         <?php endforeach; ?>
@@ -71,46 +77,27 @@
       <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
     </ul>
   </div>
-  <div class="side-content">
-    <figure> <img src="/img/logo-4.png" alt="Image"> </figure>
-    <p>Архитектурно-строительная компания Baitun Project занимается проектированием и строительством объектов от подготовки и сопровождения разрешительной документации до сдачи готового объекта под ключ.</p>
-    <ul class="gallery">
-      @foreach($mode->products->where('status', 1)->take(3) as $product)
-        <?php $images = unserialize($product->images); ?>
-        <li><a href="/img/products/{{ $product->path.'/'.$images[0]['image'] }}" data-fancybox><img src="/img/products/{{ $product->path.'/'.$images[0]['present_image'] }}" alt="$product->title }}"></a></li>
-      @endforeach
-    </ul>
-    <address>Казахстан, г.Шымкент, ул.Конаева 3/3 2-этаж</address>
-    <h6><a href="tel:+77750450008" class="text-white">+7(775)045-00-08</a></h6>
-    <p>
-      Email: <a href="mailto:info@baitun.kz">info@baitun.kz</a><br>
-      Instagram: <a href="https://www.instagram.com/baitunproject/" class="text-white">@Baitunproject</a>
-    </p>
-    <small>© <?= date('Y') ?> Baitun Project | Все права зарезервированы</small>
-  </div>
 </div>
 
 <nav class="navbar">
   <div class="container">
     <div class="upper-side">
       <div class="logo"> <a href="/"><img src="/img/logo-4.png" alt="Image"></a> </div>
-      <div class="phone-email mr-1-">
+      <div class="phone-email mr-4">
         <img src="/img/icon-phone.png" alt="Image">
-        <h4><a href="tel:+77750450008" class="text-white">+7(775)045-00-08</a></h4>
-        <small><a href="mailto:info@baitun.kz">info@baitun.kz</a></small>
+        @foreach($phones as $phone)
+          <?php $href = str_replace(' ', '', $phone); ?>
+          <h4><a href="tel:{{ $href }}" class="text-white">{{ $phone }}</a></h4>
+        @endforeach
+        <small><a href="mailto:{{ $data_3['value'] }}">{{ $data_3['value'] }}</a></small>
       </div>
-
-      <ul class="social-media">
-        <li><a href="https://www.instagram.com/baitunproject/"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-      </ul>
+      {!! $parts[0]->content !!}
       <!-- <div class="language"> <a href="#">EN</a> <a href="#">UA</a> </div> -->
-      <div class="hamburger"> <span></span> <span></span> <span></span><span></span> </div>
+      <!-- <div class="hamburger"> <span></span> <span></span> <span></span><span></span> </div> -->
     </div>
     <div class="menu">
       <ul>
+        <li><a href="/">Главная</a>
         <?php $traverse = function ($nodes, $prefix = null) use (&$traverse) { ?>
           <?php foreach ($nodes as $page) : ?>
             <?php if ($page->children && count($page->children) > 0) : ?>
@@ -212,7 +199,7 @@
         <div class="col-lg-4">
           <figure><img src="/img/footer-icon01.png" alt="Image"></figure>
           <h3>Мы находимся</h3>
-          <p>Казахстан, г.Шымкент, ул.Конаева 3/3 2-этаж</p>
+          <p>{{ $data_1['value'] }}</p>
         </div>
         <div class="col-lg-4">
           <figure><img src="/img/footer-icon02.png" alt="Image"></figure>
@@ -224,8 +211,11 @@
           <figure><img src="/img/footer-icon03.png" alt="Image"></figure>
           <h3>Наши контакты</h3>
           <p>
-            <a href="tel:+77750450008" class="text-white">+7(775)045-00-08</a><br>
-            <a href="mailto:info@baitun.kz" class="text-white">info@baitun.kz</a>
+            @foreach($phones as $phone)
+              <?php $href = str_replace(' ', '', $phone); ?>
+              <a href="tel:{{ $href }}" class="text-white">{{ $phone }}</a><br>
+            @endforeach
+            <a href="mailto:{{ $data_3['value'] }}" class="text-white">{{ $data_3['value'] }}</a>
           </p>
         </div>
       </div>
@@ -236,13 +226,27 @@
 <footer class="footer">
   <div class="container">
     <div class="row">
-      <div class="col-lg-3 mb-4">
+      <div class="col-lg-3- mb-4">
+        <!-- <p>Архитектурно-строительная компания Baitun Project занимается проектированием и строительством объектов от подготовки и сопровождения разрешительной документации до сдачи готового объекта под ключ.</p> -->
+      </div>
+      <div class="col-lg-3">
         <img src="/img/logo-4.png" alt="Image" class="logo">
-        <p>Архитектурно-строительная компания Baitun Project занимается проектированием и строительством объектов от подготовки и сопровождения разрешительной документации до сдачи готового объекта под ключ.</p>
+        <div class="contact-box- text-white">
+          <!-- <h5 class="color-gold">CALL CENTER</h5> -->
+          @foreach($phones as $phone)
+            <?php $href = str_replace(' ', '', $phone); ?>
+            <h3><a href="tel:{{ $href }}" class="text-white">{{ $phone }}</a></h3>
+          @endforeach
+          <p>
+            Email: <a href="mailto:{{ $data_3['value'] }}" class="text-white">{{ $data_3['value'] }}</a><br>
+          </p>
+          {!! $parts[0]->content !!}
+        </div>
       </div>
       <div class="col-lg-3 col-md-6 mb-4">
         <h5 class="text-uppercase color-gold">Страницы</h5>
         <ul class="footer-menu">
+          <li><a href="/">Главная</a>
           <?php $traverse = function ($nodes, $prefix = null) use (&$traverse) { ?>
             <?php foreach ($nodes as $page) : ?>
               <?php if ($page->children && count($page->children) > 0) : ?>
@@ -279,22 +283,6 @@
             <li><a href="/p/{{ $product->slug }}">{{ $product->title }}</a></li>
           <?php endforeach; ?>
         </ul>
-      </div>
-      <div class="col-lg-3">
-        <div class="contact-box- text-white">
-          <h5 class="color-gold">CALL CENTER</h5>
-          <h3><a href="tel:+77750450008" class="text-white">+7(775)045-00-08</a></h3>
-          <p>
-            Email: <a href="mailto:info@baitun.kz" class="text-white">info@baitun.kz</a><br>
-            Instagram: <a href="https://www.instagram.com/baitunproject/" class="text-white">@Baitunproject</a>
-          </p>
-          <ul class="social-media ml-0">
-            <li><a href="https://www.instagram.com/baitunproject/"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-          </ul>
-        </div>
       </div>
       <div class="col-12">
         <span class="copyright">© <?= date('Y') ?> Baitun Project | Все права зарезервированы</span>

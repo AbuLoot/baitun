@@ -13,11 +13,12 @@ class PageController extends Controller
 {
     public function main()
     {
-        $page = Page::where('slug', 'glavnaya')->first();
+        $page = Page::where('slug', '/')->first();
+        $page_about = Page::where('slug', 'o-kompanii')->first();
         $page_services = Page::where('parent_id', 2)->get();
         $products = Product::where('status', 1)->get();
 
-        return view('main', ['page' => $page, 'page_services' => $page_services, 'products' => $products]);
+        return view('main', ['page' => $page, 'page_about' => $page_about, 'page_services' => $page_services, 'products' => $products]);
     }
 
     public function services($slug)

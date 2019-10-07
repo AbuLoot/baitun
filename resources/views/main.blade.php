@@ -7,35 +7,12 @@
 
 @section('content')
 
-<!-- Slider
-<header class="slider">
-  <div class="slider-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide" data-background="/filemanager/{{ $page->icon }}" >
-        <div class="container">
-          <h1 class="text-uppercase">Проектируем престижную Архитектуру</h1>
-          <h2>Архитектура которую хочется воплотить</h2><br>
-          <a class="btn-native" href="#" data-toggle="modal" data-target="#appForm">ЗАКАЗАТЬ УСЛУГУ <i class="fas fa-caret-right"></i></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</header> -->
-
 <header class="page-header bg-main" data-background="/filemanager/{{ $page->icon }}" data-stellar-background-ratio="1.15">
   <div class="container">
-    <h1 class="text-uppercase">Проектируем Архитектуру здании и&nbsp;строим проект под&nbsp;ключ</h1>
-    <h4 class="text-white">Работаем более 8&nbsp;лет в&nbsp;сфере строительство и&nbsp;даем гарантии на&nbsp;услуги</h4><br>
+    {!! $parts[1]->content !!}
+    <!-- <h1 class="text-uppercase">Проектируем Архитектуру здании и&nbsp;строим проект под&nbsp;ключ</h1> -->
+    <!-- <h4 class="text-white">Работаем более 8&nbsp;лет в&nbsp;сфере строительство и&nbsp;даем гарантии на&nbsp;услуги</h4><br> -->
     <a class="btn-native text-white float-left" href="#" data-toggle="modal" data-target="#appForm">ЗАКАЗАТЬ УСЛУГУ <i class="fas fa-caret-right"></i></a>
-
-    <!-- <div class="social-media">
-      <h6>МЕДИА</h6>
-      <ul>
-        <li><a href="https://www.instagram.com/baitunproject/"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-      </ul>
-    </div> -->
   </div>
 </header>
 
@@ -150,7 +127,8 @@
     <div class="row align-items-center">
       <div class="col-lg-6 order-md-2">
         <div class="content-box">
-          <h2 class="font-brand color-brown- ">Если вы готовы заказать проект, строительство или вам нужна консультация специалиста, звоните по телефону <a href="tel:+77750450008" class="text-white-">+7(775)045-00-08</a>. Или оставьте заявку через форму и мы перезвоним вам в течение дня.</h2>
+          {!! $page->short_description !!}
+          <!-- <h2 class="font-brand color-brown- ">Если вы готовы заказать проект, строительство или вам нужна консультация специалиста, звоните по телефону <a href="tel:+77750450008" class="text-white-">+7(775)045-00-08</a>. Или оставьте заявку через форму и мы перезвоним вам в течение дня.</h2> -->
           <!-- <h2 class="font-brand color-brown- "><span class="display-4 font-brand  text-center color-brown"></span> Закажите <span class="color-brown">Проектирование Архитектуры</span> и получите бесплатно на&nbsp;выбор Сопровождение Документации или&nbsp;же Авторский Надзор</h2> -->
         </div>
       </div>
@@ -221,7 +199,7 @@
         <!-- <h3>Decorated Flats in Pozniaky - Kiev</h3> -->
       </div>
       <div class="col-12 col-md-6">
-        <p>Baitun Project является Архитектурно строительной компанией воплотившая немало впечатляющих проектов. Опыт специалистов компании в области архитектуры и строительство насчитывается более 8 лет. Каждый ведущий архитектор закончил высшее образование и имеет базу успешно введенных в эксплуатацию проектов. Мы оказываем полный пакет услуг для строительство Вашего будущего объекта. Это значит не нужно нанимать другие компании на каждом этапе строительство. </p>
+        {!! $page_about->short_description !!}
       </div>
     </div>
     <br><br><br>
@@ -291,7 +269,7 @@
 </section>
 
 <!-- Reviews -->
-<section class="reviews bg-dark2-">
+<!-- <section class="reviews bg-dark2-">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -328,7 +306,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- Certificates -->
 <section class="certificates">

@@ -17,6 +17,24 @@
   <div class="layer"></div>
 </div> -->
 
+  <div class="side-content">
+    <figure> <img src="/img/logo-4.png" alt="Image"> </figure>
+    <p>Архитектурно-строительная компания Baitun Project занимается проектированием и строительством объектов от подготовки и сопровождения разрешительной документации до сдачи готового объекта под ключ.</p>
+    <ul class="gallery">
+      @foreach($mode->products->where('status', 1)->take(3) as $product)
+        <?php $images = unserialize($product->images); ?>
+        <li><a href="/img/products/{{ $product->path.'/'.$images[0]['image'] }}" data-fancybox><img src="/img/products/{{ $product->path.'/'.$images[0]['present_image'] }}" alt="$product->title }}"></a></li>
+      @endforeach
+    </ul>
+    <address>Казахстан, г.Шымкент, ул.Конаева 3/3 2-этаж</address>
+    <h6><a href="tel:+77750450008" class="text-white">+7(775)045-00-08</a></h6>
+    <p>
+      Email: <a href="mailto:info@baitun.kz">info@baitun.kz</a><br>
+      Instagram: <a href="https://www.instagram.com/baitunproject/" class="text-white">@Baitunproject</a>
+    </p>
+    <small>© <?= date('Y') ?> Baitun Project | Все права зарезервированы</small>
+  </div>
+  
 <!-- Slider -->
 <header class="slider">
   <div class="slider-container">

@@ -39,6 +39,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], func
     Route::resource('pages', 'Joystick\PageController');
     Route::get('edit-html-page/{id}', 'Joystick\PageController@editHtml');
     Route::post('save-html-page/{id}', 'Joystick\PageController@saveHtml');
+    Route::resource('section', 'Joystick\SectionController');
     Route::resource('projects', 'Joystick\ProjectController');
     Route::resource('products', 'Joystick\ProductController');
     Route::resource('slide', 'Joystick\SlideController');
