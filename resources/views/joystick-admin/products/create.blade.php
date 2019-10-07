@@ -35,7 +35,7 @@
         <?php $traverse($categories); ?>
       </select>
     </div>
-    <div class="form-group" id="gallery">
+    <div class="form-group">
       <label for="company_id">Компания</label>
       <select id="company_id" name="company_id" class="form-control">
         <option value=""></option>
@@ -109,8 +109,8 @@
       <label for="description">Описание</label>
       <textarea class="form-control" id="summernote2" name="description" rows="6" maxlength="2000">{{ (old('description')) ? old('description') : '' }}</textarea>
     </div>
-    <div class="form-group">
-      <label>Фотографии</label><br>
+    <div class="form-group" id="gallery">
+      <label>Галерея</label><br>
       @for ($i = 0; $i < 6; $i++)
         <div class="fileinput fileinput-new" data-provides="fileinput">
           <div class="fileinput-preview thumbnail" style="width:300px;height:200px;" data-trigger="fileinput"></div>

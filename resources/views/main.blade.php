@@ -170,7 +170,7 @@
   </div>
   <div class="container-fluid">
     <div class="row no-gutters">
-      @foreach($mode->products->where('status', 1)->take(9) as $product)
+      @foreach($mode->products->where('status', 1)->sortBy('sort_id')->take(9) as $product)
         <div class="col-12 col-sm-6 col-md-6 col-lg-4">
           <div class="card">
             <div class="image-cover">
