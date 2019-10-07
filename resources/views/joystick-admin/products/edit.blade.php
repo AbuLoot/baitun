@@ -128,20 +128,21 @@
     </div>
     <div class="form-group">
       <label for="characteristic">Характеристика</label>
-      <textarea class="form-control" id="summernote" name="characteristic" rows="6" maxlength="2000">{{ (old('characteristic')) ? old('characteristic') : $product->characteristic }}</textarea>
+      <textarea class="form-control" name="characteristic" rows="6" maxlength="2000">{{ (old('characteristic')) ? old('characteristic') : $product->characteristic }}</textarea>
     </div>
     <div class="form-group">
       <a target="_blank" href="/admin/edit-page/{{ $product->id }}" class="btn btn-primary">Редактировать страницу</a>
     </div>
     <div class="form-group">
       <label for="description">Описание</label>
-      <textarea class="form-control" id="summernote-2" name="description" rows="6" maxlength="2000">{{ (old('description')) ? old('description') : $product->description }}</textarea>
+      <textarea class="form-control" name="description" rows="6" maxlength="2000">{{ (old('description')) ? old('description') : $product->description }}</textarea>
     </div>
     <div class="form-group" id="gallery">
       <label>Галерея</label><br>
       <?php $images = unserialize($product->images); ?>
-      @for ($i = 0; $i < ((count($images) >= 6) ? count($images) : 6); $i++)
-        @if (isset($images[$i]))
+      <?php $key_last = array_key_last($images); ?>
+      @for ($i = 0; $i <= (($key_last >= 6) ? $key_last : 5); $i++)
+        @if(array_key_exists($i, $images))
           <div class="fileinput fileinput-new" data-provides="fileinput">
             <div class="fileinput-new thumbnail" style="width:300px;height:200px;">
               <img src="/img/products/{{ $product->path.'/'.$images[$i]['present_image'] }}">
@@ -149,7 +150,7 @@
             <div class="fileinput-preview fileinput-exists thumbnail" style="width:300px;height:200px;" data-trigger="fileinput"></div>
             <div>
               <span class="btn btn-default btn-sm btn-file">
-                <span class="fileinput-new"><i class="glyphicon glyphicon-folder-open"></i>&nbsp; Изменить</span>
+                <span class="fileinput-new"><i class="glyphicon glyphicon-folder-open"></i>&nbsp; {{ $i }} Изменить</span>
                 <span class="fileinput-exists"><i class="glyphicon glyphicon-folder-open"></i>&nbsp;</span>
                 <input type="file" name="images[]" accept="image/*">
               </span>
@@ -173,7 +174,6 @@
           </div>
         @endif
       @endfor
-
     </div>
     <div>
       <button type="button" class="btn btn-success" onclick="addFileinput(this);">Добавить загрузчик</button>

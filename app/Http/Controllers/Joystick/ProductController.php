@@ -137,10 +137,10 @@ class ProductController extends Controller
             {
                 if (isset($image)) {
 
-                    $imageName = 'image-'.$order.'-'.str_slug($request->title).'.'.$image->getClientOriginalExtension();
+                    $imageName = 'image-'.$order.uniqid().'-'.str_slug($request->title).'.'.$image->getClientOriginalExtension();
 
                     // Creating preview image
-                    if ($order == 0) {
+                    if ($key == 0) {
                         $this->resizeOptimalImage($image, 450, 550, '/img/products/'.$dirName.'/preview-'.$imageName, 100);
                         $introImage = 'preview-'.$imageName;
                     }
@@ -149,13 +149,13 @@ class ProductController extends Controller
 
                     // Storing original images
                     // $image->storeAs('/img/products/'.$dirName, $imageName);
-                    $this->resizeOptimalImage($image, 1600, 900, '/img/products/'.$dirName.'/'.$imageName, 90, $watermark);
+                    $this->resizeOptimalImage($image, 1500, 900, '/img/products/'.$dirName.'/'.$imageName, 90, $watermark);
 
                     // Creating present images
                     $this->resizeOptimalImage($image, 450, 550, '/img/products/'.$dirName.'/present-'.$imageName, 100);
 
-                    $images[$order]['image'] = $imageName;
-                    $images[$order]['present_image'] = 'present-'.$imageName;
+                    $images[$key]['image'] = $imageName;
+                    $images[$key]['present_image'] = 'present-'.$imageName;
                     $order++;
                 }
             }
@@ -241,48 +241,51 @@ class ProductController extends Controller
 
         if ($request->hasFile('images')) {
 
+            $order = count($images);
             $introImage = null;
 
             foreach ($request->file('images') as $key => $image)
             {
-                if (isset($image)) {
+                $imageName = 'image-'.$order.uniqid().'-'.str_slug($request->title).'.'.$image->getClientOriginalExtension();
 
-                    $imageName = 'image-'.$key.uniqid().'-'.str_slug($request->title).'.'.$image->getClientOriginalExtension();
+                // Creating preview image
+                if ($key == 0) {
 
-                    // Creating preview image
-                    if ($key == 0) {
-
-                        if ($product->image != NULL AND $product->image != 'no-image-middle.png' AND file_exists('img/products/'.$product->path.'/'.$product->image)) {
-                            Storage::delete('img/products/'.$product->path.'/'.$product->image);
-                        }
-
-                        $this->resizeOptimalImage($image, 450, 550, '/img/products/'.$dirName.'/preview-'.$imageName, 100);
-                        $introImage = 'preview-'.$imageName;
+                    if ($product->image != NULL AND $product->image != 'no-image-middle.png' AND file_exists('img/products/'.$product->path.'/'.$product->image)) {
+                        Storage::delete('img/products/'.$product->path.'/'.$product->image);
+                        Storage::delete('img/products/'.$product->path.'/preview-'.$product->image);
                     }
 
-                    $watermark = Image::make('img/watermark.png');
-
-                    // Storing original images
-                    $this->resizeOptimalImage($image, 1600, 900, '/img/products/'.$dirName.'/'.$imageName, 90, $watermark);
-
-                    // Creating present images
-                    $this->resizeOptimalImage($image, 450, 550, '/img/products/'.$dirName.'/present-'.$imageName, 100);
-
-                    if (isset($images[$key])) {
-                        if ($images[$key]['image'] != 'no-image-middle.png') {
-                            Storage::delete([
-                                'img/products/'.$product->path.'/'.$images[$key]['image'],
-                                'img/products/'.$product->path.'/'.$images[$key]['present_image']
-                            ]);
-                        }
-                        $images[$key]['image'] = $imageName;
-                        $images[$key]['present_image'] = 'present-'.$imageName;
-                    }
-                    else {
-                        $images[$key]['image'] = $imageName;
-                        $images[$key]['present_image'] = 'present-'.$imageName;
-                    }
+                    $this->resizeOptimalImage($image, 450, 550, '/img/products/'.$dirName.'/preview-'.$imageName, 100);
+                    $introImage = 'preview-'.$imageName;
                 }
+
+                $watermark = Image::make('img/watermark.png');
+
+                // Storing original images
+                $this->resizeOptimalImage($image, 1500, 900, '/img/products/'.$dirName.'/'.$imageName, 90, $watermark);
+
+                // Creating present images
+                $this->resizeOptimalImage($image, 450, 550, '/img/products/'.$dirName.'/present-'.$imageName, 100);
+
+                if (isset($images[$key])) {
+
+                    if ($images[$key]['image'] != 'no-image-middle.png') {
+
+                        Storage::delete([
+                            'img/products/'.$product->path.'/'.$images[$key]['image'],
+                            'img/products/'.$product->path.'/'.$images[$key]['present_image']
+                        ]);
+                    }
+
+                    $images[$key]['image'] = $imageName;
+                    $images[$key]['present_image'] = 'present-'.$imageName;
+                }
+                else {
+                    $images[$key]['image'] = $imageName;
+                    $images[$key]['present_image'] = 'present-'.$imageName;
+                }
+                $order++;
             }
             $images = array_sort_recursive($images);
         }
