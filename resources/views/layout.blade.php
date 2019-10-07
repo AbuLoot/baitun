@@ -56,7 +56,7 @@
               <?php $category = \App\Category::where('slug', $page->slug)->first(); ?>
               <li><a href="#{{ $prefix . $page->slug }}">{{ $page->title }}</a>
                 <ul>
-                  <?php foreach ($category->products as $product) : ?>
+                  <?php foreach ($category->products->sortBy('sort_id') as $product) : ?>
                     <li><a href="/p/{{ $product->slug }}">{{ $product->title }}</a></li>
                   <?php endforeach; ?>
                 </ul>
@@ -111,7 +111,7 @@
                 <?php $category = \App\Category::where('slug', $page->slug)->first(); ?>
                 <li><a href="/{{ $prefix . $page->slug }}">{{ $page->title }}</a>
                   <ul>
-                    <?php foreach ($category->products as $product) : ?>
+                    <?php foreach ($category->products->sortBy('sort_id') as $product) : ?>
                       <li><a href="/p/{{ $product->slug }}">{{ $product->title }}</a></li>
                     <?php endforeach; ?>
                   </ul>
@@ -261,7 +261,7 @@
                   <?php $category = \App\Category::where('slug', $page->slug)->first(); ?>
                   <li><a href="/{{ $prefix . $page->slug }}">{{ $page->title }}</a>
                     <ul>
-                      <?php foreach ($category->products as $product) : ?>
+                      <?php foreach ($category->products->sortBy('sort_id') as $product) : ?>
                         <li><a href="/p/{{ $product->slug }}">{{ $product->title }}</a></li>
                       <?php endforeach; ?>
                     </ul>
@@ -279,7 +279,7 @@
         <h5 class="text-uppercase color-gold">Проекты</h5>
         <ul class="footer-menu">
           <?php $category = \App\Category::where('slug', 'proekty')->first(); ?>
-          <?php foreach ($category->products as $product) : ?>
+          <?php foreach ($category->products->sortBy('sort_id') as $product) : ?>
             <li><a href="/p/{{ $product->slug }}">{{ $product->title }}</a></li>
           <?php endforeach; ?>
         </ul>

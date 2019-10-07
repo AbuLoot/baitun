@@ -154,7 +154,7 @@
                 <input type="file" name="images[]" accept="image/*">
               </span>
               <label>
-                <input type="checkbox" name="delete_images[]" value="{{ $i }}"> Удалить
+                <input type="checkbox" name="remove_images[]" value="{{ $i }}"> Удалить
               </label>
               <a href="#" class="btn btn-default btn-sm fileinput-exists" data-dismiss="fileinput"><i class="glyphicon glyphicon-trash"></i> Удалить</a>
             </div>
@@ -186,7 +186,7 @@
       <label for="title_extra">Заголовок для фона (Маркетинг)</label>
       <input type="text" class="form-control" id="title_extra" name="title_extra" minlength="2" maxlength="80" value="{{ (old('title_extra')) ? old('title_extra') : $product->title_extra }}">
     </div>
-    <div class="row">
+    <!-- <div class="row">
       <div class="form-group col-md-6">
         <label for="color">Цвет текста</label><br>
         <input type="color" class="form-control" id="color" name="color" minlength="2" maxlength="80" value="{{ (old('color')) ? old('color') : $product->color }}">
@@ -225,7 +225,7 @@
         </div>
       </div>
     </div>
-    <hr>
+    <hr> -->
     <div class="form-group">
       <label for="modes_id">Режим (зажмите Ctrl чтобы выбрать несколько вариантов)</label>
       <select id="modes_id" name="modes_id[]" class="form-control" size="6" multiple>

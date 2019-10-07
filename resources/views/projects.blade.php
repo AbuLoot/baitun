@@ -36,7 +36,7 @@
     </div>
     <div class="container-fluid">
       <div class="row no-gutters">
-        <?php foreach ($category->products as $product) : ?>
+        <?php foreach ($category->products->sortBy('sort_id') as $product) : ?>
           <div class="col-12 col-sm-6 col-md-6 col-lg-4">
             <div class="card">
               <div class="image-cover">

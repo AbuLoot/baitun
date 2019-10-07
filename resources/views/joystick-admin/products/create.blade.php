@@ -136,7 +136,7 @@
       <label for="title_extra">Заголовок для фона (Маркетинг)</label>
       <input type="text" class="form-control" id="title_extra" name="title_extra" minlength="2" maxlength="80" value="{{ (old('title_extra')) ? old('title_extra') : '' }}">
     </div>
-    <div class="row">
+    <!-- <div class="row">
       <div class="form-group col-md-6">
         <label for="color">Цвет текста</label><br>
         <input type="color" class="form-control" id="color" name="color" minlength="2" maxlength="80" value="{{ (old('color')) ? old('color') : '#eeeeee' }}">
@@ -170,7 +170,7 @@
         </div>
       </div>
     </div>
-    <hr>
+    <hr> -->
     <div class="form-group">
       <label for="mode">Режим (зажмите Ctrl чтобы выбрать несколько вариантов)</label>
       <select id="mode" name="modes_id[]" class="form-control" size="6" multiple>
