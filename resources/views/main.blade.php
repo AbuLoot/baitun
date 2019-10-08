@@ -16,7 +16,7 @@
   </div>
 </header>
 
-<!-- Service 1 -->
+<!-- УСЛУГА 1 -->
 <section class="intro">
   <div class="container">
     <div class="row align-items-center">
@@ -43,7 +43,7 @@
   </div>
 </section>
 
-<!-- Service 2 -->
+<!-- УСЛУГА 2 -->
 <section class="intro pt-100">
   <div class="container">
     <div class="row align-items-center">
@@ -69,7 +69,7 @@
   </div>
 </section>
 
-<!-- Service 3 -->
+<!-- УСЛУГА 3 -->
 <section class="property-calculator pt-100">
   <div class="container">
     <div class="row align-items-center">
@@ -95,7 +95,7 @@
   </div>
 </section>
 
-<!-- Service 4 -->
+<!-- УСЛУГА 4 -->
 <section class="intro pt-100">
   <div class="container">
     <div class="row align-items-center">
@@ -121,7 +121,7 @@
   </div>
 </section>
 
-<!-- App Form -->
+<!-- ФОРМА ЗАЯВКИ -->
 <section class="intro pt-100">
   <div class="container">
     <div class="row align-items-center">
@@ -160,7 +160,7 @@
   </div>
 </section>
 
-<!-- What we can? -->
+<!-- ЧТО МЫ УМЕЕМ ПРОЕКТИРОВАТЬ -->
 <section class="what-we-can">
   <div class="container">
     <div class="col-12">
@@ -190,7 +190,7 @@
   </div>
 </section>
 
-<!-- About -->
+<!-- КОМПАНИИ BAITUN PROJECT -->
 <section class="benefits">
   <div class="container">
     <div class="row">
@@ -233,7 +233,7 @@
   </div>
 </section>
 
-<!-- App Form -->
+<!-- ФОРМА ЗАЯВКИ -->
 <section class="get-consultation" data-background="/img/bg/bg-app.jpg" data-stellar-background-ratio="0.9">
   <div class="container">
     <div class="row">
@@ -308,7 +308,7 @@
   </div>
 </section> -->
 
-<!-- Certificates -->
+<!-- СЕРТИФИКАТЫ -->
 <section class="certificates">
   <div class="container">
     <div class="row align-items-center">
