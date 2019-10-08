@@ -135,29 +135,26 @@ class ProductController extends Controller
 
             foreach ($request->file('images') as $key => $image)
             {
-                if (isset($image)) {
+                $imageName = 'image-'.$order.'-'.str_slug($request->title).'.'.$image->getClientOriginalExtension();
 
-                    $imageName = 'image-'.$order.uniqid().'-'.str_slug($request->title).'.'.$image->getClientOriginalExtension();
-
-                    // Creating preview image
-                    if ($key == 0) {
-                        $this->resizeOptimalImage($image, 450, 550, '/img/products/'.$dirName.'/preview-'.$imageName, 100);
-                        $introImage = 'preview-'.$imageName;
-                    }
-
-                    $watermark = Image::make('img/watermark.png');
-
-                    // Storing original images
-                    // $image->storeAs('/img/products/'.$dirName, $imageName);
-                    $this->resizeOptimalImage($image, 1500, 900, '/img/products/'.$dirName.'/'.$imageName, 90, $watermark);
-
-                    // Creating present images
-                    $this->resizeOptimalImage($image, 450, 550, '/img/products/'.$dirName.'/present-'.$imageName, 100);
-
-                    $images[$key]['image'] = $imageName;
-                    $images[$key]['present_image'] = 'present-'.$imageName;
-                    $order++;
+                // Creating preview image
+                if ($key == 0) {
+                    $this->resizeOptimalImage($image, 450, 550, '/img/products/'.$dirName.'/preview-'.$imageName, 100);
+                    $introImage = 'preview-'.$imageName;
                 }
+
+                $watermark = Image::make('img/watermark.png');
+
+                // Creating present images
+                $this->resizeOptimalImage($image, 450, 550, '/img/products/'.$dirName.'/present-'.$imageName, 100);
+
+                // Storing original images
+                // $image->storeAs('/img/products/'.$dirName, $imageName);
+                $this->resizeOptimalImage($image, 1500, 900, '/img/products/'.$dirName.'/'.$imageName, 90, $watermark);
+
+                $images[$key]['image'] = $imageName;
+                $images[$key]['present_image'] = 'present-'.$imageName;
+                $order++;
             }
         }
 
@@ -233,7 +230,7 @@ class ProductController extends Controller
         $images = unserialize($product->images);
         $dirName = $product->path;
 
-        if ( ! file_exists('img/products/'.$product->category_id) OR empty($product->path)) {
+        if (!file_exists('img/products/'.$product->category_id) OR empty($product->path)) {
             $dirName = $product->category->id.'/'.time();
             Storage::makeDirectory('img/products/'.$dirName);
             $product->path = $dirName;
@@ -246,12 +243,12 @@ class ProductController extends Controller
 
             foreach ($request->file('images') as $key => $image)
             {
-                $imageName = 'image-'.$order.uniqid().'-'.str_slug($request->title).'.'.$image->getClientOriginalExtension();
+                $imageName = 'image-'.$order.'-'.str_slug($request->title).'.'.$image->getClientOriginalExtension();
 
                 // Creating preview image
                 if ($key == 0) {
 
-                    if ($product->image != NULL AND $product->image != 'no-image-middle.png' AND file_exists('img/products/'.$product->path.'/'.$product->image)) {
+                    if ($product->image != 'no-image-middle.png' AND file_exists('img/products/'.$product->path.'/'.$product->image)) {
                         Storage::delete('img/products/'.$product->path.'/'.$product->image);
                         Storage::delete('img/products/'.$product->path.'/preview-'.$product->image);
                     }
@@ -262,32 +259,26 @@ class ProductController extends Controller
 
                 $watermark = Image::make('img/watermark.png');
 
-                // Storing original images
-                $this->resizeOptimalImage($image, 1500, 900, '/img/products/'.$dirName.'/'.$imageName, 90, $watermark);
-
                 // Creating present images
                 $this->resizeOptimalImage($image, 450, 550, '/img/products/'.$dirName.'/present-'.$imageName, 100);
 
+                // Storing original images
+                $this->resizeOptimalImage($image, 1500, 900, '/img/products/'.$dirName.'/'.$imageName, 90, $watermark);
+
                 if (isset($images[$key])) {
 
-                    if ($images[$key]['image'] != 'no-image-middle.png') {
-
-                        Storage::delete([
-                            'img/products/'.$product->path.'/'.$images[$key]['image'],
-                            'img/products/'.$product->path.'/'.$images[$key]['present_image']
-                        ]);
-                    }
-
-                    $images[$key]['image'] = $imageName;
-                    $images[$key]['present_image'] = 'present-'.$imageName;
+                    Storage::delete([
+                        'img/products/'.$product->path.'/'.$images[$key]['image'],
+                        'img/products/'.$product->path.'/'.$images[$key]['present_image']
+                    ]);
                 }
-                else {
-                    $images[$key]['image'] = $imageName;
-                    $images[$key]['present_image'] = 'present-'.$imageName;
-                }
+
+                $images[$key]['image'] = $imageName;
+                $images[$key]['present_image'] = 'present-'.$imageName;
                 $order++;
             }
-            $images = array_sort_recursive($images);
+
+            ksort($images);
         }
 
         // Resave background
@@ -312,26 +303,26 @@ class ProductController extends Controller
         // Remove images
         if (isset($request->remove_images)) {
 
-            foreach ($request->remove_images as $key => $value) {
+            foreach ($request->remove_images as $kvalue) {
 
-                if (!isset($request->images[$value])) {
+                if (!isset($request->images[$kvalue])) {
 
-                    if ($product->image === 'preview-'.$images[$value]['image']) {
+                    if ($product->image === 'preview-'.$images[$kvalue]['image']) {
 
                         Storage::delete('img/products/'.$product->path.'/'.$product->image);
                         $introImage = 'no-image-middle.png';
                     }
 
                     Storage::delete([
-                        'img/products/'.$product->path.'/'.$images[$value]['image'],
-                        'img/products/'.$product->path.'/'.$images[$value]['present_image']
+                        'img/products/'.$product->path.'/'.$images[$kvalue]['image'],
+                        'img/products/'.$product->path.'/'.$images[$kvalue]['present_image']
                     ]);
 
-                    unset($images[$value]);
+                    unset($images[$kvalue]);
                 }
             }
 
-            $images = array_sort_recursive($images);
+            ksort($images);
         }
 
         $product->sort_id = ($request->sort_id > 0) ? $request->sort_id : $product->count() + 1;

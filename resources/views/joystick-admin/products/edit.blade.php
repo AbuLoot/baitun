@@ -141,6 +141,7 @@
       <label>Галерея</label><br>
       <?php $images = unserialize($product->images); ?>
       <?php $key_last = array_key_last($images); ?>
+      <?php // dd($images); ?>
       @for ($i = 0; $i <= (($key_last >= 6) ? $key_last : 5); $i++)
         @if(array_key_exists($i, $images))
           <div class="fileinput fileinput-new" data-provides="fileinput">
