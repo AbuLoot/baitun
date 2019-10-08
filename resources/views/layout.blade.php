@@ -93,7 +93,7 @@
       </div>
       {!! $parts[0]->content !!}
       <!-- <div class="language"> <a href="#">EN</a> <a href="#">UA</a> </div> -->
-      <!-- <div class="hamburger"> <span></span> <span></span> <span></span><span></span> </div> -->
+      <div class="hamburger d-block d-sm-none"> <span></span> <span></span> <span></span><span></span> </div>
     </div>
     <div class="menu">
       <ul>
