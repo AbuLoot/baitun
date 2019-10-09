@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use View;
+
 use App\Page;
 use App\Mode;
 use App\Product;
@@ -26,7 +28,12 @@ class PageController extends Controller
         $page = Page::where('slug', $slug)->first();
         $page_services = Page::where('parent_id', 2)->whereNotIn('id', [$page->id])->get();
 
-        return view('service-'.$page->id, ['page' => $page, 'page_services' => $page_services]);
+        if (View::exists('service-'.$page->id)) {
+            return view('service-'.$page->id, ['page' => $page, 'page_services' => $page_services]);
+        }
+        else {
+            return view('page')->with('page', $page);
+        }
     }
 
     public function projects()
