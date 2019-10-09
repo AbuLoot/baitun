@@ -191,7 +191,7 @@
   </a>
 </div> -->
 
-<!-- Footer Bar -->
+<!-- МЫ НАХОДИМСЯ, ГРАФИК РАБОТЫ, НАШИ РАБОТЫ -->
 <section class="footer-bar">
   <div class="container">
     <div class="inner">
@@ -291,7 +291,8 @@
     </div>
   </div>
 </footer>
-<!-- WhatsHelp.io widget -->
+
+<!-- WIDGET WhatsHelp.io -->
 <script type="text/javascript">
     (function () {
         var options = {
