@@ -70,12 +70,7 @@
       <?php $traverse($pages); ?>
     </ul>
     <br>
-    <ul>
-      <li><a href="https://www.instagram.com/baitunproject/"><i class="fab fa-instagram"></i> Instagram</a></li>
-      <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-      <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-      <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
-    </ul>
+    {!! $parts[0]->content !!}
   </div>
 </div>
 

@@ -141,7 +141,6 @@
       <label>Галерея</label><br>
       <?php $images = unserialize($product->images); ?>
       <?php $key_last = array_key_last($images); ?>
-      <?php // dd($images); ?>
       @for ($i = 0; $i <= (($key_last >= 6) ? $key_last : 5); $i++)
         @if(array_key_exists($i, $images))
           <div class="fileinput fileinput-new" data-provides="fileinput">
@@ -151,7 +150,7 @@
             <div class="fileinput-preview fileinput-exists thumbnail" style="width:300px;height:200px;" data-trigger="fileinput"></div>
             <div>
               <span class="btn btn-default btn-sm btn-file">
-                <span class="fileinput-new"><i class="glyphicon glyphicon-folder-open"></i>&nbsp; {{ $i }} Изменить</span>
+                <span class="fileinput-new"><i class="glyphicon glyphicon-folder-open"></i>&nbsp; Изменить</span>
                 <span class="fileinput-exists"><i class="glyphicon glyphicon-folder-open"></i>&nbsp;</span>
                 <input type="file" name="images[]" accept="image/*">
               </span>
