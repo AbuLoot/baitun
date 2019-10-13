@@ -221,10 +221,10 @@
 <footer class="footer">
   <div class="container">
     <div class="row">
-      <div class="col-lg-3- mb-4">
+      <div class="col-lg-3- mb-4-">
         <!-- <p>Архитектурно-строительная компания Baitun Project занимается проектированием и строительством объектов от подготовки и сопровождения разрешительной документации до сдачи готового объекта под ключ.</p> -->
       </div>
-      <div class="col-lg-3">
+      <div class="col-lg-3 col-md-6 mb-4">
         <img src="/img/logo-4.png" alt="Image" class="logo">
         <div class="contact-box- text-white">
           <!-- <h5 class="color-gold">CALL CENTER</h5> -->
@@ -287,28 +287,7 @@
   </div>
 </footer>
 
-<!-- WIDGET WhatsHelp.io -->
-<script type="text/javascript">
-    (function () {
-        var options = {
-            whatsapp: "+7(775)045-00-08", // WhatsApp number
-            telegram: "+7(775)045-00-08", // Telegram bot username
-            email: "info@baitun.kz", // Email
-            call: "+7(775)045-00-08", // Call phone number
-            company_logo_url: "//static.whatshelp.io/img/flag.png", // URL of company logo (png, jpg, gif)
-            greeting_message: "Здравствуйте! Отправьте нам сообщение через любой из мессенджеров.", // Text of greeting message
-            call_to_action: "Напишите нам", // Call to action
-            button_color: "#129BF4", // Color of button
-            position: "right", // Position may be 'right' or 'left'
-            order: "whatsapp,telegram,email,call", // Order of buttons
-        };
-        var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
-        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-    })();
-</script>
-<!-- /WhatsHelp.io widget -->
+<script src="//code.jivosite.com/widget.js" data-jv-id="1wTqJ8Oodo" async></script>
 
 <!-- JS FILES --> 
 <script src="/js/jquery.min.js"></script> 
