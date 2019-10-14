@@ -122,7 +122,6 @@
     </div>
   </div>
 </nav>
-
 <!-- Content -->
 @yield('content')
 

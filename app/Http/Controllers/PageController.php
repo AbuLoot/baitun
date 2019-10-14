@@ -25,6 +25,7 @@ class PageController extends Controller
 
     public function services($slug)
     {
+        $main = Page::where('slug', '/')->first();
         $page = Page::where('slug', $slug)->first();
         $page_services = Page::where('parent_id', 2)->whereNotIn('id', [$page->id])->get();
 
@@ -32,7 +33,7 @@ class PageController extends Controller
             return view('service-'.$page->id, ['page' => $page, 'page_services' => $page_services]);
         }
         else {
-            return view('page')->with('page', $page);
+            return view('page', ['page' => $page, 'main' => $main]);
         }
     }
 

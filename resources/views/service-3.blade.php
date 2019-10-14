@@ -33,7 +33,7 @@
     <div class="row align-items-center">
       <div class="col-lg-6">
         <div class="content-box">
-          <h2 class="font-brand color-brown- ">Если вы готовы заказать проект, строительство или вам нужна консультация специалиста, звоните по телефону <a href="tel:+77750450008" class="text-white-">+7(775)045-00-08</a>. Или оставьте заявку через форму и мы перезвоним вам в течение дня.</h2>
+          {!! $page->short_description !!}
         </div>
       </div>
       <div class="col-lg-6">
