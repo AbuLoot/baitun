@@ -33,7 +33,7 @@
     <div class="row align-items-center">
       <div class="col-lg-6">
         <div class="content-box">
-          {!! $page->short_description !!}
+          {!! $main->short_description !!}
         </div>
       </div>
       <div class="col-lg-6">

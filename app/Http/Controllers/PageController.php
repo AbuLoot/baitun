@@ -30,10 +30,10 @@ class PageController extends Controller
         $page_services = Page::where('parent_id', 2)->whereNotIn('id', [$page->id])->get();
 
         if (View::exists('service-'.$page->id)) {
-            return view('service-'.$page->id, ['page' => $page, 'page_services' => $page_services]);
+            return view('service-'.$page->id, ['page' => $page, 'page_services' => $page_services, 'main' => $main]);
         }
         else {
-            return view('page', ['page' => $page, 'main' => $main]);
+            return view('page', ['page' => $page]);
         }
     }
 
