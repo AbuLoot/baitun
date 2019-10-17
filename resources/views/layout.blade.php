@@ -54,7 +54,7 @@
           <?php else : ?>
             <?php if (in_array($page->slug, ['proekty', 'projects'])) : ?>
               <?php $category = \App\Category::where('slug', $page->slug)->first(); ?>
-              <li><a href="#{{ $prefix . $page->slug }}">{{ $page->title }}</a>
+              <li><a href="#/{{ $prefix . $page->slug }}">{{ $page->title }}</a>
                 <ul>
                   <?php foreach ($category->products->sortBy('sort_id') as $product) : ?>
                     <li><a href="/p/{{ $product->slug }}">{{ $product->title }}</a></li>
@@ -62,7 +62,7 @@
                 </ul>
               </li>
             <?php else : ?>
-              <li><a href="{{ $prefix . $page->slug }}">{{ $page->title }}</a></li>
+              <li><a href="/{{ $prefix . $page->slug }}">{{ $page->title }}</a></li>
             <?php endif; ?>
           <?php endif; ?>
         <?php endforeach; ?>
