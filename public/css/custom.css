@@ -505,3 +505,187 @@
     background: linear-gradient(135deg, #4dc368, #28a745);
   }
 }
+
+.material-button-anim {
+  position: fixed;
+  right: 40px;
+  bottom: 20px;
+  z-index: 10;
+  /*padding: 127px 15px 27px;*/
+  /*text-align: center;*/
+  /*max-width: 320px;*/
+  /*margin: 0 auto 20px;*/
+}
+
+.material-button {
+  position: relative;
+  top: 0;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5em;
+  color: #fff;
+  background: #2C98DE;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,.275);
+  outline: none;
+}
+.material-button a {
+  display: block;
+  color: #fff;
+}
+.material-button-toggle {
+  z-index: 3;
+  width: 60px;
+  height: 60px;
+}
+.material-button-toggle span {
+  -webkit-transform: none;
+  transform:         none;
+  -webkit-transition: -webkit-transform .175s cubic-bazier(.175,.67,.83,.67);
+  transition:         transform .175s cubic-bazier(.175,.67,.83,.67);
+}
+.material-button-toggle.open {
+  -webkit-transform: scale(1.1, 1.1);
+  transform:         scale(1.1, 1.1);
+  -webkit-animation: toggleBtnAnim .175s;
+  animation:         toggleBtnAnim .175s;
+}
+.material-button-toggle.open span {
+  -webkit-transform: rotate(45deg);
+  transform:         rotate(45deg);
+  -webkit-transition: -webkit-transform .175s cubic-bazier(.175,.67,.83,.67);
+  transition:         transform .175s cubic-bazier(.175,.67,.83,.67);
+}
+.bg-whatsapp {
+  background-color: #54cd62;
+}
+.bg-telegram {
+  background-color: #3ba8eb;
+}
+
+#options {
+  /*height: 70px;*/
+}
+.option {
+  position: absolute;
+}
+.option .option1,
+.option .option2,
+.option .option3,
+.option .option4 {
+  -webkit-transform: translate3d(0,10px,0) scale(.5, .5);
+  transform: translate3d(0,10px,0) scale(.5, .5);
+}
+.option.scale-on .option1 {
+  -webkit-transform: translate3d(0, -260px, 0);
+  transform:         translate3d(0, -260px, 0);
+}
+.option.scale-on .option2 {
+  -webkit-transform: translate3d(0, -195px, 0);
+  transform:         translate3d(0, -195px, 0);
+}
+.option.scale-on .option3 {
+  -webkit-transform: translate3d(0, -130px, 0);
+  transform:         translate3d(0, -130px, 0);
+}
+.option.scale-on .option4 {
+  -webkit-transform: translate3d(0, -65px, 0);
+  transform:         translate3d(0, -65px, 0);
+}
+.option.scale-on .option1,
+.option.scale-on .option2,
+.option.scale-on .option3,
+.option.scale-on .option4 {
+  -webkit-transition: all .175s;
+  transition:         all .175s;
+}
+
+@keyframes toggleBtnAnim {
+    0% {
+        -webkit-transform: scale(1,1);
+        transform:         scale(1,1);
+    }
+/*    25% {
+        -webkit-transform: scale(1.4,1.4);
+        transform:         scale(1.4,1.4); 
+    }
+    75% {
+        -webkit-transform: scale(1.2,1.2);
+        transform:         scale(1.2,1.2);
+    }*/
+    100% {
+        -webkit-transform: scale(1.2,1.2);
+        transform:         scale(1.2,1.2);
+    }
+}
+@-webkit-keyframes toggleBtnAnim {
+    0% {
+        -webkit-transform: scale(1,1);
+        transform:         scale(1,1);
+    }
+/*    25% {
+        -webkit-transform: scale(1.4,1.4);
+        transform:         scale(1.4,1.4); 
+    }
+    75% {
+        -webkit-transform: scale(1.2,1.2);
+        transform:         scale(1.2,1.2);
+    }*/
+    100% {
+        -webkit-transform: scale(1.2,1.2);
+        transform:         scale(1.2,1.2);
+    }
+}
+
+/* Animation */
+.pinkBg {
+  background-image: linear-gradient(90deg, #fd5581, #fd8b55);
+}
+.material-button .ripple {
+  position:absolute;
+  width:120px;
+  height:120px;
+  z-index:-1;
+  left:50%;
+  top:50%;
+  opacity:0;
+  margin:-60px 0 0 -60px;
+  border-radius:100px;
+  -webkit-animation:ripple 1.8s infinite;
+  animation:ripple 1.8s infinite
+}
+.material-button .ripple:nth-child(2) {
+  animation-delay:.3s;
+  -webkit-animation-delay:.3s
+}
+.material-button .ripple:nth-child(3) {
+  animation-delay:.6s;
+  -webkit-animation-delay:.6s
+}
+@-webkit-keyframes ripple {
+  0%{
+    opacity:1;
+    -webkit-transform:scale(0);
+    transform:scale(0)
+  }
+  100%{
+    opacity:0;
+    -webkit-transform:scale(1);
+    transform:scale(1)
+  }
+}
+@keyframes ripple {
+  0%{
+    opacity:1;
+    -webkit-transform:scale(0);
+    transform:scale(0)
+  }
+  100%{
+    opacity:0;
+    -webkit-transform:scale(1);
+    transform:scale(1)
+  }
+}
+

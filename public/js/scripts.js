@@ -1,15 +1,22 @@
 (function($) {
   $(document).ready(function() {
     "use strict";
-    
-    
+
+
+  // MATERIAL BUTTON TOGGLE
+  $('.material-button-toggle').on("click", function () {
+      $(this).toggleClass('open');
+      $('.option').toggleClass('scale-on');
+  });
+
+
   // HOVER TOGGLE
     $('.side-navigation .menu ul li a').on('click', function(e) {
       $(this).parent().children('.side-navigation .menu ul li ul').slideToggle(300);
         return true;
       });
 
-    
+
   // CONTACT FORM INPUT LABEL
     function checkForInput(element) {
         const $label = $(element).siblings('span');
@@ -28,8 +35,7 @@
         checkForInput(this);  
     });
     
-    
-    
+
   // TOOLTIP
     $('[data-toggle="tooltip"]').tooltip()
     

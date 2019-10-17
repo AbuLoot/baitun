@@ -217,6 +217,38 @@
   </div>
 </section>
 
+<!-- Widget contact buttons -->
+<div class="material-button-anim">
+  <ul class="list-inline" id="options">
+    <li class="option">
+      <button class="material-button option1 bg-whatsapp" type="button">
+        <a href="whatsapp://send?phone=+77750450008" target="_blank"><span class="fa fa-whatsapp" aria-hidden="true"></span></a>
+      </button>
+    </li>
+    <li class="option">
+      <button class="material-button option2 bg-telegram" type="button">
+        <a href="https://t.me/+77750450008" target="_blank"><span class="fa fa-telegram" aria-hidden="true"></span></a>
+      </button>
+    </li>
+    <li class="option">
+      <button class="material-button option3" type="button">
+        <a href="tel:+77750450008" target="_blank"><span class="fa fa-phone" aria-hidden="true"></span></a>
+      </button>
+    </li>
+    <li class="option">
+      <button class="material-button option4" type="button">
+        <a href="mailto:{{ $data_3['value'] }}" target="_blank"><span class="fa fa-envelope" aria-hidden="true"></span></a>
+      </button>
+    </li>
+  </ul>
+  <button class="material-button material-button-toggle pinkBg" type="button">
+    <span class="fa fa-plus" aria-hidden="true"></span>
+    <span class="ripple pinkBg"></span>
+    <span class="ripple pinkBg"></span>
+    <span class="ripple pinkBg"></span>
+  </button>
+</div>
+
 <footer class="footer">
   <div class="container">
     <div class="row">
@@ -286,7 +318,6 @@
   </div>
 </footer>
 
-<script src="//code.jivosite.com/widget.js" data-jv-id="1wTqJ8Oodo" async></script>
 
 <!-- JS FILES --> 
 <script src="/js/jquery.min.js"></script> 
