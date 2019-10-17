@@ -577,7 +577,9 @@ textarea {
 }
 .side-navigation .menu {
   display: none;
+  padding-top: 20px;
   margin-bottom: 20px;
+  overflow-y: auto;
 }
 .side-navigation .menu ul {
   width: 100%;

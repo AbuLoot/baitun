@@ -316,6 +316,10 @@
           <?php endforeach; ?>
         </ul>
       </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="text-uppercase color-gold">&nbsp;</h5>
+        <p><a class="text-white" href="#"><span class="fa fa-arrow-up"></span> Подняться в верх</a></p>
+      </div>
       <div class="col-12">
         <span class="copyright">© <?= date('Y') ?> Baitun Project | Все права зарезервированы</span>
         <span class="creation">Связь с разработчиком сайта: <a href="#">issayev.adilet@gmail.com</a></span>
