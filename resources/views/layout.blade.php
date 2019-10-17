@@ -222,16 +222,22 @@
   <ul class="list-inline" id="options">
     <li class="option">
       <button class="material-button option1 bg-whatsapp" type="button">
-        <a href="whatsapp://send?phone=+77750450008" target="_blank"><span class="fa fa-whatsapp" aria-hidden="true"></span></a>
+        <a href="whatsapp://send?phone=+77750450008" target="_blank">
+          <!-- <span class="fa fa-whatsapp" aria-hidden="true"></span> -->
+          <img src="/img/whatsapp.png">
+        </a>
       </button>
     </li>
     <li class="option">
       <button class="material-button option2 bg-telegram" type="button">
-        <a href="https://t.me/+77750450008" target="_blank"><span class="fa fa-telegram" aria-hidden="true"></span></a>
+        <a href="https://t.me/+77750450008" target="_blank">
+          <!-- <span class="fa fa-telegram" aria-hidden="true"></span> -->
+          <img src="/img/telegram.png">
+        </a>
       </button>
     </li>
     <li class="option">
-      <button class="material-button option3" type="button">
+      <button class="material-button option3 bg-ripple" type="button">
         <a href="tel:+77750450008" target="_blank"><span class="fa fa-phone" aria-hidden="true"></span></a>
       </button>
     </li>
@@ -242,7 +248,7 @@
     </li>
   </ul>
   <button class="material-button material-button-toggle pinkBg" type="button">
-    <span class="fa fa-plus" aria-hidden="true"></span>
+    <span class="fa fa-feather" aria-hidden="true"></span>
     <span class="ripple pinkBg"></span>
     <span class="ripple pinkBg"></span>
     <span class="ripple pinkBg"></span>
