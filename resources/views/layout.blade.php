@@ -230,7 +230,7 @@
     </li>
     <li class="option">
       <button class="material-button option2 bg-telegram" type="button">
-        <a href="https://t.me/+77750450008" target="_blank">
+        <a href="https://t.me/baitunproject" target="_blank">
           <!-- <span class="fa fa-telegram" aria-hidden="true"></span> -->
           <img src="/img/telegram.png">
         </a>
