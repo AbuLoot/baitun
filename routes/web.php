@@ -12,7 +12,7 @@ Route::post('login-custom', 'Auth\AuthCustomController@postLogin');
 // Route::get('confirm/{token}', 'Auth\AuthCustomController@confirm');
 
 // User Profile
-Route::group('auth', 'role:user'], function() {,
+Route::group(['middleware' => 'auth', 'role:user'], function() {
 
     Route::get('profile', 'ProfileController@profile');
     Route::get('profile/edit', 'ProfileController@editProfile');
@@ -20,8 +20,9 @@ Route::group('auth', 'role:user'], function() {,
     Route::get('orders', 'ProfileController@orders');
 });
 
+
 // Joystick Administration
-Route::group('admin', 'auth', 'role:admin']], function () {,
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function () {
 
     Route::get('/', 'Joystick\AdminController@index');
     Route::get('filemanager', 'Joystick\AdminController@filemanager');
